@@ -1,6 +1,3 @@
-// src/components/Footer.jsx
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="bg-white p-6 flex justify-between items-center border-t flex-col md:flex-row">

@@ -1,6 +1,3 @@
-// src/components/CV.jsx
-import React from "react";
-
 const CV = () => {
   return (
     <section id="cv" className="py-16">
