@@ -9,7 +9,7 @@ const Footer = () => {
           Mail
         </a>
         <a
-          href="https://www.linkedin.com/russell-day"
+          href="https://www.linkedin.com/in/russell-day"
           target="_blank"
           className="text-gray-700 hover:text-gray-900"
         >
