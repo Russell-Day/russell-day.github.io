@@ -16,7 +16,7 @@ const Header = () => {
       {/* <div className="text-3xl font-bold">Russell</div> */}
       <nav className="hidden md:flex space-x-6">
         <Link
-          to="/Work"
+          to="/work"
           className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg"
         >
           Work
@@ -69,7 +69,7 @@ const Header = () => {
             </svg>
           </button>
           <Link
-            to="/"
+            to="/work"
             className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5"
             onClick={toggleMenu}
           >
