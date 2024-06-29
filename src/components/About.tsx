@@ -16,8 +16,8 @@ const About = () => {
           <h2 className="text-xl font-semibold text-gray-700 mb-4">WHO AM I</h2>
           <p className="text-gray-700 mb-8">
             I am currently a rising sophomore at the University of Michigan in
-            the honors college of LSA studying data science on a premedical sdf
-            s track. I have interests in the intersections of data science and
+            the honors college of LSA studying data science on a premedical
+            track. I have interests in the intersections of data science and
             medicine, specifically surrounding AI/ML and how they can be used to
             improve patient outcomes and physician workflow.
           </p>
