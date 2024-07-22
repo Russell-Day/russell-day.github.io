@@ -10,33 +10,37 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white p-6 flex justify-between items-center shadow-md">
-      <img src={CursiveName} alt="Logo" className="h-10 w-auto" />
+    <header className="bg-white p-6 flex justify-between items-center shadow-md dark:bg-gray-800 dark:shadow-gray-500">
+      <img
+        src={CursiveName}
+        alt="Logo"
+        className="h-10 w-auto bg-white rounded-md dark:bg-gray-300"
+      />
 
       {/* <div className="text-3xl font-bold">Russell</div> */}
       <nav className="hidden md:flex space-x-6">
         <Link
           to="/work"
-          className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg"
+          className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg dark:text-gray-100"
         >
           Work
         </Link>
         <Link
           to="/about"
-          className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg"
+          className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg dark:text-gray-100"
         >
           About
         </Link>
         <Link
           to="/cv"
-          className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg"
+          className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-lg dark:text-gray-100"
         >
           CV
         </Link>
       </nav>
       <button className="md:hidden" onClick={toggleMenu}>
         <svg
-          className="w-8 h-8 text-gray-700"
+          className="w-8 h-8 text-gray-700 dark:text-gray-100"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -51,10 +55,10 @@ const Header = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center z-50">
+        <div className="absolute top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center z-50 dark:bg-gray-800">
           <button className="absolute top-4 right-4" onClick={toggleMenu}>
             <svg
-              className="w-8 h-8 text-gray-700"
+              className="w-8 h-8 text-gray-700 dark:text-gray-100"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -70,21 +74,21 @@ const Header = () => {
           </button>
           <Link
             to="/work"
-            className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5"
+            className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5 dark:text-gray-100"
             onClick={toggleMenu}
           >
             Work
           </Link>
           <Link
             to="/about"
-            className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5"
+            className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5 dark:text-gray-100"
             onClick={toggleMenu}
           >
             About
           </Link>
           <Link
             to="/CV"
-            className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5"
+            className="text-gray-700 hover:text-gray-900 hover:underline hover:underline-offset-2 font-semibold text-2xl mb-4 p-5 dark:text-gray-100"
             onClick={toggleMenu}
           >
             CV

@@ -1,7 +1,7 @@
 const CV = () => {
   return (
     <section id="cv" className="py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 dark:text-gray-100">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">Russell G. Day</h1>
           <p>
@@ -13,10 +13,10 @@ const CV = () => {
         </div>
         <div className="space-y-12">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-200">
               OBJECTIVE
             </h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               Motivated, hard-working student with a passion for improving
               inequalities. Excited to study data science and business, as well
               as gain hands-on experience, aspiring to become a more effective
@@ -25,15 +25,15 @@ const CV = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-200">
               EDUCATION
             </h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   University of Michigan, LSA Honors College, Ann Arbor, MI
                 </h3>
-                <p className="text-gray-600">GPA: 3.89</p>
+                <p className="text-gray-600">GPA: 3.90</p>
                 <p className="text-gray-600">Expected Major: Data Science</p>
                 <p className="text-gray-500">
                   Activities and societies: Asian Intervarsity, KDSAP,
@@ -42,7 +42,7 @@ const CV = () => {
                 <p className="text-gray-500">Dates: 08/2023 - Present</p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   Cranbrook Schools, Bloomfield Hills, MI
                 </h3>
                 <p className="text-gray-600">
@@ -58,7 +58,7 @@ const CV = () => {
                 <p className="text-gray-500">Dates: 09/2019 - 06/2023</p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   Oakland Community College, Bloomfield Hills, MI
                 </h3>
                 <p className="text-gray-600">
@@ -71,12 +71,12 @@ const CV = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-200">
               WORK EXPERIENCE
             </h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   Aton Lab, Research Assistant
                 </h3>
                 <h2>University of Michigan, College of LSA</h2>
@@ -87,10 +87,10 @@ const CV = () => {
                 <p className="text-gray-500">Dates: 09/2023 – Present</p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800">
-                  Henry Ford Health, Department of Orthopedics, Research
-                  Volunteer
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
+                  Department of Orthopedics, Research Volunteer
                 </h3>
+                <h2>Henry Ford Health</h2>
                 <p className="text-gray-600">
                   Participated in literature review, data collection, analysis,
                   and manuscript writing/editing
@@ -102,9 +102,16 @@ const CV = () => {
                 <p className="text-gray-500">Dates: 09/2021 - 09/2023</p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800">
-                  Protera Health, Intern
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
+                  Intern
                 </h3>
+                <h2>Protera Health</h2>
+                <p className="text-gray-600">
+                  Wrote a script to scrape the web for health population leaders
+                  utilizing Google websearch API and Gemini API
+                </p>
+                <p className="text-gray-500">Dates: 06/2024 - 08/2024</p>
+                <br></br>
                 <p className="text-gray-600">
                   Created media for online platform, processed data in excel,
                   participated in executive meetings
@@ -115,7 +122,7 @@ const CV = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-200">
               PUBLICATIONS
             </h2>
             <div className="space-y-4">
@@ -123,7 +130,7 @@ const CV = () => {
                 <a
                   href="https://doi.org/10.1001/jamanetworkopen.2023.35529"
                   target="_blank"
-                  className="hover:text-blue-600 text-xl text-gray-800"
+                  className="hover:text-blue-600 text-xl text-gray-800 dark:text-gray-300"
                 >
                   Racial, Ethnic, and Sex Diversity in Academic Medical
                   Leadership
@@ -137,7 +144,7 @@ const CV = () => {
                 <a
                   href="https://doi.org/10.2106/jbjs.21.01236"
                   target="_blank"
-                  className="hover:text-blue-600 text-xl text-gray-800"
+                  className="hover:text-blue-600 text-xl text-gray-800 dark:text-gray-300"
                 >
                   Racial, Ethnic, and Gender Diversity in Academic Orthopaedic
                   Surgery Leadership
@@ -151,12 +158,12 @@ const CV = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-200">
               VOLUNTEER WORK
             </h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   Blueprints for Pangaea, Analyst
                 </h3>
                 <p className="text-gray-600">
@@ -175,7 +182,7 @@ const CV = () => {
                 <p className="text-gray-500">Dates: 01/2024 – Present</p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   Global Outreach Club, President and Founder
                 </h3>
                 <p className="text-gray-600">
@@ -186,7 +193,7 @@ const CV = () => {
                 <p className="text-gray-500">Dates: 09/2022 - 06/2023</p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800">
+                <h3 className="text-xl text-gray-800 dark:text-gray-300">
                   Breanna’s House of Joy, Chiang Mai, Thailand, Volunteer
                 </h3>
                 <p className="text-gray-600">
@@ -195,59 +202,23 @@ const CV = () => {
                   dental fluoride, assisted with medical checkups and charting
                   data
                 </p>
-                <p className="text-gray-500">Dates: 03/2018, 06/2022</p>
+                <p className="text-gray-500">
+                  Dates: 03/2018, 06/2022, 07/2024
+                </p>
               </div>
             </div>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-              SUMMER ENRICHMENT PROGRAMS
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl text-gray-800">
-                  Wharton Global Youth Program: “Essentials of Leadership”
-                </h3>
-                <p className="text-gray-500">Date: 07/2022</p>
-              </div>
-              <div>
-                <h3 className="text-xl text-gray-800">
-                  Yale Young Global Scholars: “Solving Global Challenges”
-                </h3>
-                <p className="text-gray-500">Date: 07/2021</p>
-              </div>
-              <div>
-                <h3 className="text-xl text-gray-800">
-                  National Student Leadership Conference: “Medical Intensive
-                  Program”
-                </h3>
-                <p className="text-gray-500">Date: 06/2021</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-200">
               AWARDS AND HONORS
             </h2>
             <div className="space-y-4">
               <div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   3rd Best Financial “Hack” according to Capital One for MHacks
                   16 (11/2023) – Used Hugging Faces NLP sentiment analysis model
                   to make trading decisions
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-600">
-                  National Merit Scholarship Program Letter of Commendation
-                  (09/2022)
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-600">
-                  AP Scholar with Honors (07/2022; 07/2023)
                 </p>
               </div>
             </div>

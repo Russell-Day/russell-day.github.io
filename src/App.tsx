@@ -8,9 +8,9 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-gray-800">
       <Header />
-      <main className="max-w-5xl mx-auto px-4">
+      <main className="max-w-5xl mx-auto px-4 shadow-md">
         <Routes>
           <Route path="/" element={<Work />} />
           <Route path="/about" element={<About />} />
