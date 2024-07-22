@@ -4,7 +4,7 @@ import blueprints from "../images/blueprints.png";
 const projects = [
     {
         title: "Streamlining Paper Selection",
-        link: "https://www.pubmednotes.com",
+        link: "",
         target: "_blank",
         subtitle: "Research Project",
         description: "01 | LLM PROJECTS",
@@ -37,7 +37,7 @@ const Work = () => {
                 </p>
             </div>
             <h2 className="text-xl text-gray-700 mb-4 dark:text-gray-100">
-                WORK
+                PROJECTS
             </h2>
             <div className="space-y-8">
                 {projects.map((project, index) => (
