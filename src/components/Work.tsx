@@ -1,22 +1,31 @@
 import Gaudmire from "../images/gaudmire.png";
 import blueprints from "../images/blueprints.png";
+import pop_health from "../images/pop_health.png";
 
 const projects = [
     {
         title: "Streamlining Paper Selection",
         link: "",
         target: "_blank",
-        subtitle: "Research Project",
-        description: "01 | LLM PROJECTS",
+        subtitle: "Henry Ford Research Project",
+        description: "01 | AI UTILIZATION",
         image: Gaudmire,
     },
     {
-        title: "Sorting Product Database",
+        title: "Case Study for Inventory Management",
         link: "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
         target: "_blank",
         subtitle: "Blueprints for Pangaea",
-        description: "02 | DATA MANIPULATION",
+        description: "02 | DATA CLEANING & DATA MANIPULATION",
         image: blueprints,
+    },
+    {
+        title: "Scraping for Population Health Leaders",
+        link: "https://github.com/Russell-Day/Scraping-for-Population-Health-Leaders",
+        target: "_blank",
+        subtitle: "Protera Health",
+        description: "03 | WEB SCRAPING & DATA CLEANING",
+        image: pop_health,
     },
 ];
 
