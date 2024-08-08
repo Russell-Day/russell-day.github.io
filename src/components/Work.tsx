@@ -1,15 +1,15 @@
-import Gaudmire from "../images/gaudmire.png";
+import systematic_review from "../images/systematic_review.png";
 import blueprints from "../images/blueprints.png";
 import pop_health from "../images/pop_health.png";
 
 const projects = [
     {
-        title: "Streamlining Paper Selection",
+        title: "Streamlining Paper Selection (Confidential)",
         link: "#",
         target: "_blank",
         subtitle: "Henry Ford Research Project",
-        description: "01 | AI UTILIZATION",
-        image: Gaudmire,
+        description: "01 | LLM INTEGRATION",
+        image: systematic_review,
     },
     {
         title: "Case Study for Inventory Management",
@@ -37,8 +37,10 @@ const Work = () => {
                     Hi, I'm Russell.
                 </h1>
                 <p className="text-xl text-gray-700 dark:text-gray-200">
-                    Data science student at the University of Michigan.
-                    Currently coding away for{" "}
+                    Data science student at the University of Michigan. Focusing
+                    on the intersection between AI and healthcare.{" "}
+                    <span className="font-semibold">EMAIL ME</span> for more
+                    information on current projects! Currently coding away for{" "}
                     <span className="font-semibold">
                         Henry Ford Orthopedic Research Group
                     </span>{" "}

@@ -7,20 +7,20 @@ import Footer from "./components/Footer.tsx";
 import "./index.css";
 
 function App() {
-  return (
-    <div className="App dark:bg-gray-800">
-      <Header />
-      <main className="max-w-5xl mx-auto px-4 shadow-md">
-        <Routes>
-          <Route path="/" element={<Work />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cv" element={<CV />} />
-          <Route path="/work" element={<Work />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="App dark:bg-gray-800 min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-grow max-w-5xl mx-auto px-4 shadow-md">
+                <Routes>
+                    <Route path="/" element={<Work />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/cv" element={<CV />} />
+                    <Route path="/work" element={<Work />} />
+                </Routes>
+            </main>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

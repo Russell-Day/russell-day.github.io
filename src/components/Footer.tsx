@@ -15,15 +15,19 @@ const Footer = () => {
                 >
                     LinkedIn
                 </a>
-            </div>
-            <div className="text-gray-700 block dark:text-gray-100">
-                Inspiration from Aaron Huang
+                <a
+                    href="https://github.com/Russell-Day"
+                    target="_blank"
+                    className="text-gray-700 hover:text-gray-900 dark:text-gray-100"
+                >
+                    Github
+                </a>
             </div>
             <div className="text-gray-700 block md:hidden dark:text-gray-100">
-                RD. 2024
+                RD 2024
             </div>
             <div className="text-gray-700 hidden md:block dark:text-gray-100">
-                Russell Day. 2024
+                Russell Day 2024
             </div>
         </footer>
     );
