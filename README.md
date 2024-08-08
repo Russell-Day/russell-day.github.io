@@ -3,8 +3,8 @@
 - 🌱 I’m currently learning my choices and exploring my options
 - 📫 How to reach me russday@umich.edu
 
-## Background [Website](https://russell-day.github.io/)
-My website is a basic mobile first responsive design using Vite, React, and Tailwind css frameworks. 
+## [Website](https://russell-day.github.io/)
+My personal website is a basic mobile first responsive design using Vite, React, and Tailwind css frameworks. Just a quick summer project that I did. 
 
 ## Basic Dependencies
 gh-pages (hosting on github pages)
