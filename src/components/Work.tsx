@@ -5,7 +5,7 @@ import pop_health from "../images/pop_health.png";
 const projects = [
     {
         title: "Streamlining Paper Selection",
-        link: "",
+        link: "#",
         target: "_blank",
         subtitle: "Henry Ford Research Project",
         description: "01 | AI UTILIZATION",
