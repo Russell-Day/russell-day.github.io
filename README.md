@@ -8,9 +8,13 @@ My personal website is a basic mobile first responsive design using Vite, React,
 
 ## Basic Dependencies
 gh-pages (hosting on github pages)
+
 Tailwind css
+
 Vite
+
 React
+
 React Router Dom
 
 This personal website was built with inspiration off of a friends personal website [Aaron Huang](https://aahuang.com/)
