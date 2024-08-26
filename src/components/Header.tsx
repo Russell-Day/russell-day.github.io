@@ -11,11 +11,13 @@ const Header = () => {
 
     return (
         <header className="bg-white p-6 flex justify-between items-center shadow-md dark:bg-gray-800 dark:shadow-gray-500">
-            <img
-                src={CursiveName}
-                alt="Logo"
-                className="h-10 w-auto bg-white rounded-md dark:bg-gray-300"
-            />
+            <a href="/">
+                <img
+                    src={CursiveName}
+                    alt="Logo"
+                    className="h-10 w-auto bg-white rounded-md dark:bg-gray-300"
+                />
+            </a>
 
             {/* <div className="text-3xl font-bold">Russell</div> */}
             <nav className="hidden md:flex space-x-6">

@@ -21,7 +21,7 @@ const projects = [
     },
     {
         title: "Scraping for Population Health Leaders",
-        link: "https://github.com/Russell-Day/Scraping-for-Population-Health-Leaders",
+        link: "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
         target: "_blank",
         subtitle: "Protera Health",
         description: "03 | WEB SCRAPING & DATA CLEANING",
