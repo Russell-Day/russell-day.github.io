@@ -3,9 +3,7 @@ const CV = () => {
         <section id="cv" className="py-16">
             <div className="max-w-7xl mx-auto px-4 dark:text-gray-200">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold mb-4">
-                        Russell G. Day (work in progress)
-                    </h1>
+                    <h1 className="text-4xl font-bold mb-4">Russell G. Day</h1>
                     <p>
                         266 Woodberry Drive | Bloomfield Hills, MI 48304 |
                         617-961-2251 |{" "}
@@ -17,7 +15,21 @@ const CV = () => {
                         </a>
                     </p>
                 </div>
+
                 <div className="space-y-12">
+                    <div>
+                        <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-300">
+                            This page is a current work in progress
+                        </h2>
+                        <p className="text-gray-700 dark:text-gray-400">
+                            <a
+                                href="https://github.com/Russell-Day/russell-day.github.io/blob/cb75cf15c6a0f1eac8617e2ce410fb444ccd2ca0/src/components/Resume%209-25-2024.pdf"
+                                className="text-blue-500 dark:text-blue-400"
+                            >
+                                Current Resume 9-25-2024
+                            </a>
+                        </p>
+                    </div>
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-300">
                             OBJECTIVE
