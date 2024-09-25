@@ -43,8 +43,8 @@ const Work = () => {
                     information on current projects! Currently coding away for{" "}
                     <span className="font-semibold">
                         Henry Ford Orthopedic Research Group
-                    </span>{" "}
-                    and <span className="font-semibold">Protera Health</span>.
+                    </span>
+                    {/* {" "} and <span className="font-semibold">Protera Health</span>. */}
                 </p>
             </div>
             <h2 className="text-xl text-gray-700 mb-4 dark:text-gray-100">

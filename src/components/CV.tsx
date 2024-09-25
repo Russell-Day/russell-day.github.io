@@ -3,7 +3,9 @@ const CV = () => {
         <section id="cv" className="py-16">
             <div className="max-w-7xl mx-auto px-4 dark:text-gray-200">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold mb-4">Russell G. Day</h1>
+                    <h1 className="text-4xl font-bold mb-4">
+                        Russell G. Day (work in progress)
+                    </h1>
                     <p>
                         266 Woodberry Drive | Bloomfield Hills, MI 48304 |
                         617-961-2251 |{" "}
