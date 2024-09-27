@@ -5,6 +5,33 @@ const CV = () => {
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold mb-4">Russell G. Day</h1>
                     <p>
+                        _____________________________________________________________________________________________________________________{" "}
+                    </p>
+                    <p>
+                        <a
+                            href="mailto:russday@umich.edu"
+                            className="text-blue-500 dark:text-blue-400"
+                        >
+                            russday@umich.edu
+                        </a>
+                    </p>
+                    <div className="flex justify-center items-center">
+                        <iframe
+                            src="https://1drv.ms/b/s!AsmHzUVMJnY5i7FzUHbK0KkB8cS3aA?embed=1&em=2"
+                            width="100%"
+                            height="600px"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+    return (
+        <section id="cv" className="py-16">
+            <div className="max-w-7xl mx-auto px-4 dark:text-gray-200">
+                <div className="text-center mb-8">
+                    <h1 className="text-4xl font-bold mb-4">Russell G. Day</h1>
+                    <p>
                         266 Woodberry Drive | Bloomfield Hills, MI 48304 |
                         617-961-2251 |{" "}
                         <a
@@ -14,8 +41,14 @@ const CV = () => {
                             russday@umich.edu
                         </a>
                     </p>
+                    <div className="flex justify-center items-center">
+                        <iframe
+                            src="https://1drv.ms/b/s!AsmHzUVMJnY5i7ECE9B26wGNjhJIjg?embed=1&em=2"
+                            width="100%"
+                            height="600px"
+                        ></iframe>
+                    </div>
                 </div>
-
                 <div className="space-y-12">
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-300">
@@ -23,7 +56,7 @@ const CV = () => {
                         </h2>
                         <p className="text-gray-700 dark:text-gray-400">
                             <a
-                                href="https://github.com/Russell-Day/russell-day.github.io/blob/cb75cf15c6a0f1eac8617e2ce410fb444ccd2ca0/src/components/Resume%209-25-2024.pdf"
+                                href="https://cdn.discordapp.com/attachments/1151610422160543826/1288526720856625192/Resume_9-25-2024.pdf?ex=66f58185&is=66f43005&hm=f85dd00d15a6c93558463d03c7145c7afa7311e43ba425bc48e72527eebce4d7&"
                                 className="text-blue-500 dark:text-blue-400"
                             >
                                 Current Resume 9-25-2024
