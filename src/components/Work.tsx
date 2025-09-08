@@ -31,46 +31,43 @@ const projects = [
 
 const Work = () => {
     return (
-        <section id="work" className="py-12 sm:py-16">
-            <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-3 dark:text-gray-100">
-                    Hi, I'm Russell.
-                </h1>
-                <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-200 max-w-3xl mx-auto">
-                    Data science student at the University of Michigan. Focusing
-                    on the intersection between AI and healthcare.{" "}
-                    <span className="font-semibold">EMAIL ME</span> for more
-                    information on current projects! Currently coding away for{" "}
-                    <span className="font-semibold">
-                        Henry Ford Orthopedic Research Group
-                    </span>
-                    {/* {" "} and <span className="font-semibold">Protera Health</span>. */}
+        <section id="work" className="py-12">
+            <div className="mb-12 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-sky-500/10 to-purple-500/10 dark:from-indigo-500/15 dark:via-sky-500/15 dark:to-purple-500/15 border border-slate-200/50 dark:border-slate-700/60 p-8">
+                <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">Hi, I'm Russell.</h1>
+                <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-300 max-w-3xl">
+                    Data science student at the University of Michigan. Working at the intersection of AI and healthcare—LLMs, CV, and clinical data.
                 </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                    <a href="mailto:russday@umich.edu" className="inline-flex items-center rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2 text-sm font-semibold shadow hover:opacity-90 transition">
+                        Contact
+                    </a>
+                    <a href="https://www.linkedin.com/in/russell-day" target="_blank" className="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-600 px-4 py-2 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+                        LinkedIn
+                    </a>
+                </div>
             </div>
-            <h2 className="text-xl text-gray-700 mb-4 dark:text-gray-100 tracking-wide">
-                PROJECTS
-            </h2>
+            <h2 className="text-sm font-semibold tracking-wider text-slate-600 dark:text-slate-400 mb-3">PROJECTS</h2>
             <div className="space-y-8">
                 {projects.map((project, index) => (
                     <a
                         href={project.link}
                         target={project.target}
                         key={index}
-                        className="flex flex-col md:flex-row items-center gap-6 group rounded-2xl border border-gray-200 dark:border-gray-800 p-3 hover:shadow-lg transition-shadow"
+                        className="flex flex-col md:flex-row items-center gap-6 group"
                     >
                         <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full md:w-1/2 rounded-xl"
+                            className="w-full md:w-1/2 rounded-2xl ring-1 ring-slate-200/70 dark:ring-slate-700/70 shadow-sm group-hover:shadow-md transition"
                         />
-                        <div className="md:ml-2 mt-2 md:mt-0">
-                            <p className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                        <div className="md:ml-4 mt-2 md:mt-0">
+                            <p className="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
                                 {project.description}
                             </p>
-                            <h3 className="text-2xl text-gray-800 dark:text-gray-200 group-hover:underline">
+                            <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
                                 {project.title}
                             </h3>
-                            <p className="text-base text-gray-600 dark:text-gray-300">
+                            <p className="text-base text-slate-600 dark:text-slate-300">
                                 {project.subtitle}
                             </p>
                         </div>
