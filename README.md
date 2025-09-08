@@ -18,3 +18,15 @@ React
 React Router Dom
 
 This personal website was built with inspiration off of a friends personal website [Aaron Huang](https://aahuang.com/)
+
+## Local development
+
+- Install deps: npm ci
+- Start dev server: npm run dev
+- Build: npm run build
+- Preview production build: npm run preview
+
+## Privacy notes
+
+- Do not commit phone number or home address. The CV/Resume page embeds PDFs from `cv-current/`; ensure exported PDFs do not contain phone/address before pushing.
+- Avoid committing LaTeX build artifacts (`*.aux`, `*.log`, `*.out`, `*.synctex.gz`, `*.fdb_latexmk`, `*.fls`).

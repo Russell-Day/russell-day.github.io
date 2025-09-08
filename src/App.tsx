@@ -8,15 +8,17 @@ import "./index.css";
 
 function App() {
     return (
-        <div className="App bg-bg-light dark:bg-bg-dark min-h-screen flex flex-col">
+        <div className="App min-h-screen flex flex-col bg-bg-light text-gray-900 dark:bg-bg-dark dark:text-gray-100">
             <Header />
-            <main className="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <Routes>
-                    <Route path="/" element={<Work />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/cv" element={<CV />} />
-                    <Route path="/work" element={<Work />} />
-                </Routes>
+            <main className="flex-grow w-full">
+                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-6">
+                    <Routes>
+                        <Route path="/" element={<Work />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/cv" element={<CV />} />
+                        <Route path="/work" element={<Work />} />
+                    </Routes>
+                </div>
             </main>
             <Footer />
         </div>

@@ -23,12 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
-# LaTeX build outputs
-cv-current/*.aux
-cv-current/*.log
-cv-current/*.out
-cv-current/*.fdb_latexmk
-cv-current/*.fls
-cv-current/*.pdf
-cv-current/*.synctex.gz
-src/images/*.pdf
+# LaTeX artifacts and PDFs (avoid committing sensitive info)
+cv-current/**/*.aux
+cv-current/**/*.log
+cv-current/**/*.out
+cv-current/**/*.synctex.gz
+cv-current/**/*.fdb_latexmk
+cv-current/**/*.fls
+cv-current/**/*.pdf

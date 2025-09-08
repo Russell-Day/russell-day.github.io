@@ -2,19 +2,18 @@ import Headshot from "../images/headshot.jpg";
 
 const About = () => {
     return (
-        <section id="about" className="py-12 sm:py-16">
-            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8">
-                <div className="md:w-1/2 p-4">
+        <section id="about" className="py-12">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="">
                     <img
                         src={Headshot}
                         alt="Profile Photo"
-                        className="w-full rounded-2xl shadow-lg"
-                    />{" "}
-                    {/* Update with your image path */}
+                        className="w-full rounded-3xl ring-1 ring-slate-200/70 dark:ring-slate-700/70 shadow"
+                    />
                 </div>
-                <div className="md:w-1/2 p-4 text-gray-700 dark:text-gray-200">
-                    <h2 className="text-xl font-semibold  mb-4 tracking-wide">WHO AM I</h2>
-                    <p className=" mb-8 leading-relaxed">
+                <div className="text-slate-700 dark:text-slate-200">
+                    <h2 className="text-sm font-semibold tracking-wider mb-2 text-slate-600 dark:text-slate-400">WHO AM I</h2>
+                    <p className="mb-6">
                         I am currently a sophomore at the University of Michigan
                         in the honors college of LSA studying data science on a
                         premedical track. I have interests in the intersections
@@ -22,16 +21,16 @@ const About = () => {
                         AI/ML and how they can be used to improve patient
                         outcomes, physician workflow, and predictive analytics.
                     </p>
-                    <h2 className="text-xl font-semibold mb-4 tracking-wide">INTERESTS</h2>
-                    <ul className=" mb-8 list-disc list-inside space-y-1">
+                    <h2 className="text-sm font-semibold tracking-wider mb-2 text-slate-600 dark:text-slate-400">INTERESTS</h2>
+                    <ul className="mb-6 list-disc list-inside">
                         <li>Healthcare Data Science</li>
                         <li>AI/ML in Medicine</li>
                         <li>Patient Reported Outcomes</li>
                         <li>LLM Integration</li>
                         <li>AI Agents</li>
                     </ul>
-                    <h2 className="text-xl font-semibold  mb-4 tracking-wide">FUN</h2>
-                    <p className="leading-relaxed">
+                    <h2 className="text-sm font-semibold tracking-wider mb-2 text-slate-600 dark:text-slate-400">FUN</h2>
+                    <p>
                         If I am not coding or studying organic chemistry, you'll
                         find me cooking! Ask me about my favorite recipes.
                     </p>
