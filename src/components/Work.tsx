@@ -31,12 +31,12 @@ const projects = [
 
 const Work = () => {
     return (
-        <section id="work" className="py-16">
-            <div className="text-center mb-16">
-                <h1 className="text-4xl font-bold mb-4 dark:text-gray-100">
+        <section id="work" className="py-12 sm:py-16">
+            <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold mb-3 dark:text-gray-100">
                     Hi, I'm Russell.
                 </h1>
-                <p className="text-xl text-gray-700 dark:text-gray-200">
+                <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-200 max-w-3xl mx-auto">
                     Data science student at the University of Michigan. Focusing
                     on the intersection between AI and healthcare.{" "}
                     <span className="font-semibold">EMAIL ME</span> for more
@@ -47,7 +47,7 @@ const Work = () => {
                     {/* {" "} and <span className="font-semibold">Protera Health</span>. */}
                 </p>
             </div>
-            <h2 className="text-xl text-gray-700 mb-4 dark:text-gray-100">
+            <h2 className="text-xl text-gray-700 mb-4 dark:text-gray-100 tracking-wide">
                 PROJECTS
             </h2>
             <div className="space-y-8">
@@ -56,21 +56,21 @@ const Work = () => {
                         href={project.link}
                         target={project.target}
                         key={index}
-                        className="flex flex-col md:flex-row items-center mb-8"
+                        className="flex flex-col md:flex-row items-center gap-6 group rounded-2xl border border-gray-200 dark:border-gray-800 p-3 hover:shadow-lg transition-shadow"
                     >
                         <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full md:w-1/2 rounded-2xl"
+                            className="w-full md:w-1/2 rounded-xl"
                         />
-                        <div className="md:ml-8 mt-4 md:mt-0">
-                            <p className="text-sm text-gray-500 dark:text-gray-100">
+                        <div className="md:ml-2 mt-2 md:mt-0">
+                            <p className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">
                                 {project.description}
                             </p>
-                            <h3 className="text-2xl text-gray-800 dark:text-gray-200">
+                            <h3 className="text-2xl text-gray-800 dark:text-gray-200 group-hover:underline">
                                 {project.title}
                             </h3>
-                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                            <p className="text-base text-gray-600 dark:text-gray-300">
                                 {project.subtitle}
                             </p>
                         </div>

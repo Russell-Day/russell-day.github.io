@@ -1,7 +1,9 @@
 const Footer = () => {
+    const year = new Date().getFullYear();
     return (
-        <footer className="bg-white p-6 flex justify-between items-center border-t flex-col md:flex-row dark:bg-gray-800 dark:border-gray-500">
-            <div className="flex space-x-6 mb-4 md:mb-0">
+        <footer className="bg-white/60 backdrop-blur border-t border-gray-200 dark:bg-gray-900/60 dark:border-gray-800 py-6">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center flex-col md:flex-row gap-4">
+            <div className="flex space-x-6">
                 <a
                     href="mailto:russday@umich.edu"
                     className="text-gray-700 hover:text-gray-900 dark:text-gray-100"
@@ -23,11 +25,7 @@ const Footer = () => {
                     Github
                 </a>
             </div>
-            <div className="text-gray-700 block md:hidden dark:text-gray-100">
-                RD 2024
-            </div>
-            <div className="text-gray-700 hidden md:block dark:text-gray-100">
-                Russell Day 2024
+            <div className="text-gray-700 dark:text-gray-100">Russell Day {year}</div>
             </div>
         </footer>
     );
