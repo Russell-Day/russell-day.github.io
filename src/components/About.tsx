@@ -14,12 +14,13 @@ const About = () => {
                 <div className="text-slate-700 dark:text-slate-200">
                     <h2 className="text-sm font-semibold tracking-wider mb-2 text-slate-600 dark:text-slate-400">WHO AM I</h2>
                     <p className="mb-6">
-                        I am currently a sophomore at the University of Michigan
-                        in the honors college of LSA studying data science on a
-                        premedical track. I have interests in the intersections
-                        of data science and medicine, specifically surrounding
-                        AI/ML and how they can be used to improve patient
-                        outcomes, physician workflow, and predictive analytics.
+                        I am currently a Junior at the University of Michigan
+                        in the honors college of LSA with a major in data 
+                        science and a minor in business on a premedical track. 
+                        I have interests in the intersections of data science 
+                        and medicine, specifically surrounding AI/ML and how 
+                        they can be used to improve patient outcomes, physician 
+                        workflow, and predictive analytics.
                     </p>
                     <h2 className="text-sm font-semibold tracking-wider mb-2 text-slate-600 dark:text-slate-400">INTERESTS</h2>
                     <ul className="mb-6 list-disc list-inside">
@@ -31,7 +32,7 @@ const About = () => {
                     </ul>
                     <h2 className="text-sm font-semibold tracking-wider mb-2 text-slate-600 dark:text-slate-400">FUN</h2>
                     <p>
-                        If I am not coding or studying organic chemistry, you'll
+                        If I am not coding or studying for p chem, you'll
                         find me cooking! Ask me about my favorite recipes.
                     </p>
                 </div>
