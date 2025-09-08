@@ -1,0 +1,351 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  	extbf{\Huge \scshape Russell Day} \\ \vspace{1pt}
+  \small \href{mailto:russday@umich.edu}{\underline{russday@umich.edu}} $|$ 
+  \href{https://linkedin.com/in/russell-day}{\underline{linkedin.com/in/russell-day}} $|$
+  \href{https://russell-day.github.io}{\underline{russell-day.github.io}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Major: Data Science, Minor: Business, GPA: 3.93/4.00}{Aug. 2023 -- Present}
+    \resumeSubheading
+      {Cranbrook Schools}{Bloomfield Hills, MI}
+      {High School Diploma, Weighted GPA: 4.1}{Sep. 2019 -- Jun. 2023}
+  \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Research Assistant}{Dec. 2024 -- Present}
+      {CAD-AI Lab $\cdot$ Michigan Medicine Radiology}{Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Working in a computational radiology lab}
+        \resumeItem{Finetuning LLMs to specific clinical use cases to comply with HIPAA and computational limitations}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant Volunteer}{Sep. 2021 -- Present}
+      {Department of Orthopedics and Neurosurgery $\cdot$ Henry Ford Health}{Detroit, MI}
+      \resumeItemListStart
+        \resumeItem{Worked on topics in Gender Diversity in Orthopedic Medicine, Value-Based Healthcare, and utilizing LLMs for systematic reviews}
+        \resumeItem{Participated in literature review, data collection, analysis, and coding}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{Sep. 2023 -- Dec. 2024}
+      {Aton Lab $\cdot$ University of Michigan}{Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Topic: Effect of sleep on memory consolidation}
+        \resumeItem{Working in a wet lab with mice, collecting and analyzing data}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {ML Intern -- Business Intelligence}{Aug. 2025 -- Present}
+      {Trinity Health}{Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Working to utilize ML and LLMs to help audit and prevent incorrect billing of primary care patients}
+        \resumeItem{Specifically looking at CPT codes in 992XX and the add on code G2211 (\textasciitilde\$20,000,000)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LLM Intern}{May 2024 -- Aug. 2024}
+      {Protera Health}{Troy, MI}
+      \resumeItemListStart
+        \resumeItem{Worked with LLMs to analyze, collect, and clean data for various purposes}
+        \resumeItem{Coded primarily in Python and integrated Google Search API to create programs to scrape the web for relevant information}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analyst}{May 2023 -- Aug. 2023}
+      {Protera Health}{Troy, MI}
+      \resumeItemListStart
+        \resumeItem{Media Editor: edited media including demonstration of exercises, educational content, and nutritional subjects for online platform}
+        \resumeItem{Data Processor: collected, maintained, and coded (VBA) excel sheets with data}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------STUDENT ORGANIZATIONS-----------
+\section{Student Organizations \& Projects}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+          {Vice President of Education}{Apr. 2025 -- Present}
+          {Michigan Data Science Team}{Ann Arbor, MI}
+          \resumeItemListStart
+            \resumeItem{Leading the education committee which supervises all of MDST's onboarding and educational initiatives}
+          \resumeItemListEnd
+      
+      \resumeSubSubheading
+          {Education Team Member}{Dec. 2024 -- Apr. 2025}
+          \resumeItemListStart
+            \resumeItem{Creating internal tools integrating LLMs with memory to respond to emails. The problem being solved is not emails are able to be answered due to the sheer volume}
+            \resumeItem{Built using Streamlit, Pydantic, Gmail API, and Groq API}
+          \resumeItemListEnd
+      
+      \resumeSubSubheading
+          {Project Lead, Breast Cancer Classification using CV}{Dec. 2024 -- Apr. 2025}
+          \resumeItemListStart
+            \resumeItem{Leading a team of 20+ students and teaching them to use CV to classify images in BreakHis}
+          \resumeItemListEnd
+      
+      \resumeSubSubheading
+          {Project Member, LLM Augmentation}{Aug. 2024 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Built CourseCompanion winning second in popular vote at the MDST W24 showcase utilizing LLMs, Canvas, Google Calendar, Langchain, and Streamlit}
+          \resumeItemListEnd
+      
+      \resumeSubSubheading
+          {Consulting Data Analyst for Michigan Medicine}{Aug. 2024 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Worked with the UM School of Medicine to clean, analyze, and pipeline faculty career data using Python/Pandas, SQL, and Tableau}
+          \resumeItemListEnd
+
+      \resumeSubheading
+          {Vice President of Technology}{Dec. 2024 -- Present}
+          {Blueprints For Pangaea}{Ann Arbor, MI}
+          \resumeItemListStart
+            \resumeItem{Leading and spearheading Blueprints tech team}
+            \resumeItem{Creating SOPs to define and structure our current process}
+            \resumeItem{Currently focused on creating internal tools to increase productivity of our teams by \textasciitilde 50\%}
+          \resumeItemListEnd
+      
+      \resumeSubSubheading
+          {Analyst}{May 2024 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Began development of an app integrating LLMs, OCRs, and Google Sheets to create a cleaner data pipeline for our inventorying process for a much smoother inventorying experience and usable data}
+          \resumeItemListEnd
+      
+      \resumeSubSubheading
+          {Intern}{Jan. 2024 -- May 2024}
+          \resumeItemListStart
+            \resumeItem{Facilitated partnership between the club and a non-profit organization for a shipment of medical supplies}
+            \resumeItem{Helped develop a comprehensive guide to better their understanding of the club's mission and operations}
+            \resumeItem{Cleaned and organized data to improve inventory efficiency for the app design team}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications \& Presentations}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Publications}{}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Meadows, A. M., Skinner, M. M., Hazime, A. A., Day, R. G., Fore, J. A., \& Day, C. S. (2023). Racial, Ethnic, and Sex Diversity in Academic Medical Leadership. \emph{JAMA Network Open}, 6(9), e2335529.}
+        \resumeItem{Meadows, A. M., Skinner, M. M., Faraj, M. T., Hazime, A. A., Day, R. G., Fore, J. A., \& Day, C. S. (2022). Racial, Ethnic, and Gender Diversity in Academic Orthopaedic Surgery Leadership. \emph{JBJS}, 104(13), 1157-1165.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Podium Presentations}{}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Day, R. G., Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Alva, A. S., Bruno, G., Zhou, C., Gulani, V. (2025). Performance Evaluation of a Fine Tuned Smaller Large Language Model (LLM) for Extracting Clinical Predictors of 5 Year Survival in Bladder Cancer Patients Post Cystectomy. \emph{RSNA Annual Conference}, Chicago, IL.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Poster Presentations}{}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Day, R.G., Dunaway, C., Chen, Z., Gudi, M., Day, C.S. (2025). Leveraging Artificial Intelligence Models to Streamline Systematic Reviews in Hand Surgery. \emph{AAHS Annual Conference}, Waikoloa, HI.}
+        \resumeItem{McDonald, K.O., Prabhu, A.S., Day, R.G., Aton, S.J. (2024). Chemogenetic Silencing of Dentate Gyrus Granule Cells During Memory Consolidation May Disrupt Contextual Fear Memory. \emph{MIP Annual Research Symposium}, Ann Arbor, MI.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Panels \& Moderation}{}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Panelist, "Artificial Intelligence in Orthopaedic Surgery Education," AOA/CORD Summer Conference; 2025 June 21; St. Louis, MO, USA}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------AWARDS-----------
+\section{Honors \& Awards}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Academic \& Competition Honors}{}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Dean's List and Honor Roll all eligible semesters at Cranbrook Schools}
+        \resumeItem{2nd Best MDST Project -- CourseCompanion used Canvas API, OpenAI API, and GCal to schedule workdays using relevant information (November 2024)}
+        \resumeItem{3rd Best Financial "Hack" according to Capital One for MHacks 16 -- Used Hugging Faces NLP sentiment analysis model to make trading decisions (November 2023)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATIONS-----------
+\section{Licenses \& Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Google Data Analytics Specialization}{}
+      {Credential ID: JYN5R3LGHPSX}{Jul. 2024}
+    \resumeSubheading
+      {Web Design for Everybody}{}
+      {Credential ID: B3VZFMXKAQYR}{Jun. 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------VOLUNTEER EXPERIENCE-----------
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Volunteer}{Jan. 2025 -- Present}
+      {Crisis Text Line}{Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Providing crisis support and mental health resources to individuals in need}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Volunteer}{Jan. 2024 -- Present}
+      {Kidney Disease Screening and Awareness Program}{Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Participating in community health screening initiatives}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Volunteer}{July 2024, June 2022, March 2018}
+      {Breanna's House of Joy}{Chiang Mai, Thailand}
+      \resumeItemListStart
+        \resumeItem{Volunteered at children's home providing educational and recreational support}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, R, SQL, HTML, CSS, JavaScript, VBA} \\
+     \textbf{Frameworks \& Tools}{: LLM Integration, Streamlit, Langchain, Pandas, NumPy, Matplotlib, Canvas API, Google APIs, OCR, Pydantic, Gmail API, Groq API} \\
+     \textbf{Data Analysis}{: Data Cleaning/Analysis, Machine Learning, Statistical Analysis, Tableau, Google Sheets} \\
+     \textbf{Specializations}{: Large Language Models, Computer Vision, Natural Language Processing, Clinical Data Analysis}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

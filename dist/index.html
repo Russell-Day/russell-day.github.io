@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-bg-light text-gray-900">
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/assets/icon-mIfxGE7T.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="light dark" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Russell Day</title>
-      <script type="module" crossorigin src="/assets/index-Ck1Vlguh.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/index-CRFAfU1J.css">
+        <script>
+            // Initialize theme: respect saved preference or system
+            (function() {
+                try {
+                    const stored = localStorage.getItem('theme');
+                    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    const isDark = stored ? stored === 'dark' : systemPrefersDark;
+                    document.documentElement.classList.toggle('dark', isDark);
+                    document.documentElement.classList.toggle('bg-bg-dark', isDark);
+                    document.documentElement.classList.toggle('bg-bg-light', !isDark);
+                } catch(_) {}
+            })();
+        </script>
+      <script type="module" crossorigin src="/assets/index-CVQ6TgP4.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-C8jLaxcP.css">
     </head>
-    <body>
+    <body class="min-h-screen antialiased">
         <div id="root"></div>
     </body>
 </html>
