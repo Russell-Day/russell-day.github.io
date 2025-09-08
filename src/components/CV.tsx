@@ -32,12 +32,12 @@ const CV = () => {
                         <span className="mx-2">•</span>
                         <a href="https://russell-day.github.io" target="_blank" className="underline">russell-day.github.io</a>
                     </div>
-                    <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Sanitized for web: phone and home address intentionally omitted.</p>
+                    
                 </header>
 
                 <div className="space-y-8">
                     <Section title="Education">
-                        <Row left="University of Michigan" right="Aug 2023 – Present" sub="Major: Data Science, Minor: Business (GPA: ~3.9) • Ann Arbor, MI" />
+                        <Row left="University of Michigan" right="Aug 2023 – Present" sub="Major: Data Science, Minor: Business (GPA: 3.90) • Ann Arbor, MI" />
                     </Section>
 
                     <Section title="Experience">
@@ -82,17 +82,49 @@ const CV = () => {
                     </Section>
 
                     <Section title="Publications & Presentations">
-                        <ul className="space-y-1">
-                            <Bullet>JAMA Network Open (2023) — Racial, Ethnic, and Sex Diversity in Academic Medical Leadership.</Bullet>
-                            <Bullet>JBJS (2022) — Racial, Ethnic, and Gender Diversity in Academic Orthopaedic Surgery Leadership.</Bullet>
-                            <Bullet>Poster: AAHS 2025 — Leveraging AI Models to Streamline Systematic Reviews in Hand Surgery.</Bullet>
-                            <Bullet>Podium: RSNA 2025 — Performance Evaluation of Fine-Tuned LLM for Clinical Predictors.</Bullet>
+                        <Row left="Publications" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet>Meadows, A. M., Skinner, M. M., Hazime, A. A., <strong>Day, R. G.</strong>, Fore, J. A., &amp; Day, C. S. (2023). Racial, Ethnic, and Sex Diversity in Academic Medical Leadership. <em>JAMA Network Open</em>, 6(9), e2335529.</Bullet>
+                            <Bullet>Meadows, A. M., Skinner, M. M., Faraj, M. T., Hazime, A. A., <strong>Day, R. G.</strong>, Fore, J. A., &amp; Day, C. S. (2022). Racial, Ethnic, and Gender Diversity in Academic Orthopaedic Surgery Leadership. <em>JBJS</em>, 104(13), 1157-1165.</Bullet>
+                        </ul>
+
+                        <Row left="Podium Presentations" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet><strong>Day, R. G.</strong>, Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Alva, A. S., Bruno, G., Zhou, C., &amp; Gulani, V. (2025). Performance Evaluation of a Fine Tuned Smaller Large Language Model (LLM) for Extracting Clinical Predictors of 5 Year Survival in Bladder Cancer Patients Post Cystectomy. <em>RSNA Annual Conference</em>, Chicago, IL.</Bullet>
+                        </ul>
+
+                        <Row left="Poster Presentations" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet><strong>Day, R. G.</strong>, Dunaway, C., Chen, Z., Gudi, M., &amp; Day, C. S. (2025). Leveraging Artificial Intelligence Models to Streamline Systematic Reviews in Hand Surgery. <em>AAHS Annual Conference</em>, Waikoloa, HI.</Bullet>
+                            <Bullet>McDonald, K. O., Prabhu, A. S., <strong>Day, R. G.</strong>, &amp; Aton, S. J. (2024). Chemogenetic Silencing of Dentate Gyrus Granule Cells During Memory Consolidation May Disrupt Contextual Fear Memory. <em>MIP Annual Research Symposium</em>, Ann Arbor, MI.</Bullet>
+                        </ul>
+
+                        <Row left="Panels &amp; Moderation" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet>Panelist, "Artificial Intelligence in Orthopaedic Surgery Education," AOA/CORD Summer Conference; 2025 June 21; St. Louis, MO, USA.</Bullet>
                         </ul>
                     </Section>
 
                     <Section title="Leadership">
                         <Row left="Vice President, Education — Michigan Data Science Team" right="May 2025 – Present" />
                         <Row left="Vice President, Technology — Blueprints for Pangaea" right="Dec 2024 – Present" />
+                    </Section>
+
+                    <Section title="Volunteer Experience">
+                        <Row left="Volunteer — Crisis Text Line" right="Jan 2025 – Present" sub="Ann Arbor, MI" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet>Provide crisis support and mental health resources to individuals in need.</Bullet>
+                        </ul>
+
+                        <Row left="Volunteer — Kidney Disease Screening and Awareness Program" right="Jan 2024 – Present" sub="Ann Arbor, MI" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet>Participate in community health screening initiatives.</Bullet>
+                        </ul>
+
+                        <Row left="Volunteer — Breanna's House of Joy" right="July 2024, June 2022, March 2018" sub="Chiang Mai, Thailand" />
+                        <ul className="mt-1 space-y-1">
+                            <Bullet>Volunteered at a children's home providing educational and recreational support.</Bullet>
+                        </ul>
                     </Section>
 
                     <Section title="Technical Skills">
