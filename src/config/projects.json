@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Streamlining Paper Selection",
+    "org": "Henry Ford Health",
+    "description": "Developed and validated a large language model pipeline to automate systematic review screening, achieving 96% accuracy across 3,800+ citations and reducing manual review time by an estimated 400+ hours.",
+    "imageKey": "systematic_review",
+    "link": "#",
+    "metric": "96%",
+    "metricLabel": "Accuracy",
+    "tags": ["llm integration", "python", "research", "clinical nlp"]
+  },
+  {
+    "title": "Inventory Management Case Study",
+    "org": "Blueprints for Pangaea",
+    "description": "Built a comprehensive inventory analytics dashboard for a nonprofit medical device organization, uncovering supply chain inefficiencies and informing redistribution strategy across partner sites.",
+    "imageKey": "blueprints",
+    "link": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
+    "metric": "12K+",
+    "metricLabel": "Items Tracked",
+    "tags": ["analytics", "streamlit", "dashboard", "operations"]
+  },
+  {
+    "title": "Population Health Leaders",
+    "org": "Protera Health",
+    "description": "Engineered an automated web scraping pipeline to identify and catalog population health decision-makers across U.S. hospital systems, building a structured database for targeted outreach.",
+    "imageKey": "pop_health",
+    "link": "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
+    "metric": "500+",
+    "metricLabel": "Leaders Identified",
+    "tags": ["web scraping", "python", "population health", "data pipeline"]
+  }
+]
