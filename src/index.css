@@ -41,9 +41,6 @@ html, body, #root {
 .d22-root *,
 .d22-root *::before,
 .d22-root *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -213,7 +210,8 @@ html, body, #root {
   transition: width 0.3s;
 }
 
-.d22-nav-links a:hover {
+.d22-nav-links a:hover,
+.d22-mobile-menu a:hover {
   color: var(--accent-primary);
 }
 
@@ -347,10 +345,6 @@ html, body, #root {
   transition: color 0.3s;
 }
 
-.d22-mobile-menu a:hover {
-  color: var(--accent-primary);
-}
-
 /* â”€â”€â”€ Hero â”€â”€â”€ */
 .d22-hero {
   min-height: 100vh;
@@ -452,21 +446,25 @@ html, body, #root {
   z-index: 2;
 }
 
-.d22-btn-primary {
+.d22-btn-primary,
+.d22-btn-secondary {
   font-family: var(--display);
   font-weight: 500;
   font-size: 0.9rem;
   padding: 0.75rem 1.8rem;
-  border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--gradient-end));
-  color: var(--btn-primary-text);
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.d22-btn-primary {
+  border: none;
+  background: linear-gradient(135deg, var(--accent-primary), var(--gradient-end));
+  color: var(--btn-primary-text);
 }
 
 .d22-btn-primary:hover {
@@ -475,20 +473,9 @@ html, body, #root {
 }
 
 .d22-btn-secondary {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: 0.9rem;
-  padding: 0.75rem 1.8rem;
   border: 1px solid var(--border-hover);
-  border-radius: 8px;
   background: transparent;
   color: var(--text);
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .d22-btn-secondary:hover {
@@ -645,7 +632,8 @@ html, body, #root {
   border-color: transparent;
 }
 
-.d22-project-card:hover::before {
+.d22-project-card:hover::before,
+.d22-leadership-card:hover::after {
   opacity: 1;
 }
 
@@ -1275,7 +1263,8 @@ html, body, #root {
   margin-bottom: 0.6rem;
 }
 
-.d22-timeline-desc {
+.d22-timeline-desc,
+.d22-leadership-desc {
   font-family: var(--body);
   font-size: 0.88rem;
   color: var(--text-muted);
@@ -1336,10 +1325,6 @@ html, body, #root {
   transform: translateY(-3px);
 }
 
-.d22-leadership-card:hover::after {
-  opacity: 1;
-}
-
 .d22-leadership-role {
   font-family: var(--display);
   font-weight: 600;
@@ -1353,13 +1338,6 @@ html, body, #root {
   font-size: 0.75rem;
   color: var(--accent-secondary);
   margin-bottom: 0.75rem;
-}
-
-.d22-leadership-desc {
-  font-family: var(--body);
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.7;
 }
 
 /* â”€â”€â”€ Contact â”€â”€â”€ */
@@ -1456,10 +1434,6 @@ html, body, #root {
     display: flex;
   }
 
-  .d22-about-grid {
-    grid-template-columns: 1fr;
-  }
-
   .d22-about-photo-wrap {
     max-width: 260px;
     margin: 0 auto;
@@ -1495,7 +1469,9 @@ html, body, #root {
     left: 1rem;
   }
 
-  .d22-projects-grid {
+  .d22-about-grid,
+  .d22-projects-grid,
+  .d22-leadership-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1503,10 +1479,6 @@ html, body, #root {
     min-height: auto;
     -webkit-line-clamp: 5;
     line-clamp: 5;
-  }
-
-  .d22-leadership-grid {
-    grid-template-columns: 1fr;
   }
 
   .d22-hero h1 {
