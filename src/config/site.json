@@ -142,6 +142,15 @@
       "description": "Directed data strategy and technology initiatives for a nonprofit focused on medical device redistribution."
     }
   ],
+  "agentDashboard": {
+    "hoverCards": {
+      "agent_name":{
+        "status_card": "",
+        "sentiment_card": "",
+        "activity_card": ""
+      }
+    }
+  },
   "contact": {
     "heading": "Let's Build Something Together",
     "subtitle": "Whether you have a research collaboration in mind, a data problem to solve, or just want to talk about healthcare AI - my inbox is always open.",
