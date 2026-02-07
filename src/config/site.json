@@ -1,0 +1,170 @@
+{
+  "brandName": "Russell Day",
+  "navCtaLabel": "Get in Touch",
+  "projectLinkLabel": "View Project",
+  "navLinks": [
+    { "label": "Work", "href": "#work" },
+    { "label": "About", "href": "#about" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "sectionHeaders": {
+    "work": {
+      "label": "SELECTED WORK",
+      "title": "Research & Projects",
+      "basePair": "A-T"
+    },
+    "about": {
+      "label": "BACKGROUND",
+      "title": "About Me",
+      "basePair": "C-G"
+    },
+    "experience": {
+      "label": "CAREER SEQUENCE",
+      "title": "Experience",
+      "basePair": "T-A"
+    },
+    "contact": {
+      "label": "SIGNAL",
+      "title": "Get in Touch",
+      "basePair": "G-C"
+    }
+  },
+  "hero": {
+    "overline": "Data Science & Medicine",
+    "firstName": "Russell",
+    "lastName": "Day",
+    "subtitle": "Bridging clinical medicine and machine intelligence to build healthcare AI systems that clinicians can trust.",
+    "primaryCta": { "label": "View Projects", "href": "#work" },
+    "secondaryCta": { "label": "Contact Me", "href": "#contact" },
+    "scrollLabel": "SCROLL"
+  },
+  "about": {
+    "photoAlt": "Russell Day",
+    "photoImageKey": "headshot",
+    "educationLabel": "Education",
+    "school": "University of Michigan",
+    "educationLines": [
+      "B.S. Data Science, Minor in Business",
+      "Premedical Track"
+    ],
+    "gpaDisplay": "GPA: 3.90",
+    "paragraphs": [
+      "I am a junior at the University of Michigan, pursuing a major in Data Science with a minor in Business, on a premedical track. My work sits at the intersection of clinical medicine and machine intelligence - I believe the most meaningful advances in healthcare will come from people who understand both the data and the patient.",
+      "My research centers on large language models for clinical applications, computer-aided detection in medical imaging, and the design of AI systems that clinicians can actually trust. I have contributed to publications in JAMA and the Journal of Bone and Joint Surgery.",
+      "Outside of research, I lead educational initiatives as VP of Education at the Michigan Data Science Team and direct technology strategy at Blueprints for Pangaea. When I am away from my laptop, you will find me perfecting my ramen broth, engineering smashburgers, or reverse-searing a steak."
+    ],
+    "quote": "The most meaningful advances in healthcare will come from people who understand both the data and the patient.",
+    "interestTags": [
+      "Healthcare AI",
+      "Clinical NLP",
+      "Medical Imaging",
+      "LLMs",
+      "Population Health",
+      "Data Visualization",
+      "Cooking"
+    ]
+  },
+  "metrics": [
+    {
+      "id": "gpa",
+      "target": 3.9,
+      "decimals": 2,
+      "duration": 2000,
+      "suffix": "",
+      "label": "GPA",
+      "subLabel": "University of Michigan"
+    },
+    {
+      "id": "publications",
+      "target": 2,
+      "decimals": 0,
+      "duration": 1500,
+      "suffix": "",
+      "label": "Publications",
+      "subLabel": "JAMA, JBJS"
+    },
+    {
+      "id": "accuracy",
+      "target": 96,
+      "decimals": 0,
+      "duration": 2000,
+      "suffix": "%",
+      "label": "LLM Accuracy",
+      "subLabel": "Systematic Review"
+    },
+    {
+      "id": "parameters",
+      "target": 3,
+      "decimals": 0,
+      "duration": 1800,
+      "suffix": "B",
+      "label": "Parameters",
+      "subLabel": "Model Scale"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Machine Learning Intern",
+      "org": "Trinity Health",
+      "period": "Summer 2025",
+      "description": "Applied machine learning to clinical and operational datasets within one of the nation's largest Catholic health systems."
+    },
+    {
+      "role": "Research Assistant",
+      "org": "CAD-AI Lab, University of Michigan",
+      "period": "2024 - Present",
+      "description": "Contributing to computer-aided detection and AI research under the Department of Radiology, developing models for medical imaging analysis."
+    },
+    {
+      "role": "Research Data Analyst",
+      "org": "Henry Ford Health",
+      "period": "2024",
+      "description": "Built LLM-powered pipelines for systematic review automation, culminating in publications in JAMA and JBJS."
+    },
+    {
+      "role": "Data Analyst",
+      "org": "Protera Health",
+      "period": "2023 - 2024",
+      "description": "Developed web scraping tools and data infrastructure to support population health engagement strategies."
+    }
+  ],
+  "leadershipTitle": "Leadership",
+  "leadership": [
+    {
+      "role": "VP of Education",
+      "org": "Michigan Data Science Team (MDST)",
+      "description": "Lead educational programming for one of the largest student data science organizations in the country."
+    },
+    {
+      "role": "VP of Technology",
+      "org": "Blueprints for Pangaea",
+      "description": "Directed data strategy and technology initiatives for a nonprofit focused on medical device redistribution."
+    }
+  ],
+  "contact": {
+    "heading": "Let's Build Something Together",
+    "subtitle": "Whether you have a research collaboration in mind, a data problem to solve, or just want to talk about healthcare AI - my inbox is always open.",
+    "links": [
+      {
+        "type": "email",
+        "href": "mailto:russday@umich.edu",
+        "label": "russday@umich.edu"
+      },
+      {
+        "type": "linkedin",
+        "href": "https://linkedin.com/in/russell-day",
+        "label": "linkedin.com/in/russell-day"
+      },
+      {
+        "type": "github",
+        "href": "https://github.com/Russell-Day",
+        "label": "Russell-Day"
+      }
+    ]
+  },
+  "footer": {
+    "accent": "Design 22",
+    "label": "Catalyst"
+  }
+}
