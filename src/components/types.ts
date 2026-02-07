@@ -80,6 +80,17 @@ export type FooterConfig = {
   label: string;
 };
 
+export type AgentHoverCardConfig = {
+  displayName: string;
+  persona: string;
+  location: string;
+  activity: string;
+};
+
+export type AgentDashboardConfig = {
+  hoverCards: Record<string, AgentHoverCardConfig>;
+};
+
 export type SiteConfig = {
   brandName: string;
   navCtaLabel: string;
@@ -97,6 +108,7 @@ export type SiteConfig = {
   experience: ExperienceItem[];
   leadershipTitle: string;
   leadership: LeadershipItem[];
+  agentDashboard: AgentDashboardConfig;
   contact: ContactConfig;
   footer: FooterConfig;
 };
