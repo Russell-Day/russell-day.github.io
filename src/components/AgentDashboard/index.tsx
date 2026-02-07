@@ -21,6 +21,12 @@ export default function AgentDashboardSection({ reveal }: AgentDashboardSectionP
             basePair: "A-G",
           }}
         />
+        <div className="d22-helpers-note" role="note" aria-live="polite">
+          <p className="d22-helpers-note-title">Helpers section is in progress.</p>
+          <p className="d22-helpers-note-body">
+            View helpers by hovering each agent on desktop, or using the helper cards below the map on mobile.
+          </p>
+        </div>
 
         <AgentDashboard />
       </div>

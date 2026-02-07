@@ -122,6 +122,15 @@ export type ProjectConfig = {
   metric: string;
   metricLabel: string;
   tags: string[];
+  detailSummary?: string;
+  detailBullets?: string[];
+  detailLinks?: {
+    label: string;
+    href: string;
+    description: string;
+  }[];
+  citation?: string;
+  citations?: string[];
 };
 
 export type Project = Omit<ProjectConfig, "imageKey"> & {

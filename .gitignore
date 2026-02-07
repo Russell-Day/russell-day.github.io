@@ -37,3 +37,6 @@ planning
 .agents
 .claude
 backend
+task_plan.md
+progress.md
+findings.md

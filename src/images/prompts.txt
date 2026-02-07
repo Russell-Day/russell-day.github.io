@@ -1,0 +1,52 @@
+systematic_review.png = """
+Create a realistic, high-detail medical AI research scene in a radiology reading room.
+Show a clinician-scientist at a workstation with anonymized bladder-cancer records, structured extraction tables, and subtle model confidence visualizations.
+Include monitors with clean UI overlays suggesting small-model LLM fine-tuning and clinical feature extraction.
+Visual tone: professional, trustworthy, research-grade, no brand logos, no readable patient data.
+Style: editorial photography + cinematic lighting, cool blue/teal palette, shallow depth of field.
+Composition: wide horizontal crop (16:10), space for text overlays in top-left and bottom-right corners.
+"""
+
+gaudmire.png = """
+Create a polished research-operations image for systematic review automation.
+Depict a transition from stacks of research papers to an intelligent digital triage dashboard with inclusion/exclusion columns and progress metrics.
+Convey speed and efficiency gains with visual cues like workflow arrows, sorted queues, and review checkpoints.
+Visual tone: academic, rigorous, modern, no logos or copyrighted UI.
+Style: high-end product visualization mixed with documentary realism, warm-neutral highlights with blue accents.
+Composition: wide horizontal crop (16:10), clear focal area in center-left.
+"""
+
+pop_health.png = """
+Create a medical imaging research visual for breast cancer subtype-first classification.
+Show pathology slide textures and AI attention maps/heatmaps on a multi-panel analytics display.
+Include subtle cues of hierarchical prediction (subtype first, then benign vs malignant) without adding literal text labels.
+Visual tone: scientific, precise, clinically grounded.
+Style: clean biomedical visualization with realistic monitor reflections, magenta/cyan accents over a neutral dark lab environment.
+Composition: wide horizontal crop (16:10), strong contrast and readable midground details.
+"""
+
+blueprints.png = """
+Create a nonprofit healthcare logistics technology scene for inventory automation.
+Show organized medical supplies in a warehouse/packing environment with barcode labels, sorted bins, and a tablet dashboard for automated naming/pricing workflows.
+Include subtle signals of measurable impact at scale (large inventory movement, efficient packing lines, global shipment context).
+Visual tone: mission-driven, operational, human-centered, no logos.
+Style: realistic documentary photography with polished commercial lighting, balanced warm/cool color grading.
+Composition: wide horizontal crop (16:10), clean foreground objects and depth in background.
+"""
+
+clinical_multimodal_survival.png = """
+Create a future-facing hospital AI research image combining multimodal data.
+Blend anonymized imaging panels, longitudinal clinical timeline cards, and predictive survival modeling dashboards in one cohesive workstation scene.
+Tone should communicate translational clinical AI, from research bench to bedside utility.
+Style: premium medical technology editorial, cool palette with soft highlights, high realism.
+Composition: wide horizontal crop (16:10), center focus with empty space for title text.
+"""
+
+research_lab_team_presentation.png = """
+Create a conference-style research presentation scene with a young research team presenting clinical AI findings.
+Show a poster session or podium environment with charts, imaging examples, and engaged attendees.
+Avoid specific conference logos or trademarked branding.
+Tone: high-impact, academic, professional, collaborative.
+Style: realistic event photography, natural skin tones, clean lighting, subtle depth of field.
+Composition: wide horizontal crop (16:10), speaker and display as primary focal points.
+"""

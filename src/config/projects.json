@@ -1,32 +1,112 @@
 [
   {
+    "title": "Fine-Tuning a 3B Clinical LLM",
+    "org": "CAD-AI Lab, Michigan Medicine Radiology",
+    "description": "Fine-tuned a compact 3B LLM for bladder-cancer clinical extraction, reaching 96% task accuracy in HIPAA-safe workflows.",
+    "imageKey": "systematic_review",
+    "link": "https://cattendee.abstractsonline.com/meeting/21232/presentation/3325",
+    "metric": "96%",
+    "metricLabel": "Task Accuracy",
+    "tags": ["clinical nlp", "lora", "conference", "podium presentation"],
+    "detailSummary": "This project focused on replacing costly larger-model extraction with a deployable 3B model while preserving strong performance for targeted clinical tasks.",
+    "detailBullets": [
+      "Achieved 96% extraction accuracy on targeted tasks compared with a 94% GPT-4 benchmark workflow.",
+      "Used LoRA fine-tuning for structured extraction of clinical predictors in post-cystectomy bladder-cancer records.",
+      "Connected extracted features to downstream five-year survival modeling with multimodal records (text plus imaging context)."
+    ],
+    "detailLinks": [
+      {
+        "label": "RSNA 2025 Podium Presentation",
+        "href": "https://cattendee.abstractsonline.com/meeting/21232/presentation/3325",
+        "description": "RSNA (Radiological Society of North America) hosts the largest global medical imaging meeting, with 50,000+ annual attendees across radiology, physics, and AI."
+      },
+      {
+        "label": "SPIE Medical Imaging 2026",
+        "href": "https://spie.org/medical-imaging/presentation/Lora-finetuning-of-a-small-3B-LLM-for-clinical-information/13930-14",
+        "description": "SPIE Medical Imaging is a leading technical conference for imaging science and AI translation in radiology and clinical workflows."
+      }
+    ],
+    "citations": [
+      "Day, R. G., Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Alva, A. S., Bruno, G., Zhou, C., Gulani, V. (2025). Performance Evaluation of a Fine Tuned Smaller Large Language Model (LLM) for Extracting Clinical Predictors of 5 Year Survival in Bladder Cancer Patients Post Cystectomy. RSNA Annual Conference, Chicago, IL.",
+      "Day, R. G., et al. (2026). LoRA Fine-Tuning of a Small 3B LLM for Clinical Information Extraction and Five-Year Survival Prediction in Bladder Cancer. SPIE Medical Imaging, Vancouver, Canada."
+    ]
+  },
+  {
     "title": "Streamlining Paper Selection",
     "org": "Henry Ford Health",
-    "description": "Developed and validated a large language model pipeline to automate systematic review screening, achieving 96% accuracy across 3,800+ citations and reducing manual review time by an estimated 400+ hours.",
-    "imageKey": "systematic_review",
-    "link": "#",
-    "metric": "96%",
-    "metricLabel": "Accuracy",
-    "tags": ["llm integration", "python", "research", "clinical nlp"]
+    "description": "Built an internal LLM review pipeline that reduced screening time by 60% across 3,200+ articles while preserving auditable inclusion and exclusion decisions.",
+    "imageKey": "gaudmire",
+    "link": "/docs/streamling_systematic_reviews_AAHS.pdf",
+    "metric": "60%",
+    "metricLabel": "Time Cut",
+    "tags": ["systematic review", "llm pipeline", "conference", "poster presentation"],
+    "detailSummary": "This workflow automated first-pass paper triage for systematic reviews and reduced manual burden while maintaining transparent decision logs.",
+    "detailBullets": [
+      "Screened over 3,200 literature records using model-guided inclusion and exclusion criteria.",
+      "Cut reviewer cycle time by roughly 60% on high-volume screening stages.",
+      "Maintained structured logs so reviewers could inspect model decisions and rapidly resolve borderline papers."
+    ],
+    "detailLinks": [
+      {
+        "label": "AAHS Poster PDF",
+        "href": "/docs/streamling_systematic_reviews_AAHS.pdf",
+        "description": "Direct poster PDF from the AAHS presentation on LLM-assisted screening for hand surgery systematic reviews."
+      }
+    ],
+    "citations": [
+      "Day, R.G., Dunaway, C., Chen, Z., Gudi, M., Day, C.S. (2025). Leveraging Artificial Intelligence Models to Streamline Systematic Reviews in Hand Surgery. Poster presentation, AAHS Annual Conference, Waikoloa, HI."
+    ]
   },
   {
-    "title": "Inventory Management Case Study",
-    "org": "Blueprints for Pangaea",
-    "description": "Built a comprehensive inventory analytics dashboard for a nonprofit medical device organization, uncovering supply chain inefficiencies and informing redistribution strategy across partner sites.",
-    "imageKey": "blueprints",
-    "link": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
-    "metric": "12K+",
-    "metricLabel": "Items Tracked",
-    "tags": ["analytics", "streamlit", "dashboard", "operations"]
-  },
-  {
-    "title": "Population Health Leaders",
-    "org": "Protera Health",
-    "description": "Engineered an automated web scraping pipeline to identify and catalog population health decision-makers across U.S. hospital systems, building a structured database for targeted outreach.",
+    "title": "Breast Cancer Detection (Subtype-First)",
+    "org": "Michigan Data Science Team",
+    "description": "Led a 10+ student team to train subtype-first ViT pipelines (subtype then benign or malignant), improving baseline performance by +23.7%.",
     "imageKey": "pop_health",
-    "link": "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
-    "metric": "500+",
-    "metricLabel": "Leaders Identified",
-    "tags": ["web scraping", "python", "population health", "data pipeline"]
+    "link": "/docs/comparing_machine_learning_models_for_classification.pdf",
+    "metric": "+23.7%",
+    "metricLabel": "Lift vs BoW",
+    "tags": ["computer vision", "vit", "breakhis", "medical imaging"],
+    "detailSummary": "The team restructured the objective into subtype-first classification before benign or malignant prediction, producing stronger downstream discrimination.",
+    "detailBullets": [
+      "Trained on BreakHis with subtype-aware objectives before final benign or malignant classification.",
+      "Improved bag-of-words baselines by +23.7% and CNN baselines by +11.2%.",
+      "Reached AUC 0.989 on the primary modeling track while coordinating implementation across a 10+ student team."
+    ],
+    "detailLinks": [
+      {
+        "label": "Project PDF",
+        "href": "/docs/comparing_machine_learning_models_for_classification.pdf",
+        "description": "Direct PDF summary for the subtype-first breast-cancer classification project."
+      }
+    ]
+  },
+  {
+    "title": "Blueprints for Pangaea Automation",
+    "org": "Blueprints for Pangaea",
+    "description": "Started and led technology initiatives that deployed automated pricing and image-naming workflows supporting $500K+ in medical supplies annually.",
+    "imageKey": "blueprints",
+    "link": "https://www.blueprintsforpangaea.org/",
+    "metric": "$500K+",
+    "metricLabel": "Supply Value",
+    "tags": ["apps script", "python", "openai agent sdk", "operations"],
+    "detailSummary": "Blueprints for Pangaea is a nonprofit network that redistributes surplus medical supplies to communities with limited access; this work focused on measurable operational lift.",
+    "detailBullets": [
+      "Supported internal tooling tied to approximately $500K in yearly inventory tracking and standardization workflows.",
+      "Organization impact is roughly $1M in redistributed supplies in 2025 and about $10M over its lifetime.",
+      "Implemented automation for product naming, pricing normalization, and image workflows using App Script, Python, OpenAI Agent SDK, and API integrations."
+    ],
+    "detailLinks": [
+      {
+        "label": "Blueprints for Pangaea",
+        "href": "https://www.blueprintsforpangaea.org/",
+        "description": "Blueprints for Pangaea connects surplus medical supply sources with global health partners to reduce waste and expand access to care."
+      },
+      {
+        "label": "Inventory Case Study",
+        "href": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
+        "description": "Case study showing inventory analysis and technology decisions used to improve redistribution operations."
+      }
+    ]
   }
 ]
+

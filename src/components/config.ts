@@ -1,6 +1,7 @@
 import siteData from "../config/site.json";
 import projectsData from "../config/projects.json";
 import blueprints from "../images/blueprints.png";
+import gaudmire from "../images/gaudmire.png";
 import headshot from "../images/headshot.jpg";
 import pop_health from "../images/pop_health.png";
 import systematic_review from "../images/systematic_review.png";
@@ -10,6 +11,7 @@ const projectImageMap: Record<string, string> = {
   systematic_review,
   blueprints,
   pop_health,
+  gaudmire,
 };
 
 const profileImageMap: Record<string, string> = {
