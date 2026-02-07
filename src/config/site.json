@@ -31,10 +31,10 @@
     }
   },
   "hero": {
-    "overline": "Data Science & Medicine",
+    "overline": "Clinical AI | Data Science | Medical Imaging",
     "firstName": "Russell",
     "lastName": "Day",
-    "subtitle": "Bridging clinical medicine and machine intelligence to build healthcare AI systems that clinicians can trust.",
+    "subtitle": "Building healthcare AI systems that are clinically grounded, measurable, and deployable in real workflows.",
     "primaryCta": { "label": "View Projects", "href": "#work" },
     "secondaryCta": { "label": "Contact Me", "href": "#contact" },
     "scrollLabel": "SCROLL"
@@ -48,112 +48,147 @@
       "B.S. Data Science, Minor in Business",
       "Premedical Track"
     ],
-    "gpaDisplay": "GPA: 3.90",
+    "gpaDisplay": "GPA: 3.895 / 4.000",
     "paragraphs": [
-      "I am a junior at the University of Michigan, pursuing a major in Data Science with a minor in Business, on a premedical track. My work sits at the intersection of clinical medicine and machine intelligence - I believe the most meaningful advances in healthcare will come from people who understand both the data and the patient.",
-      "My research centers on large language models for clinical applications, computer-aided detection in medical imaging, and the design of AI systems that clinicians can actually trust. I have contributed to publications in JAMA and the Journal of Bone and Joint Surgery.",
-      "Outside of research, I lead educational initiatives as VP of Education at the Michigan Data Science Team and direct technology strategy at Blueprints for Pangaea. When I am away from my laptop, you will find me perfecting my ramen broth, engineering smashburgers, or reverse-searing a steak."
+      "I am a Data Science student at the University of Michigan working at the intersection of machine learning, clinical medicine, and healthcare operations.",
+      "My current research focuses on small-model LLM fine-tuning for clinical information extraction and survival modeling in bladder cancer, alongside broader medical imaging and multimodal AI work.",
+      "I also lead educational and technology initiatives through the Michigan Data Science Team and Blueprints for Pangaea, where I build systems that move from prototype to day-to-day use."
     ],
-    "quote": "The most meaningful advances in healthcare will come from people who understand both the data and the patient.",
+    "quote": "The best healthcare AI is clinically useful, operationally practical, and rigorously measured.",
     "interestTags": [
-      "Healthcare AI",
       "Clinical NLP",
       "Medical Imaging",
-      "LLMs",
-      "Population Health",
-      "Data Visualization",
-      "Cooking"
+      "LLM Fine-Tuning",
+      "Multimodal AI",
+      "Healthcare Operations",
+      "Research Translation"
     ]
   },
   "metrics": [
     {
-      "id": "gpa",
-      "target": 3.9,
-      "decimals": 2,
-      "duration": 2000,
-      "suffix": "",
-      "label": "GPA",
-      "subLabel": "University of Michigan"
-    },
-    {
-      "id": "publications",
-      "target": 2,
-      "decimals": 0,
-      "duration": 1500,
-      "suffix": "",
-      "label": "Publications",
-      "subLabel": "JAMA, JBJS"
-    },
-    {
-      "id": "accuracy",
+      "id": "llm_accuracy",
       "target": 96,
       "decimals": 0,
       "duration": 2000,
       "suffix": "%",
       "label": "LLM Accuracy",
-      "subLabel": "Systematic Review"
+      "subLabel": "3B Clinical Fine-Tuning"
     },
     {
-      "id": "parameters",
-      "target": 3,
+      "id": "review_reduction",
+      "target": 60,
       "decimals": 0,
       "duration": 1800,
-      "suffix": "B",
-      "label": "Parameters",
-      "subLabel": "Model Scale"
+      "suffix": "%",
+      "label": "Review Time Reduced",
+      "subLabel": "Systematic Screening"
+    },
+    {
+      "id": "articles_processed",
+      "target": 3200,
+      "decimals": 0,
+      "duration": 2200,
+      "suffix": "+",
+      "label": "Articles Processed",
+      "subLabel": "LLM-Assisted Review"
+    },
+    {
+      "id": "supplies_value",
+      "target": 500,
+      "decimals": 0,
+      "duration": 1800,
+      "suffix": "K+",
+      "label": "Annual Supplies",
+      "subLabel": "Blueprints for Pangaea"
     }
   ],
   "experience": [
     {
+      "role": "Research Assistant",
+      "org": "CAD-AI Lab, Michigan Medicine Radiology",
+      "period": "Dec 2024 - Present",
+      "description": "Fine-tuning clinical LLMs and integrating multimodal data for bladder-cancer extraction and five-year survival modeling research."
+    },
+    {
       "role": "Machine Learning Intern",
       "org": "Trinity Health",
-      "period": "Summer 2025",
-      "description": "Applied machine learning to clinical and operational datasets within one of the nation's largest Catholic health systems."
+      "period": "Jan 2025 - Dec 2025",
+      "description": "Built ML and generative AI workflows for billing compliance and coding-risk analysis at scale across large primary-care revenue streams."
+    },
+    {
+      "role": "Research Assistant Volunteer",
+      "org": "Henry Ford Health (Orthopedics & Neurosurgery)",
+      "period": "Sep 2021 - Present",
+      "description": "Contributed to peer-reviewed diversity research and LLM-assisted systematic review workflows in clinical research settings."
     },
     {
       "role": "Research Assistant",
-      "org": "CAD-AI Lab, University of Michigan",
-      "period": "2024 - Present",
-      "description": "Contributing to computer-aided detection and AI research under the Department of Radiology, developing models for medical imaging analysis."
+      "org": "Aton Lab, University of Michigan",
+      "period": "Sep 2023 - Dec 2024",
+      "description": "Conducted wet-lab and analysis work on sleep and memory consolidation models, including data collection and experimental support."
     },
     {
-      "role": "Research Data Analyst",
-      "org": "Henry Ford Health",
-      "period": "2024",
-      "description": "Built LLM-powered pipelines for systematic review automation, culminating in publications in JAMA and JBJS."
+      "role": "AI Automation Engineering Intern",
+      "org": "Protera Health",
+      "period": "May 2024 - Aug 2024",
+      "description": "Built Python-based GenAI automation and ETL workflows for high-precision data collection and lead intelligence pipelines."
     },
     {
       "role": "Data Analyst",
       "org": "Protera Health",
-      "period": "2023 - 2024",
-      "description": "Developed web scraping tools and data infrastructure to support population health engagement strategies."
+      "period": "May 2023 - Aug 2023",
+      "description": "Managed media/data operations and VBA-supported processing workflows for health content and platform datasets."
     }
   ],
   "leadershipTitle": "Leadership",
   "leadership": [
     {
-      "role": "VP of Education",
-      "org": "Michigan Data Science Team (MDST)",
-      "description": "Lead educational programming for one of the largest student data science organizations in the country."
+      "role": "Vice President of Education (Apr 2025 - Present)",
+      "org": "Michigan Data Science Team",
+      "description": "Lead onboarding and education initiatives, including technical workshops on Python, Git, and data visualization."
     },
     {
-      "role": "VP of Technology",
+      "role": "Vice President of Technology (Dec 2024 - Present)",
       "org": "Blueprints for Pangaea",
-      "description": "Directed data strategy and technology initiatives for a nonprofit focused on medical device redistribution."
+      "description": "Built the inaugural technology function, defining product direction, SOPs, and rollout strategy across chapter operations."
+    },
+    {
+      "role": "Project Lead, Breast Cancer Classification (Dec 2024 - Apr 2025)",
+      "org": "Michigan Data Science Team",
+      "description": "Led a 10+ person team building subtype-aware vision models on BreakHis, improving baseline performance by +23.7%."
     }
   ],
   "agentDashboard": {
     "hoverCards": {
-      "agent_name":{
-        "status_card": "",
-        "sentiment_card": "",
-        "activity_card": ""
+      "main": {
+        "displayName": "Main Agent",
+        "persona": "Orchestrator",
+        "location": "Server Room",
+        "activity": "Coordinating nightly batch"
+      },
+      "canvas": {
+        "displayName": "Canvas Agent",
+        "persona": "Studious",
+        "location": "Research Lab",
+        "activity": "Reviewing assignment deadlines"
+      },
+      "calendar": {
+        "displayName": "Calendar Agent",
+        "persona": "Organized",
+        "location": "Lounge",
+        "activity": "Last sync: 12 events processed"
+      },
+      "gmail": {
+        "displayName": "Gmail Agent",
+        "persona": "Restless",
+        "location": "Comms Center",
+        "activity": "Triaging inbox - 47 unread"
       }
     }
   },
   "contact": {
     "heading": "Let's Build Something Together",
-    "subtitle": "Whether you have a research collaboration in mind, a data problem to solve, or just want to talk about healthcare AI - my inbox is always open.",
+    "subtitle": "For research collaborations, healthcare AI projects, or technical consulting, reach out directly.",
     "links": [
       {
         "type": "email",
@@ -174,6 +209,6 @@
   },
   "footer": {
     "accent": "Russell Day",
-    "label": "February 2026"
+    "label": "Updated February 2026"
   }
 }

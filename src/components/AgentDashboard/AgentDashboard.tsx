@@ -5,6 +5,7 @@
  * Agents walk to their room when running, idle in the lounge when not.
  */
 import { useState } from "react";
+import { siteConfig } from "../config";
 import {
   agents,
   activityLog,
@@ -25,9 +26,9 @@ const agentRoom: Record<string, string> = {
 
 const roomMeta: Record<string, { label: string; x: number; y: number; w: number; h: number }> = {
   server:  { label: "Server Room",   x: 2,  y: 2,  w: 33, h: 42 },
-  lab:     { label: "Research Lab",   x: 65, y: 2,  w: 33, h: 42 },
+  lab:     { label: "Research Lab",   x: 64, y: 2,  w: 35, h: 42 },
   office:  { label: "Admin Office",   x: 2,  y: 56, w: 33, h: 42 },
-  comms:   { label: "Comms Center",   x: 65, y: 56, w: 33, h: 42 },
+  comms:   { label: "Comms Center",   x: 64, y: 56, w: 35, h: 42 },
   lounge:  { label: "Lounge",         x: 37, y: 30, w: 26, h: 40 },
 };
 
@@ -141,18 +142,18 @@ function ServerRoomFurniture() {
       {/* Server racks */}
       {[0, 1, 2].map((i) => (
         <g key={i} transform={`translate(${8 + i * 22}, 8)`}>
-          <rect x="0" y="0" width="16" height="55" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+          <rect x="0" y="0" width="16" height="55" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
           {[0, 1, 2, 3, 4, 5, 6, 7].map((j) => (
             <g key={j}>
-              <rect x="2" y={3 + j * 6.5} width="12" height="4.5" rx="0.5" fill="var(--accent-primary-dim)" />
-              <circle cx={12} cy={5 + j * 6.5} r="1" className="d22-lab-server-led"
+              <rect x="2" y={3 + j * 6.5} width="12" height="4.5" rx="0.5" fill="var(--accent-primary)" opacity="0.22" />
+              <circle cx={12} cy={5 + j * 6.5} r="1.2" className="d22-lab-server-led"
                 style={{ animationDelay: `${(i * 8 + j) * 0.15}s` }} />
             </g>
           ))}
         </g>
       ))}
       {/* Cable tray */}
-      <line x1="4" y1="68" x2="70" y2="68" stroke="var(--accent-primary)" strokeWidth="0.5" opacity="0.15" />
+      <line x1="4" y1="68" x2="70" y2="68" stroke="var(--text-muted)" strokeWidth="0.8" opacity="0.35" />
     </g>
   );
 }
@@ -161,32 +162,32 @@ function ResearchLabFurniture() {
   return (
     <g className="d22-lab-furniture">
       {/* Lab bench */}
-      <rect x="6" y="10" width="60" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+      <rect x="6" y="10" width="60" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
       {/* Microscope */}
       <g transform="translate(12, 4)">
-        <rect x="0" y="6" width="8" height="2" rx="0.5" fill="var(--text-muted)" opacity="0.4" />
-        <rect x="2.5" y="0" width="3" height="8" rx="0.5" fill="var(--text-muted)" opacity="0.5" />
-        <rect x="1" y="0" width="6" height="2" rx="0.5" fill="var(--accent-primary)" opacity="0.3" />
-        <circle cx="4" cy="1" r="1.5" fill="var(--accent-primary)" opacity="0.2" />
+        <rect x="0" y="6" width="8" height="2" rx="0.5" fill="var(--text-muted)" opacity="0.7" />
+        <rect x="2.5" y="0" width="3" height="8" rx="0.5" fill="var(--text-muted)" opacity="0.65" />
+        <rect x="1" y="0" width="6" height="2" rx="0.5" fill="var(--accent-primary)" opacity="0.5" />
+        <circle cx="4" cy="1" r="1.5" fill="var(--accent-primary)" opacity="0.4" />
       </g>
       {/* Beakers */}
       {[0, 1, 2].map((i) => (
         <g key={i} transform={`translate(${30 + i * 12}, 4)`}>
-          <path d={`M1,8 L0,0 L6,0 L5,8 Z`} fill="none" stroke="var(--accent-primary)" strokeWidth="0.5" opacity="0.3" />
-          <rect x="0.5" y={4 - i} width="5" height={4 + i} rx="0.3" fill="var(--accent-primary)" opacity={0.08 + i * 0.04} />
-          <circle cx="3" cy={6 - i * 0.5} r="0.8" fill="var(--accent-primary)" opacity="0.15" className="d22-lab-bubble"
+          <path d={`M1,8 L0,0 L6,0 L5,8 Z`} fill="none" stroke="var(--accent-primary)" strokeWidth="0.7" opacity="0.55" />
+          <rect x="0.5" y={4 - i} width="5" height={4 + i} rx="0.3" fill="var(--accent-primary)" opacity={0.18 + i * 0.06} />
+          <circle cx="3" cy={6 - i * 0.5} r="0.8" fill="var(--accent-primary)" opacity="0.35" className="d22-lab-bubble"
             style={{ animationDelay: `${i * 0.7}s` }} />
         </g>
       ))}
       {/* Fume hood */}
-      <rect x="6" y="38" width="30" height="25" rx="2" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
-      <rect x="8" y="40" width="26" height="14" rx="1" fill="var(--accent-primary)" opacity="0.04" />
-      <text x="21" y="62" textAnchor="middle" fill="var(--text-muted)" fontSize="3" fontFamily="var(--mono)" opacity="0.2">FUME HOOD</text>
+      <rect x="6" y="38" width="30" height="25" rx="2" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
+      <rect x="8" y="40" width="26" height="14" rx="1" fill="var(--accent-primary)" opacity="0.1" />
+      <text x="21" y="62" textAnchor="middle" fill="var(--text-muted)" fontSize="3" fontFamily="var(--mono)" opacity="0.4">FUME HOOD</text>
       {/* Whiteboard */}
-      <rect x="42" y="38" width="24" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--accent-primary)" strokeWidth="0.3" opacity="0.3" />
-      <line x1="44" y1="43" x2="58" y2="43" stroke="var(--accent-primary)" strokeWidth="0.4" opacity="0.15" />
-      <line x1="44" y1="47" x2="54" y2="47" stroke="var(--accent-secondary)" strokeWidth="0.4" opacity="0.12" />
-      <line x1="44" y1="51" x2="62" y2="51" stroke="var(--accent-primary)" strokeWidth="0.4" opacity="0.1" />
+      <rect x="42" y="38" width="24" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.6" />
+      <line x1="44" y1="43" x2="58" y2="43" stroke="var(--accent-primary)" strokeWidth="0.6" opacity="0.35" />
+      <line x1="44" y1="47" x2="54" y2="47" stroke="var(--accent-secondary)" strokeWidth="0.6" opacity="0.3" />
+      <line x1="44" y1="51" x2="62" y2="51" stroke="var(--accent-primary)" strokeWidth="0.6" opacity="0.25" />
     </g>
   );
 }
@@ -195,27 +196,27 @@ function AdminOfficeFurniture() {
   return (
     <g className="d22-lab-furniture">
       {/* Desk */}
-      <rect x="10" y="16" width="36" height="20" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+      <rect x="10" y="16" width="36" height="20" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
       {/* Monitor */}
-      <rect x="18" y="10" width="18" height="12" rx="1" fill="var(--accent-primary-dim)" stroke="var(--border)" strokeWidth="0.5" />
-      <rect x="24" y="22" width="6" height="3" rx="0.3" fill="var(--text-muted)" opacity="0.3" />
-      <rect x="20" y="12" width="14" height="8" rx="0.5" fill="var(--accent-primary)" opacity="0.06" />
+      <rect x="18" y="10" width="18" height="12" rx="1" fill="var(--accent-primary-dim)" stroke="var(--border)" strokeWidth="0.8" />
+      <rect x="24" y="22" width="6" height="3" rx="0.3" fill="var(--text-muted)" opacity="0.55" />
+      <rect x="20" y="12" width="14" height="8" rx="0.5" fill="var(--accent-primary)" opacity="0.15" />
       {/* Keyboard */}
-      <rect x="20" y="27" width="14" height="4" rx="0.5" fill="var(--text-muted)" opacity="0.2" />
+      <rect x="20" y="27" width="14" height="4" rx="0.5" fill="var(--text-muted)" opacity="0.45" />
       {/* Chair */}
-      <circle cx="28" cy="44" r="7" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.4" />
-      <circle cx="28" cy="44" r="4" fill="var(--accent-secondary)" opacity="0.08" />
+      <circle cx="28" cy="44" r="7" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.6" />
+      <circle cx="28" cy="44" r="4" fill="var(--accent-secondary)" opacity="0.2" />
       {/* Filing cabinet */}
-      <rect x="54" y="10" width="12" height="40" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+      <rect x="54" y="10" width="12" height="40" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
       {[0, 1, 2].map((i) => (
         <g key={i}>
-          <rect x="56" y={13 + i * 12} width="8" height="9" rx="0.5" fill="var(--accent-secondary-dim)" />
-          <rect x="59" y={16 + i * 12} width="2" height="1" rx="0.3" fill="var(--text-muted)" opacity="0.3" />
+          <rect x="56" y={13 + i * 12} width="8" height="9" rx="0.5" fill="var(--accent-secondary)" opacity="0.2" />
+          <rect x="59" y={16 + i * 12} width="2" height="1" rx="0.3" fill="var(--text-muted)" opacity="0.55" />
         </g>
       ))}
       {/* Plant */}
-      <circle cx="8" cy="56" r="4" fill="#22c55e" opacity="0.2" />
-      <rect x="6.5" y="56" width="3" height="6" rx="0.5" fill="#8B4513" opacity="0.3" />
+      <circle cx="8" cy="56" r="4" fill="#22c55e" opacity="0.45" />
+      <rect x="6.5" y="56" width="3" height="6" rx="0.5" fill="#8B4513" opacity="0.55" />
     </g>
   );
 }
@@ -226,33 +227,33 @@ function CommsCenterFurniture() {
       {/* Monitors array */}
       {[0, 1, 2].map((i) => (
         <rect key={i} x={6 + i * 22} y="8" width="18" height="12" rx="1"
-          fill="var(--accent-primary-dim)" stroke="var(--border)" strokeWidth="0.5" />
+          fill="var(--accent-primary-dim)" stroke="var(--border)" strokeWidth="0.8" />
       ))}
       {/* Screen glow content */}
       {[0, 1, 2].map((i) => (
         <g key={`content-${i}`}>
-          <rect x={8 + i * 22} y="10" width="14" height="2" rx="0.3" fill="var(--accent-primary)" opacity="0.08" />
-          <rect x={8 + i * 22} y="13" width="10" height="1.5" rx="0.3" fill="var(--accent-primary)" opacity="0.06" />
-          <rect x={8 + i * 22} y="16" width="12" height="1.5" rx="0.3" fill="var(--accent-secondary)" opacity="0.06" />
+          <rect x={8 + i * 22} y="10" width="14" height="2" rx="0.3" fill="var(--accent-primary)" opacity="0.2" />
+          <rect x={8 + i * 22} y="13" width="10" height="1.5" rx="0.3" fill="var(--accent-primary)" opacity="0.15" />
+          <rect x={8 + i * 22} y="16" width="12" height="1.5" rx="0.3" fill="var(--accent-secondary)" opacity="0.15" />
         </g>
       ))}
       {/* Desk */}
-      <rect x="4" y="22" width="64" height="14" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+      <rect x="4" y="22" width="64" height="14" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
       {/* Headset */}
       <g transform="translate(54, 24)">
-        <path d="M0,6 Q0,0 5,0 Q10,0 10,6" fill="none" stroke="var(--text-muted)" strokeWidth="1" opacity="0.3" />
-        <circle cx="0" cy="6" r="2" fill="var(--text-muted)" opacity="0.2" />
-        <circle cx="10" cy="6" r="2" fill="var(--text-muted)" opacity="0.2" />
+        <path d="M0,6 Q0,0 5,0 Q10,0 10,6" fill="none" stroke="var(--text-muted)" strokeWidth="1.2" opacity="0.6" />
+        <circle cx="0" cy="6" r="2" fill="var(--text-muted)" opacity="0.45" />
+        <circle cx="10" cy="6" r="2" fill="var(--text-muted)" opacity="0.45" />
       </g>
       {/* Signal wave display */}
-      <rect x="10" y="42" width="52" height="22" rx="2" fill="var(--bg-elevated)" stroke="var(--accent-primary)" strokeWidth="0.3" opacity="0.4" />
+      <rect x="10" y="42" width="52" height="22" rx="2" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.6" />
       <path d="M14,53 Q18,46 22,53 Q26,60 30,53 Q34,46 38,53 Q42,60 46,53 Q50,46 54,53 Q58,60 58,53"
-        fill="none" stroke="var(--accent-primary)" strokeWidth="0.8" opacity="0.2" className="d22-lab-wave" />
+        fill="none" stroke="var(--accent-primary)" strokeWidth="1" opacity="0.45" className="d22-lab-wave" />
       {/* Antenna */}
       <g transform="translate(62, 44)">
-        <line x1="3" y1="20" x2="3" y2="4" stroke="var(--text-muted)" strokeWidth="0.8" opacity="0.3" />
-        <circle cx="3" cy="3" r="2" fill="none" stroke="var(--accent-primary)" strokeWidth="0.5" opacity="0.2" className="d22-lab-antenna-pulse" />
-        <circle cx="3" cy="3" r="4" fill="none" stroke="var(--accent-primary)" strokeWidth="0.3" opacity="0.1" className="d22-lab-antenna-pulse" style={{ animationDelay: "0.5s" }} />
+        <line x1="3" y1="20" x2="3" y2="4" stroke="var(--text-muted)" strokeWidth="1" opacity="0.55" />
+        <circle cx="3" cy="3" r="2" fill="none" stroke="var(--accent-primary)" strokeWidth="0.6" opacity="0.4" className="d22-lab-antenna-pulse" />
+        <circle cx="3" cy="3" r="4" fill="none" stroke="var(--accent-primary)" strokeWidth="0.4" opacity="0.2" className="d22-lab-antenna-pulse" style={{ animationDelay: "0.5s" }} />
       </g>
     </g>
   );
@@ -262,30 +263,30 @@ function LoungeFurniture() {
   return (
     <g className="d22-lab-furniture">
       {/* Couch */}
-      <rect x="6" y="8" width="42" height="16" rx="3" fill="var(--accent-secondary)" opacity="0.12" stroke="var(--border)" strokeWidth="0.4" />
-      <rect x="8" y="10" width="12" height="12" rx="2" fill="var(--accent-secondary)" opacity="0.06" />
-      <rect x="34" y="10" width="12" height="12" rx="2" fill="var(--accent-secondary)" opacity="0.06" />
+      <rect x="6" y="8" width="42" height="16" rx="3" fill="var(--accent-secondary)" opacity="0.28" stroke="var(--border)" strokeWidth="0.6" />
+      <rect x="8" y="10" width="12" height="12" rx="2" fill="var(--accent-secondary)" opacity="0.15" />
+      <rect x="34" y="10" width="12" height="12" rx="2" fill="var(--accent-secondary)" opacity="0.15" />
       {/* Coffee table */}
-      <rect x="14" y="30" width="26" height="12" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.4" />
+      <rect x="14" y="30" width="26" height="12" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.6" />
       {/* Magazines on table */}
-      <rect x="16" y="32" width="6" height="4" rx="0.3" fill="var(--accent-primary)" opacity="0.08" transform="rotate(-5 19 34)" />
-      <rect x="24" y="33" width="5" height="3.5" rx="0.3" fill="var(--accent-secondary)" opacity="0.08" transform="rotate(8 26 35)" />
+      <rect x="16" y="32" width="6" height="4" rx="0.3" fill="var(--accent-primary)" opacity="0.22" transform="rotate(-5 19 34)" />
+      <rect x="24" y="33" width="5" height="3.5" rx="0.3" fill="var(--accent-secondary)" opacity="0.22" transform="rotate(8 26 35)" />
       {/* Plant */}
       <g transform="translate(44, 34)">
-        <rect x="0" y="5" width="7" height="9" rx="1" fill="#8B4513" opacity="0.25" />
-        <ellipse cx="3.5" cy="3" rx="6" ry="5" fill="#22c55e" opacity="0.18" />
-        <ellipse cx="5" cy="5" rx="4" ry="3" fill="#16a34a" opacity="0.12" />
+        <rect x="0" y="5" width="7" height="9" rx="1" fill="#8B4513" opacity="0.5" />
+        <ellipse cx="3.5" cy="3" rx="6" ry="5" fill="#22c55e" opacity="0.4" />
+        <ellipse cx="5" cy="5" rx="4" ry="3" fill="#16a34a" opacity="0.3" />
       </g>
       {/* Water cooler */}
       <g transform="translate(2, 50)">
-        <rect x="0" y="0" width="6" height="14" rx="0.5" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.3" />
-        <rect x="1" y="1" width="4" height="6" rx="0.5" fill="var(--accent-primary)" opacity="0.08" />
-        <circle cx="3" cy="3" r="0.8" fill="var(--accent-primary)" opacity="0.15" className="d22-lab-bubble" />
+        <rect x="0" y="0" width="6" height="14" rx="0.5" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+        <rect x="1" y="1" width="4" height="6" rx="0.5" fill="var(--accent-primary)" opacity="0.2" />
+        <circle cx="3" cy="3" r="0.8" fill="var(--accent-primary)" opacity="0.35" className="d22-lab-bubble" />
       </g>
       {/* Vending machine */}
-      <rect x="44" y="50" width="10" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.3" />
-      <rect x="45" y="52" width="8" height="5" rx="0.3" fill="var(--accent-primary)" opacity="0.04" />
-      <rect x="45" y="58" width="8" height="5" rx="0.3" fill="var(--accent-secondary)" opacity="0.04" />
+      <rect x="44" y="50" width="10" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.5" />
+      <rect x="45" y="52" width="8" height="5" rx="0.3" fill="var(--accent-primary)" opacity="0.15" />
+      <rect x="45" y="58" width="8" height="5" rx="0.3" fill="var(--accent-secondary)" opacity="0.15" />
     </g>
   );
 }
@@ -314,15 +315,7 @@ function Room({ id, meta }: { id: string; meta: typeof roomMeta[string] }) {
       <svg className="d22-lab-room-svg" viewBox="0 0 72 72" preserveAspectRatio="xMidYMid meet">
         {/* Floor */}
         <rect x="0" y="0" width="72" height="72" rx="3" fill="var(--bg-card)" stroke="var(--border)" strokeWidth="0.8" />
-        {/* Floor tile pattern */}
-        <g opacity="0.03">
-          {Array.from({ length: 6 }, (_, i) => (
-            <line key={`h${i}`} x1="0" y1={i * 12} x2="72" y2={i * 12} stroke="var(--text)" strokeWidth="0.5" />
-          ))}
-          {Array.from({ length: 6 }, (_, i) => (
-            <line key={`v${i}`} x1={i * 12} y1="0" x2={i * 12} y2="72" stroke="var(--text)" strokeWidth="0.5" />
-          ))}
-        </g>
+
         {Furniture && <Furniture />}
       </svg>
       <div className={`d22-lab-room-label ${id === "lounge" ? "d22-lab-room-label-lounge" : ""}`}>
@@ -342,17 +335,7 @@ function Corridors() {
       {/* Vertical corridors */}
       <rect x="35" y="15" width="4" height="57" fill="var(--bg-card)" opacity="0.4" />
       <rect x="61" y="15" width="4" height="57" fill="var(--bg-card)" opacity="0.4" />
-      {/* Center corridor dashes */}
-      <line x1="50" y1="2" x2="50" y2="98" stroke="var(--accent-primary)" strokeWidth="0.15" strokeDasharray="1 1.5" opacity="0.15" />
-      <line x1="2" y1="50" x2="98" y2="50" stroke="var(--accent-primary)" strokeWidth="0.15" strokeDasharray="1 1.5" opacity="0.15" />
-      {/* Door marks */}
-      {[
-        { x: 33, y: 16 }, { x: 63, y: 16 },
-        { x: 33, y: 69 }, { x: 63, y: 69 },
-        { x: 45, y: 44 }, { x: 45, y: 69 },
-      ].map((d, i) => (
-        <rect key={i} x={d.x} y={d.y} width="2" height="3" fill="var(--accent-primary)" opacity="0.08" rx="0.3" />
-      ))}
+
     </svg>
   );
 }
@@ -383,23 +366,65 @@ function FloorPlanHeader() {
 }
 
 /* ── Agent on floor plan ── */
+const hoverCards = siteConfig.agentDashboard.hoverCards;
+
 function AgentOnFloor({ agent }: { agent: AgentData }) {
   const isWorking = agent.status.agent_mode === "running";
   const room = agentRoom[agent.profile.slug] ?? "server";
+  const roomLabel = isWorking ? roomMeta[room]?.label ?? "Server Room" : "Lounge";
   const pos = isWorking
     ? workSpot[room]
     : loungeSpots[agent.profile.slug] ?? { x: 50, y: 50 };
   const color = modeColors[agent.status.agent_mode];
+  const configuredCard = hoverCards[agent.profile.slug];
+  const popupDirection = pos.y > 54 ? "d22-lab-hover-card-up" : "d22-lab-hover-card-down";
 
   return (
     <div
       className="d22-lab-agent"
+      tabIndex={0}
+      aria-label={`${agent.profile.display_name} status`}
       style={{
         left: `${pos.x}%`,
         top: `${pos.y}%`,
         transition: "left 1.2s cubic-bezier(0.25, 1, 0.5, 1), top 1.2s cubic-bezier(0.25, 1, 0.5, 1)",
       }}
     >
+      <div className={`d22-lab-hover-card ${popupDirection}`} style={{ ["--card-accent" as string]: color }}>
+        <div className="d22-lab-card d22-lab-card-popover">
+          <div className="d22-lab-card-top">
+            <span className="d22-lab-card-dot" style={{ background: color }} />
+            <span className="d22-lab-card-name">
+              {configuredCard?.displayName ?? agent.profile.display_name}
+            </span>
+            <span className="d22-lab-card-mode" style={{ color }}>
+              {agent.status.agent_mode}
+            </span>
+          </div>
+          <div className="d22-lab-card-persona">
+            {configuredCard?.persona ?? agent.profile.persona_description}
+          </div>
+          <div className="d22-lab-card-location">
+            <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M8 1C5 1 3 3.5 3 6c0 4 5 9 5 9s5-5 5-9c0-2.5-2-5-5-5z" />
+              <circle cx="8" cy="6" r="1.5" />
+            </svg>
+            {configuredCard?.location ?? roomLabel}
+          </div>
+          <div className="d22-lab-card-activity">
+            {configuredCard?.activity ?? agent.status.activity_label}
+          </div>
+          <div className="d22-lab-card-meta">
+            <span>{agent.status.sentiment}</span>
+            <span>
+              {agent.status.running_since
+                ? `${formatUptime(agent.status.running_since)} uptime`
+                : `${formatTimeAgo(agent.status.last_heartbeat)}`}
+            </span>
+            <span>{agent.profile.runs} runs</span>
+          </div>
+        </div>
+      </div>
       <div className="d22-lab-agent-pip" style={{ background: color, boxShadow: `0 0 6px ${color}60` }} />
       <LabSprite slug={agent.profile.slug} isWorking={isWorking} sentiment={agent.status.sentiment} />
       <div className="d22-lab-agent-tag">
@@ -410,9 +435,17 @@ function AgentOnFloor({ agent }: { agent: AgentData }) {
 }
 
 /* ── Status sidebar cards ── */
-function AgentStatusCards({ selected, onSelect }: { selected: string | null; onSelect: (id: string | null) => void }) {
+function AgentStatusCards({
+  selected,
+  onSelect,
+  className = "",
+}: {
+  selected: string | null;
+  onSelect: (id: string | null) => void;
+  className?: string;
+}) {
   return (
-    <div className="d22-lab-cards">
+    <div className={`d22-lab-cards ${className}`.trim()}>
       {agents.map((agent) => {
         const color = modeColors[agent.status.agent_mode];
         const isWorking = agent.status.agent_mode === "running";
@@ -465,21 +498,39 @@ function AgentStatusCards({ selected, onSelect }: { selected: string | null; onS
 function LabActivityLog() {
   return (
     <div className="d22-lab-log">
-      <div className="d22-lab-log-header">
-        <span className="d22-lab-log-pip" />
-        Lab Activity Feed
+      <div className="d22-lab-log-head">
+        <div className="d22-lab-log-header">
+          <span className="d22-lab-log-pip" />
+          Lab Activity Feed
+        </div>
+        <p className="d22-lab-log-subhead">Recent orchestration events</p>
       </div>
-      <div className="d22-lab-log-entries">
+      <div className="d22-lab-log-table">
+        <div className="d22-lab-log-row d22-lab-log-row-header">
+          <span className="d22-lab-log-col-time">When</span>
+          <span className="d22-lab-log-col-agent">Agent</span>
+          <span className="d22-lab-log-col-activity">Activity</span>
+        </div>
         {activityLog.map((entry, i) => {
           const agent = getAgentById(entry.agent_id);
           const color = modeColors[agent?.status.agent_mode ?? "offline"];
+          const agentLabel = agent?.profile.display_name ?? entry.agent_id;
           return (
-            <div className="d22-lab-log-entry" key={entry.log_id} style={{ animationDelay: `${i * 0.05}s` }}>
-              <span className="d22-lab-log-time">{formatTimeAgo(entry.logged_at)}</span>
-              <span className="d22-lab-log-agent" style={{ color }}>
-                {agent?.profile.slug}
+            <div className="d22-lab-log-row" key={entry.log_id} style={{ animationDelay: `${i * 0.04}s` }}>
+              <span className="d22-lab-log-col-time d22-lab-log-time">{formatTimeAgo(entry.logged_at)}</span>
+              <span className="d22-lab-log-col-agent">
+                <span
+                  className="d22-lab-log-agent"
+                  style={{
+                    color,
+                    borderColor: `${color}4d`,
+                    background: `${color}14`,
+                  }}
+                >
+                  {agentLabel}
+                </span>
               </span>
-              <span className="d22-lab-log-text">{entry.summary}</span>
+              <span className="d22-lab-log-col-activity">{entry.summary}</span>
             </div>
           );
         })}
@@ -504,12 +555,12 @@ export default function AgentDashboard() {
           {agents.map((agent) => (
             <AgentOnFloor key={agent.profile.agent_id} agent={agent} />
           ))}
-          <div className="d22-lab-emergency">
-            <span className="d22-lab-emergency-icon">+</span>
-            <span>EXIT</span>
-          </div>
         </div>
-        <AgentStatusCards selected={selected} onSelect={setSelected} />
+        <AgentStatusCards
+          selected={selected}
+          onSelect={setSelected}
+          className="d22-lab-cards-mobile"
+        />
       </div>
       <LabActivityLog />
     </div>
