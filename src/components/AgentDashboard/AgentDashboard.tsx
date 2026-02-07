@@ -138,7 +138,7 @@ function LabSprite({ slug, isWorking, sentiment }: { slug: string; isWorking: bo
 /* ── Room furniture (SVG inline) ── */
 function ServerRoomFurniture() {
   return (
-    <g className="d22-lab-furniture">
+    <g>
       {/* Server racks */}
       {[0, 1, 2].map((i) => (
         <g key={i} transform={`translate(${8 + i * 22}, 8)`}>
@@ -160,7 +160,7 @@ function ServerRoomFurniture() {
 
 function ResearchLabFurniture() {
   return (
-    <g className="d22-lab-furniture">
+    <g>
       {/* Lab bench */}
       <rect x="6" y="10" width="60" height="18" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
       {/* Microscope */}
@@ -194,7 +194,7 @@ function ResearchLabFurniture() {
 
 function AdminOfficeFurniture() {
   return (
-    <g className="d22-lab-furniture">
+    <g>
       {/* Desk */}
       <rect x="10" y="16" width="36" height="20" rx="1" fill="var(--bg-elevated)" stroke="var(--border)" strokeWidth="0.8" />
       {/* Monitor */}
@@ -223,7 +223,7 @@ function AdminOfficeFurniture() {
 
 function CommsCenterFurniture() {
   return (
-    <g className="d22-lab-furniture">
+    <g>
       {/* Monitors array */}
       {[0, 1, 2].map((i) => (
         <rect key={i} x={6 + i * 22} y="8" width="18" height="12" rx="1"
@@ -261,7 +261,7 @@ function CommsCenterFurniture() {
 
 function LoungeFurniture() {
   return (
-    <g className="d22-lab-furniture">
+    <g>
       {/* Couch */}
       <rect x="6" y="8" width="42" height="16" rx="3" fill="var(--accent-secondary)" opacity="0.28" stroke="var(--border)" strokeWidth="0.6" />
       <rect x="8" y="10" width="12" height="12" rx="2" fill="var(--accent-secondary)" opacity="0.15" />
