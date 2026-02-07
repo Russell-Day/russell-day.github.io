@@ -31,3 +31,9 @@ cv-current/**/*.synctex.gz
 cv-current/**/*.fdb_latexmk
 cv-current/**/*.fls
 cv-current/**/*.pdf
+
+.env
+planning
+.agents
+.claude
+backend
