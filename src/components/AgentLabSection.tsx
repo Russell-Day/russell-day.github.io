@@ -681,7 +681,7 @@ export default function AgentLabSection({ reveal }: { reveal: RevealState }) {
   return (
     <section id="agents" className="d22-section">
       <div ref={reveal.ref} className={`d22-reveal ${reveal.visible ? "visible" : ""}`}>
-        <SectionHeader config={{ label: "AGENT NETWORK", title: "Helpers", basePair: "A-G" }} />
+        <SectionHeader config={{ label: "AGENT NETWORK", title: "Helpers", evalTag: "swarm · online" }} />
         <div className="d22-helpers-note" role="note" aria-live="polite">
           <p className="d22-helpers-note-title">Helpers section is in progress.</p>
           <p className="d22-helpers-note-body">

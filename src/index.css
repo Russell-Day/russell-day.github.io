@@ -141,9 +141,22 @@ html, body, #root {
   gap: 0.55rem;
 }
 
-.d22-nav-logo-helix {
+.d22-nav-logo-mark {
   width: 24px;
   height: 24px;
+}
+
+.d22-logo-ring {
+  opacity: 0.5;
+  animation: d22-logo-ping 3.2s ease-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes d22-logo-ping {
+  0%, 55% { transform: scale(0.55); opacity: 0; }
+  70% { opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 0; }
 }
 
 .d22-nav-right {
@@ -385,6 +398,16 @@ html, body, #root {
   gap: 1rem;
 }
 
+.d22-magnetic {
+  transform: translate(var(--tx, 0px), var(--ty, 0px));
+  transition: transform 0.18s ease-out, box-shadow 0.3s, border-color 0.3s,
+              color 0.3s, background 0.3s;
+}
+
+.d22-magnetic:hover {
+  transform: translate(var(--tx, 0px), calc(var(--ty, 0px) - 2px));
+}
+
 .d22-btn-primary {
   font-family: var(--display);
   font-weight: 500;
@@ -459,8 +482,8 @@ html, body, #root {
   50% { opacity: 0.35; }
 }
 
-/* ─── Hero DNA (subtle, parallax) ─── */
-.d22-hero-dna {
+/* ─── Hero network (subtle, parallax) ─── */
+.d22-hero-net {
   position: absolute;
   top: 55%;
   right: 3%;
@@ -472,29 +495,44 @@ html, body, #root {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 
-.d22-root[data-theme="dark"] .d22-hero-dna {
+.d22-root[data-theme="dark"] .d22-hero-net {
+  opacity: 0.16;
+}
+
+.d22-root[data-theme="light"] .d22-hero-net {
   opacity: 0.14;
 }
 
-.d22-root[data-theme="light"] .d22-hero-dna {
-  opacity: 0.12;
+.d22-net-node {
+  animation: d22-node-pulse 4.2s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
-.d22-hero-strand {
-  animation: d22-strand-rotate 28s linear infinite;
-  transform-origin: center center;
+@keyframes d22-node-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.35); }
 }
 
-@keyframes d22-strand-rotate {
-  0% { transform: scaleX(1); }
-  25% { transform: scaleX(0.3); }
-  50% { transform: scaleX(-1); }
-  75% { transform: scaleX(0.3); }
-  100% { transform: scaleX(1); }
+.d22-net-label {
+  font-family: var(--mono);
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+.d22-net-signal {
+  stroke-dasharray: 6 14;
+  animation: d22-signal-flow 6.5s linear infinite;
+}
+
+@keyframes d22-signal-flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -200; }
 }
 
 @media (max-width: 900px) {
-  .d22-hero-dna {
+  .d22-hero-net {
     display: none;
   }
 }
@@ -531,8 +569,35 @@ html, body, #root {
   background: var(--accent-primary);
 }
 
-.d22-bp-tag {
-  display: none;
+.d22-eval-tag {
+  margin-left: auto;
+  color: var(--text-muted);
+  background: var(--accent-secondary-dim);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.28rem 0.6rem;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  border-right-color: var(--accent-primary);
+}
+
+.d22-reveal.visible .d22-eval-tag {
+  animation: d22-type calc(var(--n, 12) * 55ms) steps(var(--n, 12)) 0.45s forwards,
+             d22-caret 0.7s step-end 0.45s 6;
+}
+
+@keyframes d22-type {
+  from { max-width: 0; opacity: 1; }
+  to { max-width: calc(var(--n, 12) * 1ch + 1.4rem); opacity: 1; }
+}
+
+@keyframes d22-caret {
+  0%, 100% { border-right-color: var(--accent-primary); }
+  50% { border-right-color: transparent; }
 }
 
 .d22-section-title {
@@ -573,16 +638,56 @@ html, body, #root {
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.18s ease-out,
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   display: flex;
   flex-direction: column;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  animation: d22-card-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
 .d22-project-card:hover {
-  transform: translateY(-4px);
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))
+    translateY(-4px);
   border-color: var(--border-hover);
   box-shadow: var(--glow-primary);
+}
+
+@keyframes d22-card-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+}
+
+.d22-project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -1.8rem 0 2rem;
+}
+
+.d22-project-filter {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.d22-project-filter:hover {
+  color: var(--accent-primary);
+  border-color: var(--border-hover);
+}
+
+.d22-project-filter.active {
+  color: var(--btn-primary-text);
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .d22-project-card::after {
@@ -606,19 +711,34 @@ html, body, #root {
     transform: none;
     transition: none;
   }
-  .d22-hero-strand {
+  .d22-net-node,
+  .d22-net-signal,
+  .d22-logo-ring,
+  .d22-project-card {
     animation: none;
   }
-  .d22-hero-dna {
+  .d22-hero-net {
     transition: none;
   }
   .d22-hero-scroll-line {
     animation: none;
   }
+  .d22-project-card,
   .d22-project-card:hover,
+  .d22-magnetic,
+  .d22-magnetic:hover,
   .d22-leadership-card:hover,
   .d22-contact-link:hover,
   .d22-btn-primary:hover {
+    transform: none;
+  }
+  .d22-eval-tag,
+  .d22-reveal.visible .d22-eval-tag {
+    animation: none;
+    max-width: none;
+    opacity: 1;
+  }
+  .d22-timeline::after {
     transform: none;
   }
 }
@@ -931,6 +1051,19 @@ html, body, #root {
   background: var(--border);
 }
 
+.d22-timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-primary) 92%, transparent);
+  transform: scaleY(var(--tlp, 0));
+  transform-origin: top;
+  z-index: 1;
+}
+
 .d22-timeline-item {
   position: relative;
   width: 50%;
@@ -1207,7 +1340,8 @@ html, body, #root {
     padding-left: 2rem;
   }
 
-  .d22-timeline::before {
+  .d22-timeline::before,
+  .d22-timeline::after {
     left: 0.4rem;
   }
 

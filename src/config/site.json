@@ -3,31 +3,43 @@
   "navCtaLabel": "Get in Touch",
   "projectLinkLabel": "View Project",
   "navLinks": [
-    { "label": "Work", "href": "#work" },
-    { "label": "About", "href": "#about" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Contact", "href": "#contact" }
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
   ],
   "sectionHeaders": {
     "work": {
       "label": "SELECTED WORK",
       "title": "Research & Projects",
-      "basePair": "A-T"
+      "evalTag": "eval · 7/7 pass"
     },
     "about": {
       "label": "BACKGROUND",
       "title": "About Me",
-      "basePair": "C-G"
+      "evalTag": "hx · reviewed"
     },
     "experience": {
-      "label": "CAREER SEQUENCE",
+      "label": "TRAJECTORY",
       "title": "Experience",
-      "basePair": "T-A"
+      "evalTag": "rounds · in progress"
     },
     "contact": {
       "label": "SIGNAL",
       "title": "Get in Touch",
-      "basePair": "G-C"
+      "evalTag": "on call · paging ok"
     }
   },
   "hero": {
@@ -35,8 +47,14 @@
     "firstName": "Russell",
     "lastName": "Day",
     "subtitle": "Bridging clinical medicine and machine intelligence to build healthcare AI systems that clinicians can trust.",
-    "primaryCta": { "label": "View Projects", "href": "#work" },
-    "secondaryCta": { "label": "Contact Me", "href": "#contact" },
+    "primaryCta": {
+      "label": "View Projects",
+      "href": "#work"
+    },
+    "secondaryCta": {
+      "label": "Contact Me",
+      "href": "#contact"
+    },
     "scrollLabel": "SCROLL"
   },
   "about": {

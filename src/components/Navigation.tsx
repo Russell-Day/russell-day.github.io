@@ -1,4 +1,4 @@
-import { HelixLogo, MoonIcon, SunIcon } from "./icons";
+import { LogoMark, MoonIcon, SunIcon } from "./icons";
 import { type NavLink, type Theme } from "./types";
 
 type NavigationProps = {
@@ -28,7 +28,7 @@ export default function Navigation({
     <>
       <nav className={`d22-nav ${scrolled ? "scrolled" : ""}`}>
         <a href="#hero" className="d22-nav-logo" onClick={onCloseMenu}>
-          <HelixLogo theme={theme} />
+          <LogoMark theme={theme} />
           {brandName}
         </a>
 

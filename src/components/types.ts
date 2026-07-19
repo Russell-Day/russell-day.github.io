@@ -25,7 +25,7 @@ export type HeroConfig = {
 export type SectionHeaderConfig = {
   label: string;
   title: string;
-  basePair: string;
+  evalTag: string;
 };
 
 export type AboutConfig = {
