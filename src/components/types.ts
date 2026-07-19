@@ -101,6 +101,12 @@ export type SiteConfig = {
   footer: FooterConfig;
 };
 
+export type ProjectDetailLink = {
+  label: string;
+  href: string;
+  description: string;
+};
+
 export type ProjectConfig = {
   title: string;
   org: string;
@@ -110,6 +116,49 @@ export type ProjectConfig = {
   metric: string;
   metricLabel: string;
   tags: string[];
+  detailSummary?: string;
+  detailBullets?: string[];
+  detailLinks?: ProjectDetailLink[];
+  citations?: string[];
+};
+
+export type AgentMode = "running" | "idle" | "paused" | "offline";
+
+export type AgentSentiment =
+  | "focused"
+  | "busy"
+  | "curious"
+  | "satisfied"
+  | "overwhelmed"
+  | "bored"
+  | "resting";
+
+export type AgentProfile = {
+  agent_id: string;
+  slug: string;
+  display_name: string;
+  persona_description: string;
+  runs: number;
+};
+
+export type AgentStatus = {
+  agent_mode: AgentMode;
+  sentiment: AgentSentiment;
+  activity_label: string;
+  running_since: string | null;
+  last_heartbeat: string;
+};
+
+export type Agent = {
+  profile: AgentProfile;
+  status: AgentStatus;
+};
+
+export type AgentLogEntry = {
+  log_id: number;
+  agent_id: string;
+  summary: string;
+  logged_at: string;
 };
 
 export type Project = Omit<ProjectConfig, "imageKey"> & {

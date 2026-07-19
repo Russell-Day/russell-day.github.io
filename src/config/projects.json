@@ -1,13 +1,130 @@
 [
   {
+    "title": "Fine-Tuning a 3B Clinical LLM",
+    "org": "CAD-AI Lab, Michigan Medicine Radiology",
+    "description": "Fine-tuned a compact 3B LLM for bladder-cancer clinical extraction, reaching 96% task accuracy in HIPAA-safe workflows.",
+    "imageKey": "systematic_review",
+    "link": "https://cattendee.abstractsonline.com/meeting/21232/presentation/3325",
+    "metric": "96%",
+    "metricLabel": "Task Accuracy",
+    "tags": ["clinical nlp", "lora", "conference", "podium presentation"],
+    "detailSummary": "This project focused on replacing costly larger-model extraction with a deployable 3B model while preserving strong performance for targeted clinical tasks.",
+    "detailBullets": [
+      "Achieved 96% extraction accuracy on targeted tasks compared with a 94% GPT-4 benchmark workflow.",
+      "Used LoRA fine-tuning for structured extraction of clinical predictors in post-cystectomy bladder-cancer records.",
+      "Connected extracted features to downstream five-year survival modeling with multimodal records (text plus imaging context)."
+    ],
+    "detailLinks": [
+      {
+        "label": "RSNA 2025 Podium Presentation",
+        "href": "https://cattendee.abstractsonline.com/meeting/21232/presentation/3325",
+        "description": "RSNA (Radiological Society of North America) hosts the largest global medical imaging meeting, with 50,000+ annual attendees across radiology, physics, and AI."
+      },
+      {
+        "label": "SPIE Medical Imaging 2026",
+        "href": "https://spie.org/medical-imaging/presentation/Lora-finetuning-of-a-small-3B-LLM-for-clinical-information/13930-14",
+        "description": "SPIE Medical Imaging is a leading technical conference for imaging science and AI translation in radiology and clinical workflows."
+      }
+    ],
+    "citations": [
+      "Day, R. G., Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Alva, A. S., Bruno, G., Zhou, C., Gulani, V. (2025). Performance Evaluation of a Fine Tuned Smaller Large Language Model (LLM) for Extracting Clinical Predictors of 5 Year Survival in Bladder Cancer Patients Post Cystectomy. RSNA Annual Conference, Chicago, IL.",
+      "Day, R. G., et al. (2026). LoRA Fine-Tuning of a Small 3B LLM for Clinical Information Extraction and Five-Year Survival Prediction in Bladder Cancer. SPIE Medical Imaging, Vancouver, Canada."
+    ]
+  },
+  {
     "title": "Streamlining Paper Selection",
     "org": "Henry Ford Health",
-    "description": "Developed and validated a large language model pipeline to automate systematic review screening, achieving 96% accuracy across 3,800+ citations and reducing manual review time by an estimated 400+ hours.",
-    "imageKey": "systematic_review",
-    "link": "#",
-    "metric": "96%",
-    "metricLabel": "Accuracy",
-    "tags": ["llm integration", "python", "research", "clinical nlp"]
+    "description": "Built an internal LLM review pipeline that reduced screening time by 60% across 3,200+ articles while preserving auditable inclusion and exclusion decisions.",
+    "imageKey": "paper_selection",
+    "link": "/docs/streamling_systematic_reviews_AAHS.pdf",
+    "metric": "60%",
+    "metricLabel": "Time Cut",
+    "tags": ["systematic review", "llm pipeline", "conference", "poster presentation"],
+    "detailSummary": "This workflow automated first-pass paper triage for systematic reviews and reduced manual burden while maintaining transparent decision logs.",
+    "detailBullets": [
+      "Screened over 3,200 literature records using model-guided inclusion and exclusion criteria.",
+      "Cut reviewer cycle time by roughly 60% on high-volume screening stages.",
+      "Maintained structured logs so reviewers could inspect model decisions and rapidly resolve borderline papers."
+    ],
+    "detailLinks": [
+      {
+        "label": "AAHS Poster PDF",
+        "href": "/docs/streamling_systematic_reviews_AAHS.pdf",
+        "description": "Direct poster PDF from the AAHS presentation on LLM-assisted screening for hand surgery systematic reviews."
+      }
+    ],
+    "citations": [
+      "Day, R.G., Dunaway, C., Chen, Z., Gudi, M., Day, C.S. (2025). Leveraging Artificial Intelligence Models to Streamline Systematic Reviews in Hand Surgery. Poster presentation, AAHS Annual Conference, Waikoloa, HI."
+    ]
+  },
+  {
+    "title": "Breast Cancer Detection (Subtype-First)",
+    "org": "Michigan Data Science Team",
+    "description": "Led a 10+ student team to train subtype-first ViT pipelines (subtype then benign or malignant), improving baseline performance by +23.7%.",
+    "imageKey": "breast_cancer",
+    "link": "/docs/comparing_machine_learning_models_for_classification.pdf",
+    "metric": "+23.7%",
+    "metricLabel": "Lift vs BoW",
+    "tags": ["computer vision", "vit", "breakhis", "medical imaging"],
+    "detailSummary": "The team restructured the objective into subtype-first classification before benign or malignant prediction, producing stronger downstream discrimination.",
+    "detailBullets": [
+      "Trained on BreakHis with subtype-aware objectives before final benign or malignant classification.",
+      "Improved bag-of-words baselines by +23.7% and CNN baselines by +11.2%.",
+      "Reached AUC 0.989 on the primary modeling track while coordinating implementation across a 10+ student team."
+    ],
+    "detailLinks": [
+      {
+        "label": "Project PDF",
+        "href": "/docs/comparing_machine_learning_models_for_classification.pdf",
+        "description": "Direct PDF summary for the subtype-first breast-cancer classification project."
+      }
+    ]
+  },
+  {
+    "title": "Image-to-Item Identification",
+    "org": "Blueprints for Pangaea",
+    "description": "Built a computer vision pipeline that identifies donated medical supplies directly from photos, turning a shipping box snapshot into a structured item record and eliminating manual cataloging of incoming donations.",
+    "imageKey": "bfp_vision",
+    "link": "https://www.blueprintsforpangaea.org/",
+    "metric": "Photo → Record",
+    "metricLabel": "Automated Intake",
+    "tags": ["computer vision", "openai agent sdk", "python", "nonprofit"],
+    "detailSummary": "Blueprints for Pangaea is a nonprofit network that redistributes surplus medical supplies to communities with limited access; this work automated product naming from images across chapter operations.",
+    "detailBullets": [
+      "Implemented automated product naming from photos using Python, the OpenAI Agent SDK, and API integrations.",
+      "Turned donation-box snapshots into structured inventory records, removing manual cataloging from intake.",
+      "Supported internal tooling tied to approximately $500K in yearly inventory tracking and standardization workflows."
+    ],
+    "detailLinks": [
+      {
+        "label": "Blueprints for Pangaea",
+        "href": "https://www.blueprintsforpangaea.org/",
+        "description": "Blueprints for Pangaea connects surplus medical supply sources with global health partners to reduce waste and expand access to care."
+      }
+    ]
+  },
+  {
+    "title": "Automated Item Pricing",
+    "org": "Blueprints for Pangaea",
+    "description": "Developed an automated valuation system that looks up identified medical supplies by name across market sources to assign accurate fair-market pricing, standardizing how donation value is reported.",
+    "imageKey": "bfp_pricing",
+    "link": "https://www.blueprintsforpangaea.org/",
+    "metric": "$500K+",
+    "metricLabel": "Supply Value",
+    "tags": ["data pipeline", "apps script", "python", "operations"],
+    "detailSummary": "Accurate valuation is how the nonprofit reports impact to partners and donors; this system standardized pricing across everything the chapters redistribute.",
+    "detailBullets": [
+      "Automated pricing normalization by looking up identified items across market sources using Apps Script and Python.",
+      "Standardized fair-market valuation across roughly $500K in yearly tracked inventory.",
+      "Organization impact is roughly $1M in redistributed supplies in 2025 and about $10M over its lifetime."
+    ],
+    "detailLinks": [
+      {
+        "label": "Blueprints for Pangaea",
+        "href": "https://www.blueprintsforpangaea.org/",
+        "description": "Blueprints for Pangaea connects surplus medical supply sources with global health partners to reduce waste and expand access to care."
+      }
+    ]
   },
   {
     "title": "Inventory Management Case Study",
@@ -17,7 +134,15 @@
     "link": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
     "metric": "12K+",
     "metricLabel": "Items Tracked",
-    "tags": ["analytics", "streamlit", "dashboard", "operations"]
+    "tags": ["analytics", "streamlit", "dashboard", "operations"],
+    "detailSummary": "Case study showing inventory analysis and technology decisions used to improve redistribution operations.",
+    "detailLinks": [
+      {
+        "label": "Inventory Case Study",
+        "href": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
+        "description": "Case study showing inventory analysis and technology decisions used to improve redistribution operations."
+      }
+    ]
   },
   {
     "title": "Population Health Leaders",
@@ -27,6 +152,13 @@
     "link": "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
     "metric": "500+",
     "metricLabel": "Leaders Identified",
-    "tags": ["web scraping", "python", "population health", "data pipeline"]
+    "tags": ["web scraping", "python", "population health", "data pipeline"],
+    "detailLinks": [
+      {
+        "label": "Scraping Write-Up",
+        "href": "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
+        "description": "Project page for the population health leader scraping pipeline."
+      }
+    ]
   }
 ]
