@@ -42,25 +42,14 @@ export function MoonIcon() {
   );
 }
 
-export function LogoMark({ theme }: { theme: Theme }) {
-  const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
-  const secondary = theme === "dark" ? "#8b96a8" : "#64748b";
-
+export function LogoMark() {
   return (
-    <svg
+    <span
       className="d22-nav-logo-mark"
-      viewBox="0 0 28 28"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <path d="M4 10V7a3 3 0 0 1 3-3h3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M18 4h3a3 3 0 0 1 3 3v3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M24 18v3a3 3 0 0 1-3 3h-3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M10 24H7a3 3 0 0 1-3-3v-3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
-      <circle className="d22-logo-dot" cx="14" cy="14" r="2.6" fill={primary} />
-      <circle className="d22-logo-ring" cx="14" cy="14" r="6" stroke={primary} strokeWidth="1" fill="none" />
-    </svg>
+      RD
+    </span>
   );
 }
 
