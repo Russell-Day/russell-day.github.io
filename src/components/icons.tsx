@@ -64,29 +64,29 @@ export function LogoMark({ theme }: { theme: Theme }) {
   );
 }
 
-const netLayers = [3, 5, 5, 3];
-const netLayerY = [90, 270, 450, 630];
-const netSpacing = 85;
+type NetPoint = { x: number; y: number };
 
-type NetNode = { x: number; y: number; layer: number; index: number };
+// A compact view of the actual multimodal prediction pipeline: three feature
+// families are encoded independently, fused, and resolved into one outcome.
+const inputs = [
+  { label: "CLINICAL", detail: "language features", y: 160 },
+  { label: "RADIOMICS", detail: "quantitative imaging", y: 280 },
+  { label: "DEEP LEARNING", detail: "learned image features", y: 400 },
+];
 
-const netNodes: NetNode[] = netLayers.flatMap((count, layer) =>
-  Array.from({ length: count }, (_, index) => ({
-    x: 250 + (index - (count - 1) / 2) * netSpacing,
-    y: netLayerY[layer],
-    layer,
-    index,
-  }))
-);
+const encoderNodes: NetPoint[] = [130, 205, 280, 355, 430].map((y) => ({ x: 300, y }));
+const fusionNodes: NetPoint[] = [175, 245, 315, 385].map((y) => ({ x: 420, y }));
+const outputNode: NetPoint = { x: 535, y: 280 };
 
-const netEdges = netNodes.flatMap((from) =>
-  netNodes
-    .filter((to) => to.layer === from.layer + 1)
-    .map((to) => ({ from, to }))
-);
+type NetEdge = { from: NetPoint; to: NetPoint };
 
-const netInputLabels = ["ct", "notes", "labs"];
-const netOutputLabels = ["dx", "survival", "risk"];
+const netEdges: NetEdge[] = [
+  ...inputs.flatMap((input) =>
+    encoderNodes.map((to) => ({ from: { x: 215, y: input.y }, to }))
+  ),
+  ...encoderNodes.flatMap((from) => fusionNodes.map((to) => ({ from, to }))),
+  ...fusionNodes.map((from) => ({ from, to: outputNode })),
+];
 
 export function HeroNetwork({ theme }: { theme: Theme }) {
   const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
@@ -95,67 +95,93 @@ export function HeroNetwork({ theme }: { theme: Theme }) {
   return (
     <svg
       className="d22-hero-net"
-      viewBox="0 0 500 700"
+      viewBox="0 0 620 560"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
+      <defs>
+        <linearGradient id="d22-net-line" x1="190" y1="280" x2="555" y2="280" gradientUnits="userSpaceOnUse">
+          <stop stopColor={secondary} stopOpacity="0.15" />
+          <stop offset="0.58" stopColor={primary} stopOpacity="0.58" />
+          <stop offset="1" stopColor={primary} stopOpacity="0.2" />
+        </linearGradient>
+        <radialGradient id="d22-net-orb">
+          <stop stopColor={primary} stopOpacity="0.2" />
+          <stop offset="1" stopColor={primary} stopOpacity="0" />
+        </radialGradient>
+        <filter id="d22-net-glow" x="-300%" y="-300%" width="700%" height="700%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+      </defs>
+
+      <circle cx="425" cy="280" r="180" fill="url(#d22-net-orb)" className="d22-net-detail" />
+
       {netEdges.map(({ from, to }, i) => {
-        const signal = i % 7 === 0;
         return (
-          <line
+          <path
             key={`e-${i}`}
-            x1={from.x}
-            y1={from.y}
-            x2={to.x}
-            y2={to.y}
-            stroke={signal ? primary : secondary}
-            strokeWidth={signal ? 1.4 : 0.7}
-            opacity={signal ? 0.85 : 0.3}
-            className={signal ? "d22-net-signal" : undefined}
-            style={signal ? { animationDelay: `${(i % 5) * 1.3}s` } : undefined}
+            d={`M${from.x} ${from.y} C${from.x + 40} ${from.y}, ${to.x - 40} ${to.y}, ${to.x} ${to.y}`}
+            stroke="url(#d22-net-line)"
+            className="d22-net-edge"
           />
         );
       })}
-      {netNodes.map((node, i) => (
+
+      {inputs.map((input) => (
         <circle
-          key={`n-${i}`}
-          cx={node.x}
-          cy={node.y}
-          r="5"
-          fill={node.layer % 2 === 0 ? primary : secondary}
+          key={`in-${input.label}`}
+          cx="215"
+          cy={input.y}
+          r="4.5"
+          fill={secondary}
           className="d22-net-node"
-          style={{ animationDelay: `${(i % 6) * 0.7}s` }}
         />
       ))}
-      {netNodes
-        .filter((node) => node.layer === 0)
-        .map((node) => (
-          <text
-            key={`in-${node.index}`}
-            x={node.x}
-            y={node.y - 24}
-            textAnchor="middle"
-            className="d22-net-label"
-            fill={secondary}
-          >
-            {netInputLabels[node.index]}
-          </text>
-        ))}
-      {netNodes
-        .filter((node) => node.layer === netLayers.length - 1)
-        .map((node) => (
-          <text
-            key={`out-${node.index}`}
-            x={node.x}
-            y={node.y + 36}
-            textAnchor="middle"
-            className="d22-net-label"
-            fill={primary}
-          >
-            {netOutputLabels[node.index]}
-          </text>
-        ))}
+
+      {inputs.map((input) => (
+        <g key={input.label} className="d22-net-input">
+          <rect className="d22-net-input-panel" x="52" y={input.y - 28} width="163" height="56" rx="12" />
+          <text x="70" y={input.y + 4} className="d22-net-input-letter">{input.label[0]}</text>
+          <text x="80" y={input.y + 4} className="d22-net-input-suffix">{input.label.slice(1)}</text>
+          <text x="70" y={input.y + 18} className="d22-net-input-detail">{input.detail}</text>
+        </g>
+      ))}
+
+      {[...encoderNodes, ...fusionNodes].map((node, i) => (
+        <g key={`n-${i}`} className="d22-net-node" style={{ animationDelay: `${i * -0.38}s` }}>
+          <circle cx={node.x} cy={node.y} r="13" className="d22-net-node-halo" />
+          <circle cx={node.x} cy={node.y} r="4.5" fill={i < encoderNodes.length ? secondary : primary} />
+        </g>
+      ))}
+
+      <g className="d22-net-output">
+        <circle cx={outputNode.x} cy={outputNode.y} r="42" />
+        <circle cx={outputNode.x} cy={outputNode.y} r="28" />
+        <circle cx={outputNode.x} cy={outputNode.y} r="6" fill={primary} filter="url(#d22-net-glow)" />
+        <text x={outputNode.x} y={outputNode.y + 62} textAnchor="middle">OUTCOME</text>
+      </g>
+
+      <g className="d22-net-column-labels">
+        <text x="300" y="493" textAnchor="middle">ENCODERS</text>
+        <text x="420" y="443" textAnchor="middle">FUSION</text>
+      </g>
+
+      <text x="598" y="548" textAnchor="end" className="d22-net-corner">
+        RSNA 2025 · SPIE 2026
+      </text>
+
+      {[160, 280, 400].map((y, i) => (
+        <circle key={`s-${y}`} r="3.2" fill={primary} className="d22-net-particle" filter="url(#d22-net-glow)">
+          <animateMotion
+            dur={`${4.8 + i * 0.65}s`}
+            begin={`${i * -1.7}s`}
+            repeatCount="indefinite"
+            path={`M215 ${y} C260 ${y}, 365 ${280 + (i - 1) * 35}, 493 280`}
+          />
+        </circle>
+      ))}
     </svg>
   );
 }

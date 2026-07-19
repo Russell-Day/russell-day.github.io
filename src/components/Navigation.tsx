@@ -27,7 +27,7 @@ export default function Navigation({
   return (
     <>
       <nav className={`d22-nav ${scrolled ? "scrolled" : ""}`}>
-        <a href="#hero" className="d22-nav-logo" onClick={onCloseMenu}>
+        <a href="/" className="d22-nav-logo" onClick={onCloseMenu}>
           <LogoMark theme={theme} />
           {brandName}
         </a>
