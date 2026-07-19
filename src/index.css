@@ -1491,6 +1491,20 @@ html, body, #root {
     display: none;
   }
 
+  .d22-hero {
+    align-items: center;
+    text-align: center;
+  }
+
+  .d22-hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .d22-hero-actions {
+    justify-content: center;
+  }
+
   .d22-hamburger {
     display: flex;
   }
