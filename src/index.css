@@ -482,53 +482,218 @@ html, body, #root {
   50% { opacity: 0.35; }
 }
 
-/* ─── Hero network (subtle, parallax) ─── */
+/* ─── Hero neural network ─── */
 .d22-hero-net {
   position: absolute;
-  top: 55%;
-  right: 3%;
-  width: 340px;
-  height: 560px;
-  pointer-events: none;
+  top: 51%;
+  right: -1.5%;
+  width: clamp(430px, 46vw, 570px);
+  height: auto;
+  pointer-events: auto;
   transform: translateY(-50%)
-    translate3d(calc(var(--hpx, 0) * 16px), calc(var(--hpy, 0) * 16px), 0);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    translate3d(calc(var(--hpx, 0) * 11px), calc(var(--hpy, 0) * 11px), 0);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.55s ease-out 0.06s;
+}
+
+.d22-hero-net:hover {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease-out;
 }
 
 .d22-root[data-theme="dark"] .d22-hero-net {
-  opacity: 0.16;
+  opacity: 0.58;
 }
 
 .d22-root[data-theme="light"] .d22-hero-net {
-  opacity: 0.14;
+  opacity: 0.5;
+}
+
+.d22-root[data-theme="dark"] .d22-hero-net:hover {
+  opacity: 0.72;
+}
+
+.d22-root[data-theme="light"] .d22-hero-net:hover {
+  opacity: 0.64;
+}
+
+/* Detail layer responds quickly on hover and eases back to the wireframe. */
+.d22-net-detail {
+  opacity: 0;
+  transition: opacity 0.55s ease-out 0.06s;
+}
+
+.d22-hero-net:hover .d22-net-detail {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.d22-net-edge {
+  fill: none;
+  stroke-width: 0.9;
+}
+
+.d22-net-input-panel {
+  fill: color-mix(in srgb, var(--bg-card) 86%, transparent);
+  stroke: var(--border);
+  stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: right center;
+  transform: scaleX(0.22);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.06s,
+    opacity 0.55s ease-out 0.06s;
+  opacity: 0.7;
+}
+
+.d22-net-input {
+  opacity: 0.8;
+  transition: opacity 0.55s ease-out 0.06s;
+}
+
+.d22-hero-net:hover .d22-net-input {
+  opacity: 0.95;
+  transition: opacity 0.2s ease-out;
+}
+
+.d22-hero-net:hover .d22-net-input-panel {
+  transform: scaleX(1);
+  opacity: 1;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease-out;
+}
+
+.d22-net-input-letter,
+.d22-net-input-suffix,
+.d22-net-column-labels,
+.d22-net-output text {
+  font-family: var(--mono);
+  fill: var(--text);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.d22-net-input-letter {
+  fill: var(--accent-primary);
+  font-size: 12px;
+  font-weight: 500;
+  transform: translateX(127px);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.06s;
+}
+
+.d22-hero-net:hover .d22-net-input-letter {
+  transform: translateX(0);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.d22-net-input-suffix {
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: opacity 0.12s ease-out,
+    clip-path 0.28s steps(8, end);
+}
+
+.d22-hero-net:hover .d22-net-input-suffix {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  transition: opacity 0.08s ease-out 0.12s,
+    clip-path 0.28s steps(8, end) 0.12s;
+}
+
+.d22-net-input-detail {
+  font-family: var(--body);
+  fill: var(--text-muted);
+  font-size: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.d22-hero-net:hover .d22-net-input-detail {
+  opacity: 0.72;
+  transition: opacity 0.2s ease-out 0.2s;
+}
+
+.d22-net-column-labels,
+.d22-net-output text {
+  fill: var(--text-muted);
+  font-size: 8px;
+}
+
+.d22-net-column-labels {
+  opacity: 0.35;
+}
+
+.d22-net-corner {
+  font-family: var(--mono);
+  fill: var(--text-muted);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  opacity: 0.8;
+}
+
+.d22-net-node-halo {
+  fill: var(--accent-primary-dim);
+  stroke: var(--border);
+  stroke-width: 0.75;
 }
 
 .d22-net-node {
-  animation: d22-node-pulse 4.2s ease-in-out infinite;
+  animation: d22-node-pulse 4.8s ease-in-out infinite;
   transform-box: fill-box;
   transform-origin: center;
 }
 
 @keyframes d22-node-pulse {
-  0%, 100% { opacity: 0.45; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.35); }
+  0%, 100% { opacity: 0.12; transform: scale(0.94); }
+  50% { opacity: 0.28; transform: scale(1.04); }
 }
 
-.d22-net-label {
-  font-family: var(--mono);
-  font-size: 17px;
-  letter-spacing: 0.08em;
-  opacity: 0.9;
+.d22-hero-net:hover .d22-net-node {
+  animation-name: d22-node-pulse-active;
+  animation-duration: 1.35s;
 }
 
-.d22-net-signal {
-  stroke-dasharray: 6 14;
-  animation: d22-signal-flow 6.5s linear infinite;
+@keyframes d22-node-pulse-active {
+  0%, 100% { opacity: 0.24; transform: scale(0.9); }
+  45% { opacity: 0.72; transform: scale(1.16); }
 }
 
-@keyframes d22-signal-flow {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -200; }
+.d22-net-particle {
+  opacity: 0.24;
+  transition: opacity 0.55s ease-out 0.06s;
+}
+
+.d22-hero-net:hover .d22-net-particle {
+  opacity: 0.82;
+  transition: opacity 0.2s ease-out;
+}
+
+.d22-net-output {
+  opacity: 0.2;
+  transition: opacity 0.55s ease-out 0.06s;
+}
+
+.d22-hero-net:hover .d22-net-output {
+  opacity: 0.32;
+  transition: opacity 0.2s ease-out;
+}
+
+.d22-net-output circle:first-child {
+  fill: var(--accent-primary-dim);
+  stroke: color-mix(in srgb, var(--accent-primary) 28%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 2 5;
+  transform-origin: 535px 280px;
+  animation: d22-output-spin 18s linear infinite;
+}
+
+.d22-net-output circle:nth-child(2) {
+  fill: color-mix(in srgb, var(--bg-elevated) 78%, transparent);
+  stroke: var(--accent-primary);
+  stroke-width: 0.8;
+}
+
+@keyframes d22-output-spin {
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 900px) {
@@ -712,10 +877,29 @@ html, body, #root {
     transition: none;
   }
   .d22-net-node,
-  .d22-net-signal,
+  .d22-net-particle,
+  .d22-net-output circle:first-child,
   .d22-logo-ring,
   .d22-project-card {
     animation: none;
+  }
+
+  .d22-net-particle {
+    display: none;
+  }
+
+  .d22-hero-net:hover .d22-net-node {
+    animation: none;
+  }
+
+  .d22-net-input,
+  .d22-net-input-panel,
+  .d22-net-input-letter,
+  .d22-net-input-suffix,
+  .d22-net-input-detail,
+  .d22-net-output,
+  .d22-net-detail {
+    transition: none;
   }
   .d22-hero-net {
     transition: none;
