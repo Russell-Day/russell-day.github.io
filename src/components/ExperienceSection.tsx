@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import SectionHeader from "./SectionHeader";
 import {
   type ExperienceItem,
@@ -21,6 +22,32 @@ export default function ExperienceSection({
   leadershipTitle,
   leadership,
 }: ExperienceSectionProps) {
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = timelineRef.current;
+    if (!el) return;
+    let frameId = 0;
+    const update = () => {
+      frameId = 0;
+      const rect = el.getBoundingClientRect();
+      const viewport = window.innerHeight;
+      const progress = (viewport * 0.8 - rect.top) / rect.height;
+      el.style.setProperty("--tlp", String(Math.min(Math.max(progress, 0), 1)));
+    };
+    const onScroll = () => {
+      if (!frameId) frameId = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frameId) cancelAnimationFrame(frameId);
+    };
+  }, []);
+
   return (
     <section id="experience" className="d22-section">
       <div
@@ -29,7 +56,7 @@ export default function ExperienceSection({
       >
         <SectionHeader config={header} />
 
-        <div className="d22-timeline">
+        <div className="d22-timeline" ref={timelineRef}>
           {experience.map((item) => (
             <div className="d22-timeline-item" key={`${item.role}-${item.org}`}>
               <div className="d22-timeline-node" />

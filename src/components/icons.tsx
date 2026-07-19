@@ -42,106 +42,120 @@ export function MoonIcon() {
   );
 }
 
-export function HelixLogo({ theme }: { theme: Theme }) {
+export function LogoMark({ theme }: { theme: Theme }) {
   const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
   const secondary = theme === "dark" ? "#8b96a8" : "#64748b";
 
   return (
     <svg
-      className="d22-nav-logo-helix"
+      className="d22-nav-logo-mark"
       viewBox="0 0 28 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <path d="M14 2C18 6 18 11 14 14C10 17 10 22 14 26" stroke={primary} strokeWidth="1.6" />
-      <path d="M14 2C10 6 10 11 14 14C18 17 18 22 14 26" stroke={secondary} strokeWidth="1.6" />
-      {[5, 9, 13, 17, 21, 25].map((y, index) => (
-        <line
-          key={y}
-          x1={index % 2 === 0 ? 11 : 17}
-          y1={y}
-          x2={index % 2 === 0 ? 17 : 11}
-          y2={y}
-          stroke={index % 2 === 0 ? primary : secondary}
-          strokeWidth="0.9"
-          opacity="0.7"
-        />
-      ))}
+      <path d="M4 10V7a3 3 0 0 1 3-3h3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M18 4h3a3 3 0 0 1 3 3v3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M24 18v3a3 3 0 0 1-3 3h-3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M10 24H7a3 3 0 0 1-3-3v-3" stroke={secondary} strokeWidth="1.6" strokeLinecap="round" />
+      <circle className="d22-logo-dot" cx="14" cy="14" r="2.6" fill={primary} />
+      <circle className="d22-logo-ring" cx="14" cy="14" r="6" stroke={primary} strokeWidth="1" fill="none" />
     </svg>
   );
 }
 
-export function HeroDNA({ theme }: { theme: Theme }) {
+const netLayers = [3, 5, 5, 3];
+const netLayerY = [90, 270, 450, 630];
+const netSpacing = 85;
+
+type NetNode = { x: number; y: number; layer: number; index: number };
+
+const netNodes: NetNode[] = netLayers.flatMap((count, layer) =>
+  Array.from({ length: count }, (_, index) => ({
+    x: 250 + (index - (count - 1) / 2) * netSpacing,
+    y: netLayerY[layer],
+    layer,
+    index,
+  }))
+);
+
+const netEdges = netNodes.flatMap((from) =>
+  netNodes
+    .filter((to) => to.layer === from.layer + 1)
+    .map((to) => ({ from, to }))
+);
+
+const netInputLabels = ["ct", "notes", "labs"];
+const netOutputLabels = ["dx", "survival", "risk"];
+
+export function HeroNetwork({ theme }: { theme: Theme }) {
   const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
   const secondary = theme === "dark" ? "#8b96a8" : "#94a3b8";
 
   return (
     <svg
-      className="d22-hero-dna"
+      className="d22-hero-net"
       viewBox="0 0 500 700"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <g className="d22-hero-strand">
-        <path
-          d="M250 0 C350 50 350 130 250 175 C150 220 150 300 250 350 C350 400 350 480 250 525 C150 570 150 650 250 700"
-          stroke={primary}
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
+      {netEdges.map(({ from, to }, i) => {
+        const signal = i % 7 === 0;
+        return (
+          <line
+            key={`e-${i}`}
+            x1={from.x}
+            y1={from.y}
+            x2={to.x}
+            y2={to.y}
+            stroke={signal ? primary : secondary}
+            strokeWidth={signal ? 1.4 : 0.7}
+            opacity={signal ? 0.85 : 0.3}
+            className={signal ? "d22-net-signal" : undefined}
+            style={signal ? { animationDelay: `${(i % 5) * 1.3}s` } : undefined}
+          />
+        );
+      })}
+      {netNodes.map((node, i) => (
+        <circle
+          key={`n-${i}`}
+          cx={node.x}
+          cy={node.y}
+          r="5"
+          fill={node.layer % 2 === 0 ? primary : secondary}
+          className="d22-net-node"
+          style={{ animationDelay: `${(i % 6) * 0.7}s` }}
         />
-        <path
-          d="M250 0 C150 50 150 130 250 175 C350 220 350 300 250 350 C150 400 150 480 250 525 C350 570 350 650 250 700"
-          stroke={secondary}
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-        {[45, 90, 135, 220, 265, 310, 395, 440, 485, 570, 615, 660].map((y, i) => {
-          const progress = (y % 175) / 175;
-          const amplitude = 80;
-          const offset = Math.sin(progress * Math.PI) * amplitude;
-          const x1 = 250 - offset;
-          const x2 = 250 + offset;
-          return (
-            <line
-              key={i}
-              x1={x1}
-              y1={y}
-              x2={x2}
-              y2={y}
-              stroke={i % 2 === 0 ? primary : secondary}
-              strokeWidth="1"
-              opacity="0.4"
-            />
-          );
-        })}
-        {[45, 90, 135, 220, 265, 310, 395, 440, 485, 570, 615, 660].map((y, i) => {
-          const progress = (y % 175) / 175;
-          const amplitude = 80;
-          const offset = Math.sin(progress * Math.PI) * amplitude;
-          return (
-            <g key={`dots-${i}`}>
-              <circle
-                cx={250 - offset}
-                cy={y}
-                r="3"
-                fill={i % 2 === 0 ? primary : secondary}
-                opacity="0.6"
-              />
-              <circle
-                cx={250 + offset}
-                cy={y}
-                r="3"
-                fill={i % 2 === 0 ? secondary : primary}
-                opacity="0.6"
-              />
-            </g>
-          );
-        })}
-      </g>
+      ))}
+      {netNodes
+        .filter((node) => node.layer === 0)
+        .map((node) => (
+          <text
+            key={`in-${node.index}`}
+            x={node.x}
+            y={node.y - 24}
+            textAnchor="middle"
+            className="d22-net-label"
+            fill={secondary}
+          >
+            {netInputLabels[node.index]}
+          </text>
+        ))}
+      {netNodes
+        .filter((node) => node.layer === netLayers.length - 1)
+        .map((node) => (
+          <text
+            key={`out-${node.index}`}
+            x={node.x}
+            y={node.y + 36}
+            textAnchor="middle"
+            className="d22-net-label"
+            fill={primary}
+          >
+            {netOutputLabels[node.index]}
+          </text>
+        ))}
     </svg>
   );
 }
