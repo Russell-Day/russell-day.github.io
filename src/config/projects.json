@@ -2,17 +2,17 @@
   {
     "title": "Fine-Tuning a 3B Clinical LLM",
     "org": "CAD-AI Lab, Michigan Medicine Radiology",
-    "description": "Fine-tuned a compact 3B LLM for bladder-cancer clinical extraction, reaching 96% task accuracy in HIPAA-safe workflows.",
+    "description": "Fine-tuned a 3B clinical LLM to extract survival predictors from post-cystectomy records with 96% accuracy on the study's defined extraction task.",
     "imageKey": "clinical_llm",
     "link": "https://cattendee.abstractsonline.com/meeting/21232/presentation/3325",
     "metric": "96%",
-    "metricLabel": "Task Accuracy",
+    "metricLabel": "Extraction Accuracy",
     "tags": ["clinical nlp", "lora", "conference", "podium presentation"],
-    "detailSummary": "This project focused on replacing costly larger-model extraction with a deployable 3B model while preserving strong performance for targeted clinical tasks.",
+    "detailSummary": "This research tests whether a compact model can match a frontier-model baseline on a narrowly defined clinical extraction task and preserve the value of manually abstracted data for downstream survival prediction.",
     "detailBullets": [
-      "Achieved 96% extraction accuracy on targeted tasks compared with a 94% GPT-4 benchmark workflow.",
-      "Used LoRA fine-tuning for structured extraction of clinical predictors in post-cystectomy bladder-cancer records.",
-      "Connected extracted features to downstream five-year survival modeling with multimodal records (text plus imaging context)."
+      "Matched GPT-5.2 at 96% accuracy on the study's specific clinical information-extraction task using a 3B-parameter model.",
+      "Used LoRA fine-tuning to structure predictors from post-cystectomy bladder-cancer records.",
+      "Evaluated whether model-extracted predictors could retain the five-year survival-prediction performance obtained from manually extracted information."
     ],
     "detailLinks": [
       {
@@ -34,17 +34,17 @@
   {
     "title": "Streamlining Paper Selection",
     "org": "Henry Ford Health",
-    "description": "Built an internal LLM review pipeline that reduced screening time by 60% across 3,200+ articles while preserving auditable inclusion and exclusion decisions.",
+    "description": "Expanded an LLM-assisted literature-screening workflow to 3,200+ records, cutting the number requiring manual review by more than half.",
     "imageKey": "systematic_review",
     "link": "/docs/streamling_systematic_reviews_AAHS.pdf",
-    "metric": "60%",
-    "metricLabel": "Time Cut",
-    "tags": ["systematic review", "llm pipeline", "conference", "poster presentation"],
-    "detailSummary": "This workflow automated first-pass paper triage for systematic reviews and reduced manual burden while maintaining transparent decision logs.",
+    "metric": ">50%",
+    "metricLabel": "Review Load Cut",
+    "tags": ["systematic review", "llm pipeline", "conference", "manuscript in review"],
+    "detailSummary": "This workflow uses LLMs for first-pass paper triage, reducing manual screening burden while keeping inclusion and exclusion decisions available for human review. An expanded evaluation is currently under review.",
     "detailBullets": [
-      "Screened over 3,200 literature records using model-guided inclusion and exclusion criteria.",
-      "Cut reviewer cycle time by roughly 60% on high-volume screening stages.",
-      "Maintained structured logs so reviewers could inspect model decisions and rapidly resolve borderline papers."
+      "Expanded the original 121-record conference study to more than 3,200 literature records.",
+      "Reduced the set requiring manual review by more than half through model-guided inclusion and exclusion decisions.",
+      "Kept structured decision logs so reviewers could inspect results and resolve borderline papers rather than treating the model as the final reviewer."
     ],
     "detailLinks": [
       {
@@ -58,19 +58,19 @@
     ]
   },
   {
-    "title": "Breast Cancer Detection (Subtype-First)",
+    "title": "Subtype-First Breast Cancer Classification",
     "org": "Michigan Data Science Team",
-    "description": "Led a 10+ student team to train subtype-first ViT pipelines (subtype then benign or malignant), improving baseline performance by +23.7%.",
+    "description": "Led a 10+ student team comparing direct benign/malignant training with a subtype-first approach that maps predicted tumor subtypes to the final binary label.",
     "imageKey": "breast_cancer",
     "link": "/docs/comparing_machine_learning_models_for_classification.pdf",
-    "metric": "+23.7%",
-    "metricLabel": "Lift vs BoW",
+    "metric": "2-Stage",
+    "metricLabel": "Training Strategy",
     "tags": ["computer vision", "vit", "breakhis", "medical imaging"],
-    "detailSummary": "The team restructured the objective into subtype-first classification before benign or malignant prediction, producing stronger downstream discrimination.",
+    "detailSummary": "Instead of training only on benign and malignant labels, the models first learned the eight tumor subtypes. Each predicted subtype was then mapped deterministically to its benign or malignant class; subtype accuracy itself was not the final endpoint.",
     "detailBullets": [
-      "Trained on BreakHis with subtype-aware objectives before final benign or malignant classification.",
-      "Improved bag-of-words baselines by +23.7% and CNN baselines by +11.2%.",
-      "Reached AUC 0.989 on the primary modeling track while coordinating implementation across a 10+ student team."
+      "Compared direct binary training with subtype-first training on the BreakHis histopathology dataset.",
+      "On the internal test split, subtype-first training improved binary accuracy by 23.7 percentage points for Bag of Visual Words and 11.2 points for the CNN.",
+      "The subtype-first ViT reported 98.9% binary accuracy and 0.989 AUC on the study split; external validation is still needed to assess generalizability."
     ],
     "detailLinks": [
       {
@@ -83,17 +83,17 @@
   {
     "title": "Image-to-Item Identification",
     "org": "Blueprints for Pangaea",
-    "description": "Built a computer vision pipeline that identifies donated medical supplies directly from photos, turning a shipping box snapshot into a structured item record and eliminating manual cataloging of incoming donations.",
+    "description": "Built an AI-assisted intake pipeline that identifies donated medical supplies from photos and converts shipping-box images into structured inventory records.",
     "imageKey": "bfp_vision",
     "link": "https://www.blueprintsforpangaea.org/",
-    "metric": "Photo → Record",
-    "metricLabel": "Automated Intake",
+    "metric": "37.7K+",
+    "metricLabel": "Items Tracked YTD",
     "tags": ["computer vision", "openai agent sdk", "python", "nonprofit"],
-    "detailSummary": "Blueprints for Pangaea is a nonprofit network that redistributes surplus medical supplies to communities with limited access; this work automated product naming from images across chapter operations.",
+    "detailSummary": "Blueprints for Pangaea redistributes surplus medical supplies to communities with limited access. This system reduces repetitive cataloging by turning photos of incoming donations into standardized item records for chapter teams.",
     "detailBullets": [
       "Implemented automated product naming from photos using Python, the OpenAI Agent SDK, and API integrations.",
-      "Turned donation-box snapshots into structured inventory records, removing manual cataloging from intake.",
-      "Supported internal tooling tied to approximately $500K in yearly inventory tracking and standardization workflows."
+      "Turned donation-box snapshots into structured inventory records for review instead of requiring every field to be entered from scratch.",
+      "Integrated the workflow with internal inventory tooling that has tracked more than 37,700 items in 2026 through July."
     ],
     "detailLinks": [
       {
@@ -106,17 +106,17 @@
   {
     "title": "Automated Item Pricing",
     "org": "Blueprints for Pangaea",
-    "description": "Developed an automated valuation system that looks up identified medical supplies by name across market sources to assign accurate fair-market pricing, standardizing how donation value is reported.",
+    "description": "Developed a valuation pipeline that compares identified medical supplies across market sources to produce consistent, reviewable fair-market estimates.",
     "imageKey": "bfp_pricing",
     "link": "https://www.blueprintsforpangaea.org/",
-    "metric": "$500K+",
-    "metricLabel": "Supply Value",
+    "metric": "$1M+",
+    "metricLabel": "Annual Supply Value",
     "tags": ["data pipeline", "apps script", "python", "operations"],
-    "detailSummary": "Accurate valuation is how the nonprofit reports impact to partners and donors; this system standardized pricing across everything the chapters redistribute.",
+    "detailSummary": "Consistent valuation helps the nonprofit report the scale of redistributed supplies to partners and donors. This pipeline standardizes market comparisons while leaving final values reviewable by the operations team.",
     "detailBullets": [
       "Automated pricing normalization by looking up identified items across market sources using Apps Script and Python.",
-      "Standardized fair-market valuation across roughly $500K in yearly tracked inventory.",
-      "Organization impact is roughly $1M in redistributed supplies in 2025 and about $10M over its lifetime."
+      "Supports valuation and reporting for more than $1M in supplies redistributed annually.",
+      "Blueprints for Pangaea has redistributed approximately $10M in medical supplies over its lifetime."
     ],
     "detailLinks": [
       {
@@ -129,13 +129,18 @@
   {
     "title": "Inventory Management Case Study",
     "org": "Blueprints for Pangaea",
-    "description": "Built a comprehensive inventory analytics dashboard for a nonprofit medical device organization, uncovering supply chain inefficiencies and informing redistribution strategy across partner sites.",
+    "description": "Completed a one-time inventory analytics case study that identified operational bottlenecks and informed medical-supply redistribution planning.",
     "imageKey": "blueprints",
     "link": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
     "metric": "12K+",
-    "metricLabel": "Items Tracked",
+    "metricLabel": "Items Analyzed",
     "tags": ["analytics", "streamlit", "dashboard", "operations"],
-    "detailSummary": "Case study showing inventory analysis and technology decisions used to improve redistribution operations.",
+    "detailSummary": "This one-time case study examined more than 12,000 inventory records to understand donation patterns, surface operational inefficiencies, and inform redistribution decisions.",
+    "detailBullets": [
+      "Built interactive views for donation volume, inventory composition, and supply movement.",
+      "Analyzed more than 12,000 item records to identify patterns and operational bottlenecks.",
+      "Presented findings and technology recommendations to support redistribution planning across partner sites."
+    ],
     "detailLinks": [
       {
         "label": "Inventory Case Study",
@@ -153,6 +158,12 @@
     "metric": "500+",
     "metricLabel": "Leaders Identified",
     "tags": ["web scraping", "python", "population health", "data pipeline"],
+    "detailSummary": "This project converted fragmented public information about U.S. health-system leadership into a structured dataset for population-health outreach and research.",
+    "detailBullets": [
+      "Built a Python pipeline to discover and extract population-health leadership information from public web sources.",
+      "Normalized titles, organizations, and contact context into a consistent dataset.",
+      "Identified more than 500 relevant leaders while reducing repetitive manual research."
+    ],
     "detailLinks": [
       {
         "label": "Scraping Write-Up",
