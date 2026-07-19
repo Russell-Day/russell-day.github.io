@@ -43,8 +43,8 @@ export function MoonIcon() {
 }
 
 export function HelixLogo({ theme }: { theme: Theme }) {
-  const primary = theme === "dark" ? "#00d4ff" : "#2a7c8a";
-  const secondary = theme === "dark" ? "#9b72cf" : "#7c5cbf";
+  const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
+  const secondary = theme === "dark" ? "#8b96a8" : "#64748b";
 
   return (
     <svg
@@ -73,8 +73,8 @@ export function HelixLogo({ theme }: { theme: Theme }) {
 }
 
 export function HeroDNA({ theme }: { theme: Theme }) {
-  const primary = theme === "dark" ? "#00d4ff" : "#2a7c8a";
-  const secondary = theme === "dark" ? "#9b72cf" : "#7c5cbf";
+  const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
+  const secondary = theme === "dark" ? "#8b96a8" : "#94a3b8";
 
   return (
     <svg

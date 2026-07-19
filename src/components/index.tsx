@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import AboutSection from "./AboutSection";
+import AgentLabSection from "./AgentLabSection";
 import { profileImage, projects, siteConfig } from "./config";
 import ContactSection from "./ContactSection";
 import ExperienceSection from "./ExperienceSection";
@@ -25,6 +26,7 @@ export default function ComponentsPage() {
   const aboutReveal = useScrollReveal(0.1);
   const metricsReveal = useScrollReveal(0.2);
   const expReveal = useScrollReveal(0.1);
+  const agentsReveal = useScrollReveal(0.1);
   const contactReveal = useScrollReveal(0.1);
 
   const metricValues = useAnimatedMetrics(siteConfig.metrics, metricsReveal.visible);
@@ -55,7 +57,6 @@ export default function ComponentsPage() {
 
   return (
     <div className="d22-root" data-theme={theme}>
-      <div className="d22-bg-helix" />
 
       <Navigation
         scrolled={scrolled}
@@ -95,6 +96,8 @@ export default function ComponentsPage() {
         leadershipTitle={siteConfig.leadershipTitle}
         leadership={siteConfig.leadership}
       />
+
+      <AgentLabSection reveal={agentsReveal} />
 
       <ContactSection
         reveal={contactReveal}

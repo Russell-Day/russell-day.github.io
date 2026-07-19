@@ -8,7 +8,21 @@ type HeroSectionProps = {
 
 export default function HeroSection({ theme, hero }: HeroSectionProps) {
   return (
-    <section id="hero" className="d22-hero">
+    <section
+      id="hero"
+      className="d22-hero"
+      onMouseMove={(event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        event.currentTarget.style.setProperty(
+          "--hpx",
+          String((event.clientX - rect.left) / rect.width - 0.5)
+        );
+        event.currentTarget.style.setProperty(
+          "--hpy",
+          String((event.clientY - rect.top) / rect.height - 0.5)
+        );
+      }}
+    >
       <HeroDNA theme={theme} />
       <div className="d22-hero-overline">
         <span>{hero.overline}</span>

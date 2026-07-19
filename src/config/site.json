@@ -50,9 +50,10 @@
     ],
     "gpaDisplay": "GPA: 3.90",
     "paragraphs": [
-      "I am a junior at the University of Michigan, pursuing a major in Data Science with a minor in Business, on a premedical track. My work sits at the intersection of clinical medicine and machine intelligence - I believe the most meaningful advances in healthcare will come from people who understand both the data and the patient.",
+      "I am a senior at the University of Michigan, pursuing a major in Data Science with a minor in Business, on a premedical track. My work sits at the intersection of clinical medicine and machine intelligence - I believe the most meaningful advances in healthcare will come from people who understand both the data and the patient.",
       "My research centers on large language models for clinical applications, computer-aided detection in medical imaging, and the design of AI systems that clinicians can actually trust. I have contributed to publications in JAMA and the Journal of Bone and Joint Surgery.",
-      "Outside of research, I lead educational initiatives as VP of Education at the Michigan Data Science Team and direct technology strategy at Blueprints for Pangaea. When I am away from my laptop, you will find me perfecting my ramen broth, engineering smashburgers, or reverse-searing a steak."
+      "This summer, I am a Software Development Engineer Intern at Amazon in the Alexa AI organization, building data pipelines that measure the impact of model changes and LLM agents that automate metric onboarding.",
+      "Outside of research, I serve as President of the Michigan Data Science Team and direct technology strategy at Blueprints for Pangaea. When I am away from my laptop, you will find me perfecting my ramen broth, engineering smashburgers, or reverse-searing a steak."
     ],
     "quote": "The most meaningful advances in healthcare will come from people who understand both the data and the patient.",
     "interestTags": [
@@ -105,36 +106,54 @@
   ],
   "experience": [
     {
-      "role": "Machine Learning Intern",
-      "org": "Trinity Health",
-      "period": "Summer 2025",
-      "description": "Applied machine learning to clinical and operational datasets within one of the nation's largest Catholic health systems."
+      "role": "Software Development Engineer Intern",
+      "org": "Amazon — Alexa AI",
+      "period": "May 2026 - Present",
+      "description": "Building data pipelines to deploy and measure the impact of model changes in Alexa AI, and developing LLM agents that automate new-metric onboarding - cutting turnaround from roughly a month to a day."
     },
     {
       "role": "Research Assistant",
-      "org": "CAD-AI Lab, University of Michigan",
-      "period": "2024 - Present",
-      "description": "Contributing to computer-aided detection and AI research under the Department of Radiology, developing models for medical imaging analysis."
+      "org": "CAD-AI Lab, Michigan Medicine Radiology",
+      "period": "Dec 2024 - Present",
+      "description": "Fine-tuning clinical LLMs and integrating multimodal data for bladder-cancer extraction and five-year survival modeling research."
     },
     {
-      "role": "Research Data Analyst",
-      "org": "Henry Ford Health",
-      "period": "2024",
-      "description": "Built LLM-powered pipelines for systematic review automation, culminating in publications in JAMA and JBJS."
+      "role": "Research Assistant Volunteer",
+      "org": "Henry Ford Health (Orthopedics & Neurosurgery)",
+      "period": "Sep 2021 - Present",
+      "description": "Contributed to peer-reviewed diversity research and LLM-assisted systematic review workflows in clinical research settings."
+    },
+    {
+      "role": "Machine Learning Intern",
+      "org": "Trinity Health",
+      "period": "Jan 2025 - Dec 2025",
+      "description": "Built ML and generative AI workflows for billing compliance and coding-risk analysis at scale across large primary-care revenue streams."
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Aton Lab, University of Michigan",
+      "period": "Sep 2023 - Dec 2024",
+      "description": "Conducted wet-lab and analysis work on sleep and memory consolidation models, including data collection and experimental support."
+    },
+    {
+      "role": "AI Automation Engineering Intern",
+      "org": "Protera Health",
+      "period": "May 2024 - Aug 2024",
+      "description": "Built Python-based GenAI automation and ETL workflows for high-precision data collection and lead intelligence pipelines."
     },
     {
       "role": "Data Analyst",
       "org": "Protera Health",
-      "period": "2023 - 2024",
-      "description": "Developed web scraping tools and data infrastructure to support population health engagement strategies."
+      "period": "May 2023 - Aug 2023",
+      "description": "Managed media/data operations and VBA-supported processing workflows for health content and platform datasets."
     }
   ],
   "leadershipTitle": "Leadership",
   "leadership": [
     {
-      "role": "VP of Education",
+      "role": "President",
       "org": "Michigan Data Science Team (MDST)",
-      "description": "Lead educational programming for one of the largest student data science organizations in the country."
+      "description": "Lead one of the largest student data science organizations in the country, overseeing projects, education, and partnerships."
     },
     {
       "role": "VP of Technology",
@@ -164,7 +183,7 @@
     ]
   },
   "footer": {
-    "accent": "Design 22",
-    "label": "Catalyst"
+    "accent": "Russell Day",
+    "label": "Updated July 2026"
   }
 }
