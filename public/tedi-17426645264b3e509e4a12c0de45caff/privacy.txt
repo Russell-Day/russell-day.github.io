@@ -1,0 +1,19 @@
+TEDI PRIVACY POLICY
+Effective Date: September 8, 2026
+
+TEDI is a private, local-first personal assistant developed by Russell Day.
+
+1. DATA WE ACCESS:
+- Google Calendar API: To view, create, and organize calendar events.
+- Gmail API: To view message headers, snippets, and drafts for local triage.
+
+2. LOCAL PROCESSING & PRIVACY:
+- All data retrieved via Google APIs is processed and stored exclusively on the user's local machine.
+- User data is NEVER transferred to third-party servers, external cloud storage, or external tracking services.
+- User data is NEVER sold, leased, or used for advertising.
+
+3. RETENTION AND DELETION:
+- You can revoke access at any time through Google Account Security (https://myaccount.google.com/permissions).
+- All cached data can be wiped immediately from local storage by removing local cache files.
+
+Contact: russellday422@gmail.com
