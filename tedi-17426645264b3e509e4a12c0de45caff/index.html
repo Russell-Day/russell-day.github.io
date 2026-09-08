@@ -4,21 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEDI — Personal Assistant</title>
+  <title>personal-project (TEDI) — Personal Productivity Assistant</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #1f2937; background: #fafafa; }
-    h1 { color: #111827; }
-    .card { background: #ffffff; padding: 28px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    a { color: #2563eb; text-decoration: none; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 24px; color: #1f2937; background: #f9fafb; }
+    header { border-bottom: 1px solid #e5e7eb; padding-bottom: 20px; margin-bottom: 30px; }
+    h1 { color: #111827; font-size: 2rem; margin-bottom: 8px; }
+    .subtitle { font-size: 1.125rem; color: #4b5563; }
+    .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .card { background: #ffffff; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    h2 { color: #111827; font-size: 1.35rem; margin-top: 24px; margin-bottom: 12px; }
+    h3 { color: #1f2937; font-size: 1.1rem; margin-top: 16px; margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .feature-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
+    @media (min-width: 640px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+    .feature-box { background: #f3f4f6; padding: 18px; border-radius: 8px; border: 1px solid #e5e7eb; }
+    .feature-box h3 { margin-top: 0; color: #111827; }
+    .footer { margin-top: 40px; font-size: 0.9rem; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 20px; }
+    a { color: #2563eb; text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>TEDI Personal Assistant</h1>
-    <p>TEDI is an autonomous personal life assistant for calendar planning, email triage, and academic management, running locally on a private workstation.</p>
-    <p>For details regarding how user data is handled, see the <a href="privacy">Privacy Policy</a> and <a href="terms">Terms of Service</a>.</p>
-    <p style="font-size: 0.875rem; color: #6b7280; margin-top: 32px;">Contact: russellday422@gmail.com</p>
-  </div>
+  <header>
+    <span class="badge">Application Overview</span>
+    <h1>personal-project (TEDI)</h1>
+    <p class="subtitle">A local-first personal productivity and life assistant for unified scheduling, email triage, and task management.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Purpose of the Application</h2>
+      <p><strong>personal-project</strong> (also known as <strong>TEDI</strong>) is a private, local productivity application designed to simplify personal schedule planning, academic deadlines, and daily communications into a single, cohesive dashboard.</p>
+      <p>Instead of manually checking multiple calendar feeds, university portals, and personal email accounts separately, personal-project unifies these workflows on the user's private computer without transmitting any personal data to external cloud services or third parties.</p>
+
+      <h2>Key Features & Functionality</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h3>📅 Calendar Management</h3>
+          <p>Consolidates personal, work, and university Google Calendars into daily, 3-day, week, and monthly views. Allows quick event creation, agenda summaries, and schedule conflict resolution.</p>
+        </div>
+        <div class="feature-box">
+          <h3>📬 Email Triage</h3>
+          <p>Retrieves incoming email headers and snippets via the Gmail API to categorize notifications, highlight urgent messages, and draft replies with user confirmation.</p>
+        </div>
+        <div class="feature-box">
+          <h3>✅ Task & Academic Planning</h3>
+          <p>Combines coursework deadlines, assignments, and personal todos alongside calendar events to create daily focus agendas.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🔒 Local-First Architecture</h3>
+          <p>All data retrieved from connected APIs is processed and cached strictly on the user's local workstation. No external telemetry or cloud databases are used.</p>
+        </div>
+      </div>
+
+      <h2>How Google User Data Is Used</h2>
+      <p>When you authenticate your Google Account with <strong>personal-project</strong>, the application requests access to specific Google APIs strictly to provide the core productivity features listed above:</p>
+      <ul>
+        <li><strong>Google Calendar (<code>https://www.googleapis.com/auth/calendar</code>):</strong> Used to read calendar events so your daily agenda is displayed on the dashboard, and to create new events directly from your schedule view.</li>
+        <li><strong>Gmail (<code>https://www.googleapis.com/auth/gmail.modify</code>, <code>https://www.googleapis.com/auth/gmail.send</code>):</strong> Used to read incoming message snippets for inbox categorization, label urgent messages, and send user-approved email drafts.</li>
+      </ul>
+      <p><strong>Notice:</strong> personal-project does NOT require you to log in to browse this information. All information on this page and our privacy terms are publicly accessible.</p>
+
+      <h2>Governance & Compliance</h2>
+      <p>Please review our official governance documents:</p>
+      <ul>
+        <li><a href="privacy">Privacy Policy</a> — Detailed disclosures on data collection, local storage, security, and Google Limited Use compliance.</li>
+        <li><a href="terms">Terms of Service</a> — Terms governing personal, non-commercial use of the software.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Developer & Contact: Russell Day (<a href="mailto:russellday422@gmail.com">russellday422@gmail.com</a>)</p>
+    <p>&copy; 2026 personal-project (TEDI). All rights reserved.</p>
+  </footer>
 </body>
 </html>
