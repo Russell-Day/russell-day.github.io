@@ -1,0 +1,17 @@
+TEDI TERMS OF SERVICE
+Effective Date: September 8, 2026
+
+1. DESCRIPTION OF SERVICE:
+TEDI is a private, local-first personal productivity assistant application developed by Russell Day.
+
+2. USE OF SERVICE:
+TEDI is provided for personal, non-commercial use on the user's private computer.
+
+3. THIRD-PARTY APIS:
+TEDI accesses Google APIs (Google Calendar, Gmail) strictly based on user authorization.
+
+4. DISCLAIMER:
+The software is provided "AS IS" without warranty of any kind.
+
+5. CONTACT:
+russellday422@gmail.com
