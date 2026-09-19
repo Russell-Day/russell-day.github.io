@@ -70,7 +70,7 @@
     "paragraphs": [
       "I am a senior at the University of Michigan, pursuing a major in Data Science with a minor in Business, on a premedical track. My work sits at the intersection of clinical medicine and machine intelligence - I believe the most meaningful advances in healthcare will come from people who understand both the data and the patient.",
       "My research centers on large language models for clinical applications, computer-aided detection in medical imaging, and the design of AI systems that clinicians can actually trust. I have contributed to publications in JAMA, the Journal of Bone and Joint Surgery, and Frontiers in Rehabilitation Sciences. I have also presented my research at national and international conferences, including podium presentations at RSNA and SPIE Medical Imaging.",
-      "This summer, I am a Software Development Engineer Intern at Amazon in the Alexa AI organization, building data pipelines that measure the impact of model changes and LLM agents that automate metric onboarding.",
+      "From May to July 2026, I was a Software Development Engineer Intern in Amazon’s Alexa AI organization, where I built data pipelines to measure model changes and LLM agents to automate metric onboarding.",
       "Outside of research, I serve as President of the Michigan Data Science Team and direct technology strategy at Blueprints for Pangaea. When I am away from my laptop, you will find me perfecting my ramen broth, engineering smashburgers, or reverse-searing a steak."
     ],
     "quote": "The most meaningful advances in healthcare will come from people who understand both the data and the patient.",
@@ -124,12 +124,6 @@
   ],
   "experience": [
     {
-      "role": "Software Development Engineer Intern",
-      "org": "Amazon — Alexa AI",
-      "period": "May 2026 - Present",
-      "description": "Building data pipelines to deploy and measure the impact of model changes in Alexa AI, and developing LLM agents that automate new-metric onboarding - cutting turnaround from roughly a month to a day."
-    },
-    {
       "role": "Research Assistant",
       "org": "CAD-AI Lab, Michigan Medicine Radiology",
       "period": "Dec 2024 - Present",
@@ -140,6 +134,12 @@
       "org": "Henry Ford Health (Orthopedics & Neurosurgery)",
       "period": "Sep 2021 - Present",
       "description": "Contributed to peer-reviewed diversity research and LLM-assisted systematic review workflows in clinical research settings."
+    },
+    {
+      "role": "Software Development Engineer Intern",
+      "org": "Amazon — Alexa AI",
+      "period": "May 2026 - July 2026",
+      "description": "Built data pipelines to deploy and measure the impact of model changes in Alexa AI, and developed LLM agents that automated new-metric onboarding - cutting turnaround from roughly a month to a day."
     },
     {
       "role": "Machine Learning Intern",
