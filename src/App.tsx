@@ -1,8 +1,8 @@
-import ComponentsPage from "./components";
+import PersonalSite from "./components/PersonalSite";
 import "./index.css";
 
 function App() {
-  return <ComponentsPage />;
+  return <PersonalSite />;
 }
 
 export default App;

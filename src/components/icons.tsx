@@ -77,9 +77,9 @@ const netEdges: NetEdge[] = [
   ...fusionNodes.map((from) => ({ from, to: outputNode })),
 ];
 
-export function HeroNetwork({ theme }: { theme: Theme }) {
-  const primary = theme === "dark" ? "#2dd4bf" : "#0f766e";
-  const secondary = theme === "dark" ? "#8b96a8" : "#94a3b8";
+export function HeroNetwork({ theme, colors }: { theme: Theme; colors?: { primary: string; secondary: string } }) {
+  const primary = colors?.primary ?? (theme === "dark" ? "#2dd4bf" : "#0f766e");
+  const secondary = colors?.secondary ?? (theme === "dark" ? "#8b96a8" : "#94a3b8");
 
   return (
     <svg
