@@ -1,7 +1,7 @@
-import PersonalSite from "./components/PersonalSite";
+import Site from "./components/Site";
 
 function App() {
-  return <PersonalSite />;
+  return <Site />;
 }
 
 export default App;

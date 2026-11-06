@@ -1,5 +1,3 @@
-export type Theme = "dark" | "light";
-
 export type EducationItem = {
   degree: string;
   school: string;
@@ -43,7 +41,7 @@ export type ProjectDetailLink = {
   description: string;
 };
 
-export type ProjectConfig = {
+export type Project = {
   title: string;
   org: string;
   description: string;
@@ -56,10 +54,6 @@ export type ProjectConfig = {
   detailBullets?: string[];
   detailLinks?: ProjectDetailLink[];
   citations?: string[];
-};
-
-export type Project = Omit<ProjectConfig, "imageKey"> & {
-  image: string;
 };
 
 export type Publication = {

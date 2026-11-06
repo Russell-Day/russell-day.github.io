@@ -30,8 +30,8 @@
     {
       "role": "Software Development Engineer Intern",
       "org": "Amazon — Alexa AI",
-      "period": "May 2026 - July 2026",
-      "description": "Built data pipelines to deploy and measure the impact of model changes in Alexa AI, and developed LLM agents that automated new-metric onboarding - cutting turnaround from roughly a month to a day."
+      "period": "May 2026 - Jul 2026",
+      "description": "Built data pipelines to deploy and measure the impact of model changes in Alexa AI, and developed LLM agents that automated new-metric onboarding, cutting turnaround from roughly a month to a day."
     },
     {
       "role": "Machine Learning Intern",
@@ -94,6 +94,6 @@
     "label": "CV (PDF)"
   },
   "footer": {
-    "label": "Updated November 2026"
+    "label": "Updated Nov 2026"
   }
 }

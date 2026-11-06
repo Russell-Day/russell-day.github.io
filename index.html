@@ -25,11 +25,12 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap&text=%E6%88%B4%E5%85%89%E4%BD%91" rel="stylesheet" />
 
         <script>
             // Evening (dark) or daylight, before first paint: the stored choice,
-            // else the system preference. PersonalSite reads data-theme back.
+            // else the system preference. Site reads data-theme back.
             (function () {
                 var stored = null;
                 try { stored = localStorage.getItem('theme'); } catch (e) {}
@@ -38,8 +39,8 @@
             })();
         </script>
         <style>
-            html { background: #f6f7f2; color-scheme: light; }
-            html[data-theme="dark"] { background: #1e3040; color-scheme: dark; }
+            html { background: #f3f5f0; color-scheme: light; }
+            html[data-theme="dark"] { background: #121815; color-scheme: dark; }
         </style>
     </head>
     <body>
