@@ -87,13 +87,13 @@
     "imageKey": "bfp_vision",
     "link": "https://www.blueprintsforpangaea.org/",
     "metric": "37.7K+",
-    "metricLabel": "Items tracked through July 2026",
+    "metricLabel": "Items tracked through Jul 2026",
     "tags": ["computer vision", "openai agent sdk", "python", "nonprofit"],
     "detailSummary": "Blueprints for Pangaea redistributes surplus medical supplies to communities with limited access. This system reduces repetitive cataloging by turning photos of incoming donations into standardized item records for chapter teams.",
     "detailBullets": [
       "Implemented automated product naming from photos using Python, the OpenAI Agent SDK, and API integrations.",
       "Turned donation-box snapshots into structured inventory records for review instead of requiring every field to be entered from scratch.",
-      "Integrated the workflow with internal inventory tooling that has tracked more than 37,700 items in 2026 through July."
+      "Integrated the workflow with internal inventory tooling that has tracked more than 37,700 items through Jul 2026."
     ],
     "detailLinks": [
       {
