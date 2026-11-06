@@ -45,7 +45,6 @@ export type Project = {
   title: string;
   org: string;
   description: string;
-  imageKey: string;
   link: string;
   metric: string;
   metricLabel: string;
