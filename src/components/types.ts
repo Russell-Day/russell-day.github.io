@@ -69,11 +69,6 @@ export type PublicationGroup = {
   items: Publication[];
 };
 
-export type NewsItem = {
-  date: string;
-  text: string;
-};
-
 export type Honour = {
   title: string;
   org: string;
