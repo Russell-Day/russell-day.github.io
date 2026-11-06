@@ -45,7 +45,7 @@
     "group": "Podium presentations",
     "items": [
       {
-        "authors": "Day, R. G., et al.",
+        "authors": "Day, R., Hadjiiski, L., Sun, D., Chan, H. P., Caoili, E., Cohan, R. H., Bruno, G., Zhou, C., & Gulani, V.",
         "year": "2027",
         "title": "LoRA Fine-Tuning of a Compact 3B LLM for Clinical Information Extraction from Complete Perioperative Records and Five-Year Survival Prediction in Bladder Cancer",
         "venue": "SPIE Medical Imaging 2027: Imaging Informatics, Vancouver, Canada, Feb 16, 2027 (accepted, oral)"
