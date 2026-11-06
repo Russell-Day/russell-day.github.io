@@ -3,12 +3,11 @@ import type { Project, ExperienceItem } from './types';
 
 const featured = [0, 3, 1];
 const annotations: Record<string, string> = {
-  [projects[0].title]: 'The interesting part: testing how far a small model can go on a very specific task. The 96% figure is extraction accuracy in this study, not a general clinical accuracy claim.',
   [projects[3].title]: 'A photo is a much easier starting point than an empty spreadsheet. The workflow turns incoming donations into records that the team can review.',
   [projects[1].title]: 'The goal is less repetitive screening. Reviewers still get to inspect the decisions and resolve borderline papers.',
 };
 const shortDescriptions: Record<string, string> = {
-  [projects[0].title]: 'Teaching a small language model to extract useful information from clinical records.',
+  [projects[0].title]: 'Fine-tuning a small language model to extract survival predictors from bladder cancer records.',
   [projects[3].title]: 'Turning photos of donated medical supplies into reviewable inventory records.',
   [projects[1].title]: 'Helping researchers find relevant papers with less manual screening.',
 };
@@ -31,14 +30,14 @@ function ProjectEntry({ project, index }: { project: Project; index: number }) {
 }
 
 export function DaylightWork() {
-  return <section id="work" className="daylight-work"><div className="compact-section-heading"><h2>A few things I’ve worked on.</h2><span className="eyebrow">Open one to look closer ↙</span></div>
+  return <section id="work" className="daylight-work"><div className="compact-section-heading"><h2>Selected projects</h2><span className="eyebrow">Open one to look closer ↙</span></div>
     {featured.map((index, i) => <ProjectEntry key={projects[index].title} project={projects[index]} index={i} />)}
     <details className="work-archive"><summary>Four more projects <span aria-hidden="true">↗</span><span className="archive-preview">Medical imaging, inventory, pricing & population health</span></summary><div>{projects.filter((_, i) => !featured.includes(i)).map((project, i) => <ProjectEntry key={project.title} project={project} index={i} />)}</div></details>
   </section>;
 }
 
 export function DaylightAbout() {
-  return <section id="about" className="daylight-about"><div className="daylight-portrait"><img src={profileImage} alt="Russell Day" loading="lazy" /><span>Hi, I’m Russell.</span></div><div><span className="eyebrow">A little more about me</span><h2>There’s a person behind the models.</h2><p>I study Data Science at Michigan, with a minor in Business and a premedical focus. I’m interested in building tools that make clinicians’ work easier, so they can spend more time with their patients.</p><p>I also like figuring out what I can run on my own hardware. My helper is called <span className="personal-word">Tedi</span>.</p><details className="personal-footnote"><summary>Tedi? Teddy? <span aria-hidden="true">+</span></summary><p>Tedi is my helper. Teddy is my small, fluffy, very hyper dog. Ollie, my other dog, is much more composed.</p></details><p className="daylight-offline">Away from the keyboard: probably working on a ramen broth.</p></div></section>;
+  return <section id="about" className="daylight-about"><div className="daylight-portrait"><img src={profileImage} alt="Russell Day" loading="lazy" /><span>Hi, I’m Russell.</span></div><div><h2>A little about me.</h2><p>Alongside my data science major, I’m pursuing a minor in business and a premedical track.</p><p>I also like figuring out what I can run on my own hardware. I’m building <span className="personal-word">Tedi</span>, a personal assistant that helps me organize my schedule, email, and tasks.</p><details className="personal-footnote"><summary>Tedi? Teddy? <span aria-hidden="true">+</span></summary><p>Tedi is the assistant. Teddy is my small, fluffy, very hyper dog. Ollie, my other dog, is much more composed.</p></details><p className="daylight-offline">Away from the keyboard: probably working on a ramen broth.</p></div></section>;
 }
 
 function Role({ item }: { item: ExperienceItem }) {

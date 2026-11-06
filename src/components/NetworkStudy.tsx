@@ -33,7 +33,7 @@ export default function NetworkStudy({ evening }: { evening: boolean }) {
   return <div ref={host} className={`network-study${open ? ' is-open' : ''}`}>
     <button className="network-study-trigger" aria-label="Explore the neural network" aria-expanded={open} aria-controls="network-study-note" onClick={() => setOpen(!open)}>
       <HeroNetwork theme={evening ? 'dark' : 'light'} colors={{ primary: evening ? '#e0c187' : '#aa7838', secondary: evening ? '#9bbccf' : '#6d91a6' }} />
-      <span className="network-study-hint">Three kinds of information. One shared question. <span aria-hidden="true">{open ? '−' : '+'}</span></span>
+      <span className="network-study-hint">Combining clinical records and images to study survival. <span aria-hidden="true">{open ? '−' : '+'}</span></span>
     </button>
     <div className="network-study-note" id="network-study-note" hidden={!open}>
       <p>A sketch of multimodal research: language features from clinical records, measurements from images, and features learned by a neural network, brought together for survival modeling.</p>

@@ -8,11 +8,11 @@
     "metric": "96%",
     "metricLabel": "Extraction Accuracy",
     "tags": ["clinical nlp", "lora", "conference", "podium presentation"],
-    "detailSummary": "This research tests whether a compact model can match a frontier-model baseline on a narrowly defined clinical extraction task and preserve the value of manually abstracted data for downstream survival prediction.",
+    "detailSummary": "This research compares a small language model with GPT-5.2 for extracting survival predictors from bladder cancer records after cystectomy.",
     "detailBullets": [
-      "Matched GPT-5.2 at 96% accuracy on the study's specific clinical information-extraction task using a 3B-parameter model.",
+      "The 3B-parameter model achieved 96% accuracy on the study’s clinical information-extraction task, matching GPT-5.2.",
       "Used LoRA fine-tuning to structure predictors from post-cystectomy bladder-cancer records.",
-      "Evaluated whether model-extracted predictors could retain the five-year survival-prediction performance obtained from manually extracted information."
+      "We also tested whether information extracted by the model supported five-year survival prediction as well as information extracted manually."
     ],
     "detailLinks": [
       {
@@ -32,13 +32,13 @@
     ]
   },
   {
-    "title": "Streamlining Paper Selection",
+    "title": "Screening Papers for Systematic Reviews",
     "org": "Henry Ford Health",
     "description": "Expanded an LLM-assisted literature-screening workflow to 3,200+ records, cutting the number requiring manual review by more than half.",
     "imageKey": "systematic_review",
     "link": "/docs/streamling_systematic_reviews_AAHS.pdf",
     "metric": ">50%",
-    "metricLabel": "Review Load Cut",
+    "metricLabel": "Fewer records needing manual review",
     "tags": ["systematic review", "llm pipeline", "conference", "manuscript in review"],
     "detailSummary": "This workflow uses LLMs for first-pass paper triage, reducing manual screening burden while keeping inclusion and exclusion decisions available for human review. An expanded evaluation is currently under review.",
     "detailBullets": [
@@ -81,13 +81,13 @@
     ]
   },
   {
-    "title": "Image-to-Item Identification",
+    "title": "Medical Supply Cataloging from Photos",
     "org": "Blueprints for Pangaea",
     "description": "Built an AI-assisted intake pipeline that identifies donated medical supplies from photos and converts shipping-box images into structured inventory records.",
     "imageKey": "bfp_vision",
     "link": "https://www.blueprintsforpangaea.org/",
     "metric": "37.7K+",
-    "metricLabel": "Items Tracked YTD",
+    "metricLabel": "Items tracked through July 2026",
     "tags": ["computer vision", "openai agent sdk", "python", "nonprofit"],
     "detailSummary": "Blueprints for Pangaea redistributes surplus medical supplies to communities with limited access. This system reduces repetitive cataloging by turning photos of incoming donations into standardized item records for chapter teams.",
     "detailBullets": [
