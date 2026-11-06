@@ -1,127 +1,19 @@
 {
-  "brandName": "Russell Day",
-  "navCtaLabel": "Get in Touch",
-  "projectLinkLabel": "View Details",
-  "navLinks": [
-    {
-      "label": "Projects",
-      "href": "#work"
-    },
-    {
-      "label": "About",
-      "href": "#about"
-    },
-    {
-      "label": "Work",
-      "href": "#experience"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
-    }
-  ],
-  "sectionHeaders": {
-    "work": {
-      "label": "SELECTED PROJECTS",
-      "title": "Research & Projects",
-      "evalTag": "eval · 7/7 pass"
-    },
-    "about": {
-      "label": "BACKGROUND",
-      "title": "About Me",
-      "evalTag": "hx · reviewed"
-    },
-    "experience": {
-      "label": "TRAJECTORY",
-      "title": "Work Experience",
-      "evalTag": "rounds · in progress"
-    },
-    "contact": {
-      "label": "SIGNAL",
-      "title": "Get in Touch",
-      "evalTag": "on call · paging ok"
-    }
-  },
-  "hero": {
-    "overline": "Data Science & Medicine",
-    "firstName": "Russell",
-    "lastName": "Day",
-    "subtitle": "Bridging clinical medicine and machine intelligence to build healthcare AI systems that clinicians can trust.",
-    "primaryCta": {
-      "label": "View Projects",
-      "href": "#work"
-    },
-    "secondaryCta": {
-      "label": "Contact Me",
-      "href": "#contact"
-    },
-    "scrollLabel": "SCROLL"
-  },
   "about": {
-    "photoAlt": "Russell Day",
     "photoImageKey": "headshot",
-    "educationLabel": "Education",
-    "school": "University of Michigan",
-    "educationLines": [
-      "B.S. Data Science, Minor in Business",
-      "Premedical Track"
-    ],
-    "gpaDisplay": "GPA: 3.90",
-    "paragraphs": [
-      "I am a senior at the University of Michigan, pursuing a major in Data Science with a minor in Business, on a premedical track. My work sits at the intersection of clinical medicine and machine intelligence - I believe the most meaningful advances in healthcare will come from people who understand both the data and the patient.",
-      "My research centers on large language models for clinical applications, computer-aided detection in medical imaging, and the design of AI systems that clinicians can actually trust. I have contributed to publications in JAMA, the Journal of Bone and Joint Surgery, and Frontiers in Rehabilitation Sciences. I have also presented my research at national and international conferences, including podium presentations at RSNA and SPIE Medical Imaging.",
-      "From May to July 2026, I was a Software Development Engineer Intern in Amazon’s Alexa AI organization, where I built data pipelines to measure model changes and LLM agents to automate metric onboarding.",
-      "Outside of research, I serve as President of the Michigan Data Science Team and direct technology strategy at Blueprints for Pangaea. When I am away from my laptop, you will find me perfecting my ramen broth, engineering smashburgers, or reverse-searing a steak."
-    ],
-    "quote": "The most meaningful advances in healthcare will come from people who understand both the data and the patient.",
-    "interestTags": [
-      "Healthcare AI",
-      "Clinical NLP",
-      "Medical Imaging",
-      "LLMs",
-      "Population Health",
-      "Data Visualization",
-      "Cooking"
+    "education": [
+      {
+        "degree": "M.S. Computational Medicine & Bioinformatics",
+        "school": "DCMB, Michigan Medicine, University of Michigan (accelerated master’s program)",
+        "period": "Aug 2026 – May 2027 (expected)"
+      },
+      {
+        "degree": "B.S. Data Science, Minor in Business",
+        "school": "University of Michigan",
+        "period": "Aug 2023 – May 2027 (expected)"
+      }
     ]
   },
-  "metrics": [
-    {
-      "id": "gpa",
-      "target": 3.9,
-      "decimals": 2,
-      "duration": 2000,
-      "suffix": "",
-      "label": "GPA",
-      "subLabel": "University of Michigan"
-    },
-    {
-      "id": "publications",
-      "target": 3,
-      "decimals": 0,
-      "duration": 1500,
-      "suffix": "",
-      "label": "Publications",
-      "subLabel": "JAMA · JBJS · Frontiers"
-    },
-    {
-      "id": "accuracy",
-      "target": 96,
-      "decimals": 0,
-      "duration": 2000,
-      "suffix": "%",
-      "label": "Extraction Accuracy",
-      "subLabel": "Task-Specific Clinical NLP"
-    },
-    {
-      "id": "parameters",
-      "target": 37.7,
-      "decimals": 1,
-      "duration": 1800,
-      "suffix": "K+",
-      "label": "Items Tracked",
-      "subLabel": "2026 YTD"
-    }
-  ],
   "experience": [
     {
       "role": "Research Assistant",
@@ -166,7 +58,6 @@
       "description": "Managed media/data operations and VBA-supported processing workflows for health content and platform datasets."
     }
   ],
-  "leadershipTitle": "Leadership",
   "leadership": [
     {
       "role": "President",
@@ -180,8 +71,6 @@
     }
   ],
   "contact": {
-    "heading": "Let's Build Something Together",
-    "subtitle": "Whether you have a research collaboration in mind, a data problem to solve, or just want to talk about healthcare AI - my inbox is always open.",
     "links": [
       {
         "type": "email",
@@ -200,8 +89,11 @@
       }
     ]
   },
+  "cv": {
+    "href": "/cv/russell-day-cv.pdf",
+    "label": "CV (PDF)"
+  },
   "footer": {
-    "accent": "Russell Day",
-    "label": "Updated July 2026"
+    "label": "Updated November 2026"
   }
 }

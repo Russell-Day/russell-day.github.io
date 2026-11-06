@@ -1,5 +1,5 @@
-import { projects, profileImage, siteConfig } from './config';
-import type { Project, ExperienceItem } from './types';
+import { honours, news, projects, profileImage, publications, siteConfig } from './config';
+import type { Project, ExperienceItem, Publication } from './types';
 
 const featured = [0, 3, 1];
 const annotations: Record<string, string> = {
@@ -37,7 +37,7 @@ export function DaylightWork() {
 }
 
 export function DaylightAbout() {
-  return <section id="about" className="daylight-about"><div className="daylight-portrait"><img src={profileImage} alt="Russell Day" loading="lazy" /><span>Hi, I’m Russell.</span></div><div><h2>A little about me.</h2><p>Alongside my data science major, I’m pursuing a minor in business and a premedical track.</p><p>I also like figuring out what I can run on my own hardware. I’m building <span className="personal-word">Tedi</span>, a personal assistant that helps me organize my schedule, email, and tasks.</p><details className="personal-footnote"><summary>Tedi? Teddy? <span aria-hidden="true">+</span></summary><p>Tedi is the assistant. Teddy is my small, fluffy, very hyper dog. Ollie, my other dog, is much more composed.</p></details><p className="daylight-offline">Away from the keyboard: probably working on a ramen broth.</p></div></section>;
+  return <section id="about" className="daylight-about"><div className="daylight-portrait"><img src={profileImage} alt="Russell Day" loading="lazy" /><span>Hi, I’m Russell.</span></div><div><h2>A little about me.</h2><p>I’m finishing a B.S. in data science with a minor in business, and through Michigan’s accelerated master’s program I’ve started an M.S. in computational medicine and bioinformatics. I’m also on a premedical track.</p><ul className="daylight-education">{siteConfig.about.education.map(item => <li key={item.degree}><strong>{item.degree}</strong><span>{item.school}</span><time>{item.period}</time></li>)}</ul><p>I also like figuring out what I can run on my own hardware. I’m building <span className="personal-word">Tedi</span>, a personal assistant that helps me organize my schedule, email, and tasks.</p><details className="personal-footnote"><summary>Tedi? Teddy? <span aria-hidden="true">+</span></summary><p>Tedi is the assistant. Teddy is my small, fluffy, very hyper dog. Ollie, my other dog, is much more composed.</p></details><p className="daylight-offline">Away from the keyboard: probably working on a ramen broth.</p></div></section>;
 }
 
 function Role({ item }: { item: ExperienceItem }) {
@@ -46,4 +46,32 @@ function Role({ item }: { item: ExperienceItem }) {
 
 export function DaylightExperience() {
   return <section id="experience" className="daylight-experience"><div className="compact-section-heading"><h2>Where I’ve been.</h2><span className="eyebrow">Current roles, then most recent</span></div><div className="compact-roles">{siteConfig.experience.slice(0, 3).map(item => <Role key={`${item.org}-${item.role}`} item={item} />)}<details className="career-archive"><summary>Earlier experience <span aria-hidden="true">+</span></summary><div>{siteConfig.experience.slice(3).map(item => <Role key={`${item.org}-${item.role}`} item={item} />)}</div></details></div><div className="compact-leadership">{siteConfig.leadership.map(item => <p key={item.org}><strong>{item.role}</strong> · {item.org}</p>)}</div></section>;
+}
+
+const ownName = /(Day, R\.(?: G\.)?)/;
+
+function Authors({ authors }: { authors: string }) {
+  return <>{authors.split(ownName).map((part, i) => ownName.test(part) ? <strong key={i}>{part}</strong> : part)}</>;
+}
+
+function PublicationEntry({ item }: { item: Publication }) {
+  return <li><span className="publication-authors"><Authors authors={item.authors} /> ({item.year}).</span> <cite>{item.title}.</cite> <span className="publication-venue">{item.venue}.</span>{item.href && <> <a href={item.href} target="_blank" rel="noreferrer">{item.linkLabel ?? 'Link'} ↗</a></>}</li>;
+}
+
+export function DaylightPublications() {
+  return <section id="publications" className="daylight-publications"><div className="compact-section-heading"><h2>Publications & talks</h2><a className="eyebrow" href={siteConfig.cv.href} target="_blank" rel="noreferrer">Full list in my {siteConfig.cv.label} ↗</a></div>
+    {publications.map(group => <div className="publication-group" key={group.group}><h3>{group.group}</h3><ol>{group.items.map(item => <PublicationEntry key={item.title} item={item} />)}</ol></div>)}
+  </section>;
+}
+
+export function DaylightNews() {
+  return <section id="news" className="daylight-news"><div className="compact-section-heading"><h2>News</h2><span className="eyebrow">Most recent first</span></div>
+    <ul className="dated-list">{news.map(item => <li key={item.date + item.text}><time>{item.date}</time><span>{item.text}</span></li>)}</ul>
+  </section>;
+}
+
+export function DaylightHonours() {
+  return <section id="honours" className="daylight-honours"><div className="compact-section-heading"><h2>Honours</h2></div>
+    <ul className="dated-list">{honours.map(item => <li key={item.title}><time>{item.date}</time><span><strong>{item.title}</strong> · {item.org}</span></li>)}</ul>
+  </section>;
 }

@@ -8,9 +8,9 @@
     "metric": "96%",
     "metricLabel": "Extraction Accuracy",
     "tags": ["clinical nlp", "lora", "conference", "podium presentation"],
-    "detailSummary": "This research compares a small language model with GPT-5.2 for extracting survival predictors from bladder cancer records after cystectomy.",
+    "detailSummary": "This research compares a small language model with GPT-4 for extracting survival predictors from bladder cancer records after cystectomy.",
     "detailBullets": [
-      "The 3B-parameter model achieved 96% accuracy on the study’s clinical information-extraction task, matching GPT-5.2.",
+      "The 3B-parameter model achieved 96% accuracy on the study’s clinical information-extraction task, compared with 94% for GPT-4.",
       "Used LoRA fine-tuning to structure predictors from post-cystectomy bladder-cancer records.",
       "We also tested whether information extracted by the model supported five-year survival prediction as well as information extracted manually."
     ],
@@ -22,7 +22,7 @@
       },
       {
         "label": "SPIE Medical Imaging 2026",
-        "href": "https://spie.org/medical-imaging/presentation/Lora-finetuning-of-a-small-3B-LLM-for-clinical-information/13930-14",
+        "href": "https://spie.org/medical-imaging/presentation/Lora-finetuning-of-a-small-3B-LLM-for-clinical-information/13930-146",
         "description": "SPIE Medical Imaging is a leading technical conference for imaging science and AI translation in radiology and clinical workflows."
       }
     ],
@@ -131,7 +131,7 @@
     "org": "Blueprints for Pangaea",
     "description": "Completed a one-time inventory analytics case study that identified operational bottlenecks and informed medical-supply redistribution planning.",
     "imageKey": "blueprints",
-    "link": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
+    "link": "https://russellday.dev/blueprints_inventory_case_study_07042024/",
     "metric": "12K+",
     "metricLabel": "Items Analyzed",
     "tags": ["analytics", "streamlit", "dashboard", "operations"],
@@ -144,7 +144,7 @@
     "detailLinks": [
       {
         "label": "Inventory Case Study",
-        "href": "https://russell-day.github.io/blueprints_inventory_case_study_07042024/index.html",
+        "href": "https://russellday.dev/blueprints_inventory_case_study_07042024/",
         "description": "Case study showing inventory analysis and technology decisions used to improve redistribution operations."
       }
     ]
@@ -154,7 +154,7 @@
     "org": "Protera Health",
     "description": "Engineered an automated web scraping pipeline to identify and catalog population health decision-makers across U.S. hospital systems, building a structured database for targeted outreach.",
     "imageKey": "pop_health",
-    "link": "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
+    "link": "https://russellday.dev/Scraping-for-Population-Health-Leaders/",
     "metric": "500+",
     "metricLabel": "Leaders Identified",
     "tags": ["web scraping", "python", "population health", "data pipeline"],
@@ -167,7 +167,7 @@
     "detailLinks": [
       {
         "label": "Scraping Write-Up",
-        "href": "https://russell-day.github.io/Scraping-for-Population-Health-Leaders/",
+        "href": "https://russellday.dev/Scraping-for-Population-Health-Leaders/",
         "description": "Project page for the population health leader scraping pipeline."
       }
     ]

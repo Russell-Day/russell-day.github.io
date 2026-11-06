@@ -1,53 +1,9 @@
-import { type RefObject } from "react";
-
 export type Theme = "dark" | "light";
 
-export type NavLink = {
-  label: string;
-  href: string;
-};
-
-export type Cta = {
-  label: string;
-  href: string;
-};
-
-export type HeroConfig = {
-  overline: string;
-  firstName: string;
-  lastName: string;
-  subtitle: string;
-  primaryCta: Cta;
-  secondaryCta: Cta;
-  scrollLabel: string;
-};
-
-export type SectionHeaderConfig = {
-  label: string;
-  title: string;
-  evalTag: string;
-};
-
-export type AboutConfig = {
-  photoAlt: string;
-  photoImageKey: string;
-  educationLabel: string;
+export type EducationItem = {
+  degree: string;
   school: string;
-  educationLines: string[];
-  gpaDisplay: string;
-  paragraphs: string[];
-  quote: string;
-  interestTags: string[];
-};
-
-export type MetricConfig = {
-  id: string;
-  target: number;
-  decimals: number;
-  duration: number;
-  suffix: string;
-  label: string;
-  subLabel: string;
+  period: string;
 };
 
 export type ExperienceItem = {
@@ -69,36 +25,16 @@ export type ContactLink = {
   label: string;
 };
 
-export type ContactConfig = {
-  heading: string;
-  subtitle: string;
-  links: ContactLink[];
-};
-
-export type FooterConfig = {
-  accent: string;
-  label: string;
-};
-
 export type SiteConfig = {
-  brandName: string;
-  navCtaLabel: string;
-  projectLinkLabel: string;
-  navLinks: NavLink[];
-  sectionHeaders: {
-    work: SectionHeaderConfig;
-    about: SectionHeaderConfig;
-    experience: SectionHeaderConfig;
-    contact: SectionHeaderConfig;
+  about: {
+    photoImageKey: string;
+    education: EducationItem[];
   };
-  hero: HeroConfig;
-  about: AboutConfig;
-  metrics: MetricConfig[];
   experience: ExperienceItem[];
-  leadershipTitle: string;
   leadership: LeadershipItem[];
-  contact: ContactConfig;
-  footer: FooterConfig;
+  contact: { links: ContactLink[] };
+  cv: { href: string; label: string };
+  footer: { label: string };
 };
 
 export type ProjectDetailLink = {
@@ -122,50 +58,31 @@ export type ProjectConfig = {
   citations?: string[];
 };
 
-export type AgentMode = "running" | "idle" | "paused" | "offline";
-
-export type AgentSentiment =
-  | "focused"
-  | "busy"
-  | "curious"
-  | "satisfied"
-  | "overwhelmed"
-  | "bored"
-  | "resting";
-
-export type AgentProfile = {
-  agent_id: string;
-  slug: string;
-  display_name: string;
-  persona_description: string;
-  runs: number;
-};
-
-export type AgentStatus = {
-  agent_mode: AgentMode;
-  sentiment: AgentSentiment;
-  activity_label: string;
-  running_since: string | null;
-  last_heartbeat: string;
-};
-
-export type Agent = {
-  profile: AgentProfile;
-  status: AgentStatus;
-};
-
-export type AgentLogEntry = {
-  log_id: number;
-  agent_id: string;
-  summary: string;
-  logged_at: string;
-};
-
 export type Project = Omit<ProjectConfig, "imageKey"> & {
   image: string;
 };
 
-export type RevealState = {
-  ref: RefObject<HTMLDivElement>;
-  visible: boolean;
+export type Publication = {
+  authors: string;
+  year: string;
+  title: string;
+  venue: string;
+  href?: string;
+  linkLabel?: string;
+};
+
+export type PublicationGroup = {
+  group: string;
+  items: Publication[];
+};
+
+export type NewsItem = {
+  date: string;
+  text: string;
+};
+
+export type Honour = {
+  title: string;
+  org: string;
+  date: string;
 };
