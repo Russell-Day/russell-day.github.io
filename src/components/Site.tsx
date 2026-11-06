@@ -119,7 +119,11 @@ const NAV: { id: string; label: string; covers: string[] }[] = [
 ];
 
 const role = siteConfig.experience[0];
-const degree = siteConfig.about.education[0];
+// Now shows the degree in progress: the B.S. (the M.S. is the accelerated
+// program on top of it), without the minor.
+const degree =
+  siteConfig.about.education.find((d) => d.degree.startsWith('B.S.')) ?? siteConfig.about.education[0];
+const degreeName = degree.degree.split(',')[0];
 const degreeEnd = /–\s*(.+?)\s*\(expected\)/.exec(degree.period)?.[1];
 
 export default function Site() {
@@ -237,7 +241,7 @@ export default function Site() {
                 {role.role}, {tidy(role.org)}
               </li>
               <li>
-                {degree.degree}
+                {degreeName}
                 {degreeEnd ? `, expected ${degreeEnd.replace(/ /g, '\u00a0')}` : ''}
               </li>
             </ul>
