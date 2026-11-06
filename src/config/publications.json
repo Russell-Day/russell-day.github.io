@@ -32,6 +32,14 @@
     "group": "Conference papers",
     "items": [
       {
+        "authors": "Day, R., Hadjiiski, L., Sun, D., Chan, H. P., Caoili, E., Cohan, R. H., Alva, A., Bruno, G., Zhou, C., & Gulani, V.",
+        "year": "2026",
+        "title": "LoRA Fine-Tuning of a Small 3B LLM for Clinical Information Extraction and Five-Year Survival Prediction in Bladder Cancer",
+        "venue": "SPIE Medical Imaging 2026: Imaging Informatics, Proc. SPIE 13930, Vancouver, Canada (oral)",
+        "href": "https://doi.org/10.1117/12.3087747",
+        "linkLabel": "doi:10.1117/12.3087747"
+      },
+      {
         "authors": "Yordanova, A., Hadjiiski, L., Day, R., Fiori, S., Caoili, E. M., Cohan, R. H., Chan, H. P., Worden, F., Hammer, G., Wilms, M., & Zhou, C.",
         "year": "2026",
         "title": "Integrated System for Characterization of Malignant and Benign Adrenal Lesions and Differentiation of High- and Low-Risk Adrenal Cancer on CT Scans Using Radiomics-Based Decision Support",
@@ -49,14 +57,6 @@
         "year": "2027",
         "title": "LoRA Fine-Tuning of a Compact 3B LLM for Clinical Information Extraction from Complete Perioperative Records and Five-Year Survival Prediction in Bladder Cancer",
         "venue": "SPIE Medical Imaging 2027: Imaging Informatics, Vancouver, Canada, Feb 16, 2027 (accepted, oral)"
-      },
-      {
-        "authors": "Day, R., Hadjiiski, L., Sun, D., Chan, H. P., Caoili, E., Cohan, R. H., Alva, A., Bruno, G., Zhou, C., & Gulani, V.",
-        "year": "2026",
-        "title": "LoRA Fine-Tuning of a Small 3B LLM for Clinical Information Extraction and Five-Year Survival Prediction in Bladder Cancer",
-        "venue": "SPIE Medical Imaging 2026: Imaging Informatics, Proc. SPIE 13930, Vancouver, Canada",
-        "href": "https://doi.org/10.1117/12.3087747",
-        "linkLabel": "doi:10.1117/12.3087747"
       },
       {
         "authors": "Day, R. G., Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Alva, A. S., Bruno, G., Zhou, C., & Gulani, V.",
