@@ -127,7 +127,7 @@
       "role": "Research Assistant",
       "org": "CAD-AI Lab, Michigan Medicine Radiology",
       "period": "Dec 2024 - Present",
-      "description": "Fine-tuning clinical LLMs and integrating multimodal data for bladder-cancer extraction and five-year survival modeling research."
+      "description": "Fine-tuning clinical LLMs to extract information from bladder cancer records and combining clinical and imaging data for five-year survival research."
     },
     {
       "role": "Research Assistant Volunteer",
@@ -145,7 +145,7 @@
       "role": "Machine Learning Intern",
       "org": "Trinity Health",
       "period": "Jan 2025 - Dec 2025",
-      "description": "Built ML and generative AI workflows for billing compliance and coding-risk analysis at scale across large primary-care revenue streams."
+      "description": "Built machine learning tools to flag potential billing and coding issues in primary care."
     },
     {
       "role": "Research Assistant",
@@ -157,7 +157,7 @@
       "role": "AI Automation Engineering Intern",
       "org": "Protera Health",
       "period": "May 2024 - Aug 2024",
-      "description": "Built Python-based GenAI automation and ETL workflows for high-precision data collection and lead intelligence pipelines."
+      "description": "Built Python workflows to collect and organize data for outreach."
     },
     {
       "role": "Data Analyst",

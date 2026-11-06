@@ -28,17 +28,16 @@ export default function PersonalSite() {
             <div className="hero-writing">
               <div className="eyebrow hero-eyebrow">Data science & medicine / Michigan</div>
               <h1>Russell <em>Day.</em><span className="daylight-chinese">戴光佑</span></h1>
-              <p className="hero-intro">I study data science at Michigan and build things at the intersection of machine learning and medicine. I’m interested in making the work around patient care a little easier.</p>
+              <p className="hero-intro">I study data science at the University of Michigan and work on machine learning for clinical research. I’m interested in reducing the time clinicians and researchers spend on repetitive tasks.</p>
               <div className="hero-links">
                 <a href="#work">Explore my work <span>↘</span></a>
                 <a href="mailto:russday@umich.edu">Get in touch ↗</a>
                 <a href="https://github.com/Russell-Day" target="_blank" rel="noreferrer">GitHub ↗</a>
               </div>
-              <p className="hero-personal-note">Often fine-tuning a model. Occasionally, a ramen broth.</p>
             </div>
             <NetworkStudy evening={evening} />
           </section>
-          <div className="explore-divider"><span>A few connections I’m working on</span><span>↓</span></div>
+          <div className="explore-divider" aria-hidden="true"><span>↓</span></div>
           <DaylightWork />
           <DaylightAbout />
           <DaylightExperience />
