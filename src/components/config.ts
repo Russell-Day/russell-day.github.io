@@ -1,5 +1,8 @@
 import siteData from "../config/site.json";
 import projectsData from "../config/projects.json";
+import publicationsData from "../config/publications.json";
+import newsData from "../config/news.json";
+import honoursData from "../config/honours.json";
 import bfp_pricing from "../images/bfp_pricing.webp";
 import bfp_vision from "../images/bfp_vision.webp";
 import breast_cancer from "../images/breast_cancer.webp";
@@ -8,7 +11,14 @@ import clinical_llm from "../images/clinical_llm.webp";
 import headshot from "../images/headshot.webp";
 import pop_health from "../images/pop_health.webp";
 import systematic_review from "../images/systematic_review.webp";
-import { type Project, type ProjectConfig, type SiteConfig } from "./types";
+import {
+  type Honour,
+  type NewsItem,
+  type Project,
+  type ProjectConfig,
+  type PublicationGroup,
+  type SiteConfig,
+} from "./types";
 
 const projectImageMap: Record<string, string> = {
   clinical_llm,
@@ -33,3 +43,7 @@ export const projects: Project[] = (projectsData as ProjectConfig[]).map((projec
 
 export const profileImage =
   profileImageMap[siteConfig.about.photoImageKey] ?? headshot;
+
+export const publications = publicationsData as PublicationGroup[];
+export const news = newsData as NewsItem[];
+export const honours = honoursData as Honour[];

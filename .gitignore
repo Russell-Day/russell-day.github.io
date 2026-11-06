@@ -40,3 +40,4 @@ backend
 
 image-prompts.mdnp
 src/images/research
+*.tsbuildinfo

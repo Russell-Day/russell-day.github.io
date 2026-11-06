@@ -4,24 +4,43 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/src/images/icon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="color-scheme" content="dark light" />
+        <meta name="color-scheme" content="light dark" />
         <title>Russell Day</title>
+        <meta name="description" content="Russell Day studies data science and computational medicine at the University of Michigan and works on machine learning for clinical research: clinical language models, medical imaging and research tools." />
+        <link rel="canonical" href="https://russellday.dev/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Russell Day" />
+        <meta property="og:title" content="Russell Day" />
+        <meta property="og:description" content="Data science and medicine at the University of Michigan: clinical language models, medical imaging and research tools." />
+        <meta property="og:url" content="https://russellday.dev/" />
+        <meta property="og:image" content="https://russellday.dev/og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Russell Day — data science and medicine, University of Michigan" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Russell Day" />
+        <meta name="twitter:description" content="Data science and medicine at the University of Michigan: clinical language models, medical imaging and research tools." />
+        <meta name="twitter:image" content="https://russellday.dev/og.png" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+
         <script>
-            // Initialize theme from localStorage or system preference, before paint
-            (function() {
-                const stored = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const theme = stored || (prefersDark ? 'dark' : 'light');
-                if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
+            // Evening (dark) or daylight, before first paint: the stored choice,
+            // else the system preference. PersonalSite reads data-theme back.
+            (function () {
+                var stored = null;
+                try { stored = localStorage.getItem('theme'); } catch (e) {}
+                var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.dataset.theme = dark ? 'dark' : 'light';
             })();
         </script>
+        <style>
+            html { background: #f6f7f2; color-scheme: light; }
+            html[data-theme="dark"] { background: #1e3040; color-scheme: dark; }
+        </style>
     </head>
     <body>
         <div id="root"></div>

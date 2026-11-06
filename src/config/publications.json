@@ -1,0 +1,96 @@
+[
+  {
+    "group": "Journal articles",
+    "items": [
+      {
+        "authors": "Cross, A. G., Rain, U. Z., Makhni, E. C., Schnettler, E. N., Jayakumar, P., Berry, S., Vandenboom, J., Keteyian, C., Day, R., Verhagen, D., Schumacher, M., Kucksdorf, J., & Muma, B.",
+        "year": "2025",
+        "title": "Clinical and engagement efficacy of a virtual musculoskeletal integrated practice unit in health system employees: aggregate and comparative results from two employers",
+        "venue": "Frontiers in Rehabilitation Sciences, 6, 1541508",
+        "href": "https://doi.org/10.3389/fresc.2025.1541508",
+        "linkLabel": "doi:10.3389/fresc.2025.1541508"
+      },
+      {
+        "authors": "Meadows, A. M., Skinner, M. M., Hazime, A. A., Day, R. G., Fore, J. A., & Day, C. S.",
+        "year": "2023",
+        "title": "Racial, Ethnic, and Sex Diversity in Academic Medical Leadership",
+        "venue": "JAMA Network Open, 6(9), e2335529",
+        "href": "https://doi.org/10.1001/jamanetworkopen.2023.35529",
+        "linkLabel": "doi:10.1001/jamanetworkopen.2023.35529"
+      },
+      {
+        "authors": "Meadows, A. M., Skinner, M. M., Faraj, M. T., Hazime, A. A., Day, R. G., Fore, J. A., & Day, C. S.",
+        "year": "2022",
+        "title": "Racial, Ethnic, and Gender Diversity in Academic Orthopaedic Surgery Leadership",
+        "venue": "The Journal of Bone and Joint Surgery (JBJS), 104(13), 1157–1165",
+        "href": "https://doi.org/10.2106/JBJS.21.01236",
+        "linkLabel": "doi:10.2106/JBJS.21.01236"
+      }
+    ]
+  },
+  {
+    "group": "Podium presentations",
+    "items": [
+      {
+        "authors": "Day, R. G., et al.",
+        "year": "2026",
+        "title": "LoRA Fine-Tuning of a Small 3B LLM for Clinical Information Extraction and Five-Year Survival Prediction in Bladder Cancer",
+        "venue": "SPIE Medical Imaging, Vancouver, Canada",
+        "href": "https://spie.org/medical-imaging/presentation/Lora-finetuning-of-a-small-3B-LLM-for-clinical-information/13930-146",
+        "linkLabel": "Abstract"
+      },
+      {
+        "authors": "Day, R. G., Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Alva, A. S., Bruno, G., Zhou, C., & Gulani, V.",
+        "year": "2025",
+        "title": "Performance Evaluation of a Fine Tuned Smaller Large Language Model (LLM) for Extracting Clinical Predictors of 5 Year Survival in Bladder Cancer Patients Post Cystectomy",
+        "venue": "RSNA Annual Meeting, Chicago, IL",
+        "href": "https://cattendee.abstractsonline.com/meeting/21232/presentation/3325",
+        "linkLabel": "Abstract"
+      }
+    ]
+  },
+  {
+    "group": "Invited talks & panels",
+    "items": [
+      {
+        "authors": "Day, R. G.",
+        "year": "2025",
+        "title": "Large Language Models in Clinical Workflows",
+        "venue": "Invited speaker, Michigan Institute for Imaging Technology Translation (MIITT), Ann Arbor, MI, November 2025",
+        "href": "https://medresearch.umich.edu/labs-departments/centers/miitt",
+        "linkLabel": "MIITT"
+      },
+      {
+        "authors": "Day, R. G.",
+        "year": "2025",
+        "title": "Artificial Intelligence in Orthopaedic Surgery Education",
+        "venue": "Panelist, AOA/CORD Summer Conference, St. Louis, MO, June 21, 2025"
+      }
+    ]
+  },
+  {
+    "group": "Posters",
+    "items": [
+      {
+        "authors": "Day, R. G., Hadjiiski, L. M., Sun, D., Chan, H. P., Caoili, E. M., Cohan, R. H., Wilms, M., Bruno, G., Zhou, C., & Gulani, V.",
+        "year": "2026",
+        "title": "LoRA versus Full Fine-Tuning of a Local Lightweight LLM for Extracting 5-Year Survival Predictors from Unstructured Reports after Radical Cystectomy for Bladder Cancer",
+        "venue": "RSNA 112th Scientific Assembly and Annual Meeting, Chicago, IL, Nov. 29 – Dec. 3, 2026"
+      },
+      {
+        "authors": "Day, R. G., Dunaway, C., Chen, Z., Gudi, M., & Day, C. S.",
+        "year": "2025",
+        "title": "Leveraging Artificial Intelligence Models to Streamline Systematic Reviews in Hand Surgery",
+        "venue": "AAHS Annual Conference, Waikoloa, HI",
+        "href": "/docs/streamling_systematic_reviews_AAHS.pdf",
+        "linkLabel": "Poster (PDF)"
+      },
+      {
+        "authors": "McDonald, K. O., Prabhu, A. S., Day, R. G., & Aton, S. J.",
+        "year": "2024",
+        "title": "Chemogenetic Silencing of Dentate Gyrus Granule Cells During Memory Consolidation May Disrupt Contextual Fear Memory",
+        "venue": "MIP Annual Research Symposium, Ann Arbor, MI"
+      }
+    ]
+  }
+]
