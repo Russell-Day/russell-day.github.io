@@ -1,14 +1,26 @@
-import { useCallback, useEffect, useState, type RefObject } from 'react';
+import { useCallback, useEffect, useState, useSyncExternalStore, type RefObject } from 'react';
 import { flushSync } from 'react-dom';
 import { createLamp, pulseLamp, type Lamp } from './lamp';
 
 const REDUCE = '(prefers-reduced-motion: reduce)';
 
 // index.html sets data-theme on <html> before first paint (the stored choice,
-// else the system preference); React starts from the same value so nothing
-// flashes, and the toggle writes the choice back.
+// else the system preference), and the page's colours follow it from there.
+// React reads it as an outside store: the prerendered HTML (and the hydrating
+// render) say daylight, then the client re-renders at once with the real value.
+// The toggle writes the choice back.
+const themeListeners = new Set<() => void>();
+const subscribeTheme = (fn: () => void) => {
+  themeListeners.add(fn);
+  return () => {
+    themeListeners.delete(fn);
+  };
+};
+const readTheme = () => document.documentElement.dataset.theme === 'dark';
+const serverFalse = () => false;
+
 export function useTheme() {
-  const [evening, setEvening] = useState(() => document.documentElement.dataset.theme === 'dark');
+  const evening = useSyncExternalStore(subscribeTheme, readTheme, serverFalse);
 
   const toggle = useCallback(() => {
     const root = document.documentElement;
@@ -20,7 +32,7 @@ export function useTheme() {
       } catch {
         // Blocked storage: the toggle still works for this visit.
       }
-      setEvening(next);
+      themeListeners.forEach((fn) => fn());
     };
     // Suppress every colour transition for the swap so nothing smears.
     root.classList.add('theme-swap');
@@ -323,17 +335,17 @@ export function useReading(ids: string[]) {
   return current;
 }
 
-/** True while the media query matches. */
+/** True while the media query matches (false in the prerendered HTML). */
 export function useMedia(query: string) {
-  const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
-  useEffect(() => {
-    const mq = window.matchMedia(query);
-    const on = () => setMatches(mq.matches);
-    on();
-    mq.addEventListener('change', on);
-    return () => mq.removeEventListener('change', on);
-  }, [query]);
-  return matches;
+  const subscribe = useCallback(
+    (on: () => void) => {
+      const mq = window.matchMedia(query);
+      mq.addEventListener('change', on);
+      return () => mq.removeEventListener('change', on);
+    },
+    [query],
+  );
+  return useSyncExternalStore(subscribe, () => window.matchMedia(query).matches, serverFalse);
 }
 
 /** True once the element has scrolled up under the sticky header. */

@@ -86,10 +86,11 @@ const TAKE_OVER = ['wheel', 'touchstart', 'pointerdown', 'keydown'] as const;
 
 /**
  * Back and Forward between a paper and its project, and an address with a
- * #fragment opened cold (a shared #project-… link, or #work). The page is
- * built after load, so the browser cannot scroll there by itself: place it,
- * and place it again while fonts settle the layout, until the reader takes
- * over. A spot the browser has already restored (a reload) is kept.
+ * #fragment opened cold (a shared #project-… link, or #work). The browser's
+ * own jump can't open a project or light it, and fonts shift the layout
+ * after it: place it, and place it again while fonts settle the layout,
+ * until the reader takes over. A spot the browser has already restored (a
+ * reload) is kept.
  */
 function useHistoryAndHash() {
   useEffect(() => {
@@ -132,10 +133,14 @@ function useHistoryAndHash() {
       el.scrollIntoView({ block: 'start', behavior: 'instant' });
       holdLight(el.querySelector<HTMLElement>('[data-entry]'));
     };
+    // The page arrives prerendered, so the browser may already have scrolled to
+    // the fragment by itself; only a reload or Back/Forward keeps its own spot.
+    const nav = performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming | undefined;
+    const restored = nav?.type === 'reload' || nav?.type === 'back_forward';
     if (id) {
       // A frame first, so the reading light is listening.
       frame = requestAnimationFrame(() => {
-        if (!document.getElementById(id) || window.scrollY !== 0) return;
+        if (!document.getElementById(id) || (restored && window.scrollY !== 0)) return;
         place();
         if (document.getElementById(id)?.matches('.project')) {
           history.replaceState({ ...(history.state ?? {}), project: id }, '');

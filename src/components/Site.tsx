@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import { Check, Copy, Moon, X } from '@phosphor-icons/react';
 import { profileImage, siteConfig } from './config';
-import { EMAIL, NAME, cv, github, linkedin, tidy } from './content';
+import { EMAIL, NAME, NAME_ZH, cv, github, linkedin, tidy } from './content';
 import { holdLight, useCopy, useMedia, usePassed, useReading, useTheme } from './hooks';
 import { pulseLamp } from './lamp';
 import { About, Experience, Honours, Research, Work } from './Sections';
@@ -13,11 +13,14 @@ import { About, Experience, Honours, Research, Work } from './Sections';
 // travelling between entries, the glow under the pointer, the evening switch,
 // and 光 itself when you touch the name.
 
-/** 戴光佑 with 光 ("light") picked out. */
+/** The Chinese name (戴光佑) with 光 ("light") picked out. */
 function ZhName({ className, lit = true }: { className?: string; lit?: boolean }) {
+  const [before, ...rest] = NAME_ZH.split('光');
   return (
     <span className={className} lang="zh-Hans">
-      戴{lit ? <span className="guang">光</span> : '光'}佑
+      {before}
+      {rest.length > 0 && (lit ? <span className="guang">光</span> : '光')}
+      {rest.join('光')}
     </span>
   );
 }
@@ -107,6 +110,9 @@ function CopyEmail() {
   );
 }
 
+// The build prerenders this page on the server, where layout effects can't run.
+const useClientLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
 const SECTIONS = ['research', 'work', 'experience', 'honours', 'about', 'contact'];
 
 // Nav items and the sections each one covers.
@@ -137,7 +143,7 @@ export default function Site() {
   const markRef = useRef<HTMLSpanElement>(null);
 
   // One marker under the current nav item that slides from item to item.
-  useLayoutEffect(() => {
+  useClientLayoutEffect(() => {
     const nav = navRef.current;
     const mark = markRef.current;
     if (!nav || !mark) return;

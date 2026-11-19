@@ -2,7 +2,8 @@
 // adds one.
 import { siteConfig } from './config';
 
-export const NAME = 'Russell Day';
+export const NAME = siteConfig.name;
+export const NAME_ZH = siteConfig.nameZh;
 export const EMAIL = 'russday@umich.edu';
 
 export const github = siteConfig.contact.links.find((l) => l.type === 'github')!;

@@ -24,6 +24,9 @@ export type ContactLink = {
 };
 
 export type SiteConfig = {
+  name: string;
+  /** Chinese name; 光 in it is picked out on the page. */
+  nameZh: string;
   about: {
     photoImageKey: string;
     education: EducationItem[];
