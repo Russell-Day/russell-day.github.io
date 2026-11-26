@@ -29,7 +29,7 @@ function ZhName({ className, lit = true }: { className?: string; lit?: boolean }
  * The upright 戴光佑 beside the portrait. Touching it (click, tap, Enter or
  * Space) kindles 光 and brightens the lamp once. Holding it down warms 光
  * first, and the longer the hold, the brighter it kindles. It adds no visible
- * text, so the heading still reads "Russell Day 戴光佑".
+ * text, so the heading still reads "Russell G. Day 戴光佑".
  */
 function Kindle() {
   const ref = useRef<HTMLButtonElement>(null);
@@ -221,7 +221,7 @@ export default function Site() {
         </div>
         <section id="top" className="hero" aria-labelledby="name">
           <h1 id="name" className="name" ref={nameRef}>
-            <span className="name-en">{NAME}</span> <Kindle />
+            <span className="name-en">{NAME.replace(/ (?=\S+$)/, "\u00a0")}</span> <Kindle />
           </h1>
           <span id="kindle-hint" hidden>
             Lights 光, the character for light
@@ -229,7 +229,7 @@ export default function Site() {
           <img
             className="photo"
             src={profileImage}
-            alt="Portrait of Russell Day"
+            alt="Portrait of Russell G. Day"
             width={1200}
             height={1500}
             decoding="async"
